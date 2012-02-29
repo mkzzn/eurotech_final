@@ -1,0 +1,290 @@
+/* CSS Document */
+body {
+  padding: 0;
+  margin: 0;
+  background: url("../images/bg/metal_dark.jpg"); }
+
+#container {
+  width: 966px;
+  margin: 0 auto 0 auto; }
+
+#content {
+  margin: 0 auto; }
+  #content h1 {
+    font-family: "Open Sans", sans-serif;
+    color: white;
+    font-weight: normal;
+    font-size: 3.6em;
+    background: #111111;
+    margin: 0;
+    padding: 20px;
+    opacity: 0.95; }
+  #content h2 {
+    font-family: "Open Sans", sans-serif;
+    color: white;
+    font-weight: normal;
+    font-size: 2.1em;
+    margin: 20px 0 0 0;
+    padding: 12px 20px;
+    opacity: 0.98;
+    background: #14505a; }
+  #content .copy {
+    font-family: "Open Sans", sans-serif;
+    color: black;
+    font-weight: normal;
+    font-size: 15px;
+    padding: 8px 32px 18px 32px;
+    margin: 0;
+    background: #dddddd;
+    opacity: 0.9; }
+    #content .copy p {
+      margin-top: 10px; }
+    #content .copy img {
+      padding: 20px 20px 12px 20px; }
+    #content .copy.left img {
+      float: left; }
+    #content .copy.right img {
+      float: right; }
+  #content .content {
+    float: left; }
+    #content .content.large {
+      width: 580px;
+      margin-right: 40px; }
+    #content .content.small {
+      width: 346px; }
+    #content .content .copy {
+      height: 600px; }
+    #content .content img {
+      padding: 16px 20px 8px 0; }
+    #content .content h2 {
+      font-size: 28px; }
+
+#products .product, #products .news, #news .product, #news .news {
+  width: 47%;
+  opacity: 1;
+  float: left; }
+  #products .product.left, #products .news.left, #news .product.left, #news .news.left {
+    margin-right: 6%; }
+  #products .product h2, #products .news h2, #news .product h2, #news .news h2 {
+    padding: 10px 20px 16px 20px;
+    font-size: 24px; }
+    #products .product h2 .title, #products .news h2 .title, #news .product h2 .title, #news .news h2 .title {
+      width: 200;
+      float: left;
+      padding: none;
+      margin: none; }
+    #products .product h2 .links, #products .news h2 .links, #news .product h2 .links, #news .news h2 .links {
+      float: right;
+      text-align: right;
+      margin-top: 4px; }
+    #products .product h2 .model, #products .news h2 .model, #news .product h2 .model, #news .news h2 .model {
+      color: #92cfd8;
+      font-size: 12px;
+      font-weight: normal; }
+    #products .product h2 a, #products .news h2 a, #news .product h2 a, #news .news h2 a {
+      margin-left: 14px;
+      font-size: 15px;
+      font-family: "Telex", sans-serif;
+      color: white;
+      text-decoration: none; }
+      #products .product h2 a:hover, #products .news h2 a:hover, #news .product h2 a:hover, #news .news h2 a:hover {
+        text-decoration: underline; }
+      #products .product h2 a.view, #products .news h2 a.view, #news .product h2 a.view, #news .news h2 a.view {
+        color: #ffff4a;
+        display: block;
+        margin-bottom: -4px; }
+  #products .product .body, #products .news .body, #news .product .body, #news .news .body {
+    padding: 0 16px 16px 16px;
+    margin: 0;
+    background: #dddddd;
+    opacity: 1;
+    height: 320px; }
+    #products .product .body img, #products .news .body img, #news .product .body img, #news .news .body img {
+      float: left;
+      margin: 22px 20px 0 20px; }
+    #products .product .body .container, #products .news .body .container, #news .product .body .container, #news .news .body .container {
+      font-size: 14px;
+      padding: none;
+      float: left;
+      opacity: 1;
+      font-family: "Open Sans", sans-serif;
+      color: black;
+      font-weight: normal; }
+    #products .product .body .description, #products .news .body .description, #news .product .body .description, #news .news .body .description {
+      margin-left: 20px;
+      margin-top: 16px; }
+#products .news .body, #news .news .body {
+  padding-top: 8px;
+  padding-right: 24px;
+  height: 360px; }
+
+#header {
+  padding: 20px 0;
+  margin: 0;
+  height: 160px;
+  width: 966px;
+  text-align: left; }
+  #header img {
+    margin: 0; }
+  #header #pg1000_logo {
+    float: left; }
+  #header #eurotech_logo {
+    float: right; }
+
+#navigation {
+  width: 966px;
+  margin: 0 auto; }
+  #navigation .filler {
+    width: 6px;
+    display: block;
+    height: 104px;
+    background: #111111;
+    opacity: 0.75;
+    float: left; }
+  #navigation a {
+    background: #111111;
+    border-left: #111111 1px solid;
+    opacity: 0.75;
+    float: left;
+    height: 70px;
+    text-align: left;
+    border-left: 1px solid black;
+    display: block;
+    text-decoration: none;
+    width: 128px;
+    padding: 12px 14px 12px 18px; }
+    #navigation a:hover {
+      opacity: 0.92; }
+    #navigation a.active {
+      color: #018aa1;
+      opacity: 0.85; }
+      #navigation a.active:hover {
+        opacity: 0.92; }
+    #navigation a .link-title {
+      color: white;
+      font-size: 24px;
+      padding: 0 0 2px 0;
+      font-family: "Telex", sans-serif; }
+    #navigation a .link-summary {
+      color: #999999;
+      font-size: 13px;
+      font-style: italic;
+      padding: 0 0 2px 0;
+      font-family: "Telex", sans-serif; }
+    #navigation a:hover .link-summary, #navigation a.active .link-summary {
+      color: #ffff4a;
+      font-style: italic;
+      padding: 0 0 2px 0;
+      font-family: "Telex", sans-serif; }
+
+#register, #login {
+  margin-top: 20px;
+  background: #dddddd;
+  opacity: 1;
+  font-size: 14px;
+  float: left;
+  opacity: 1;
+  font-family: "Open Sans", sans-serif;
+  color: black;
+  font-weight: normal; }
+  #register .inputs, #login .inputs {
+    padding: 10px 20px 20px 0;
+    width: 50%;
+    float: left; }
+    #register .inputs input[type=text], #register .inputs input[type=password], #login .inputs input[type=text], #login .inputs input[type=password] {
+      border: 1px solid #aaaaaa;
+      padding: 3px 6px;
+      width: 240px;
+      margin-top: 4px; }
+    #register .inputs input[type=submit], #login .inputs input[type=submit] {
+      margin-top: 12px; }
+  #register .labels, #login .labels {
+    padding: 14px 20px 20px 20px;
+    float: left;
+    width: 30%; }
+    #register .labels label, #login .labels label {
+      text-align: right;
+      display: block;
+      margin-bottom: 11px; }
+  #register h2, #login h2 {
+    margin-top: 0;
+    margin-bottom: 10px; }
+
+#register {
+  margin-right: 7%;
+  width: 55%; }
+  #register .description {
+    margin-left: 20px; }
+
+#contact .content {
+  width: 300px;
+  margin-right: 32px;
+  margin-bottom: 20px; }
+  #contact .content .label {
+    margin-top: 12px;
+    font-weight: bold;
+    font-size: 13px;
+    font-family: "Telex", sans-serif; }
+  #contact .content .heading {
+    font-size: 16px; }
+  #contact .content .copy {
+    height: 530px; }
+  #contact .content.rightmost {
+    margin-right: 0;
+    width: 301px; }
+
+#login {
+  width: 367px; }
+  #login .inputs {
+    width: 50%; }
+    #login .inputs input[type=text], #login .inputs input[type=password] {
+      width: 200px; }
+    #login .inputs input[type=submit] {
+      margin-top: 12px;
+      display: block; }
+    #login .inputs a {
+      display: block;
+      margin-top: 8px;
+      color: #007689; }
+  #login .labels {
+    width: 20%; }
+    #login .labels label {
+      text-align: right;
+      display: block;
+      margin-bottom: 11px; }
+
+#footer {
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  margin: 40px 0 0 0; }
+
+.footer-links {
+  background: #111111;
+  opacity: 0.95;
+  line-height: 1.5em;
+  width: 966px;
+  float: left; }
+  .footer-links a {
+    font-size: 15px;
+    font-family: "Telex", sans-serif;
+    float: left;
+    color: #666666;
+    text-decoration: none; }
+    .footer-links a.active {
+      color: #007689; }
+      .footer-links a.active:hover {
+        color: #0096ae; }
+    .footer-links a:hover {
+      color: #0096ae; }
+  .footer-links.pages {
+    background: black;
+    padding: 8px 0; }
+    .footer-links.pages a {
+      margin-left: 88px; }
+  .footer-links.links {
+    padding: 8px 0; }
+    .footer-links.links a {
+      margin-left: 200px; }
+
+.clear {
+  clear: both; }
