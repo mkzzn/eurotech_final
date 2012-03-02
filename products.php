@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 
 <?php
    include 'db/config.php';
    include 'db/open_db.php';
-   $active_page = "news";
+   $active_page = "home";
 ?>
 
 <html>
@@ -20,7 +20,7 @@
     <meta name="expires" content="never" />
     <meta name="distribution" content="global" /><meta name="robots" content="index,follow" /><meta name="revisit-after" content="15 days" />
     
-    <title>PG 1000 Cutting Tool Inspection System by Euro-Tech | News</title>
+    <title>PG 1000 Cutting Tool Inspection System by Euro-Tech | Products</title>
     
     <link rel="stylesheet" type="text/css" media="all" href="css/primary.css" />
     <link href='http://fonts.googleapis.com/css?family=Droid+Sans|Cabin|Ubuntu|Cantarell|Open+Sans|Nobile|Telex' rel='stylesheet' type='text/css'>
@@ -35,76 +35,57 @@
       </div>
       <div class="clear"></div>
 
-      <?php include "app/views/_nav.php"; ?>
+      <?php include 'app/views/_nav.php'; ?>
 
       <div id="content">
-        <h1>What's New?</h1>
-<div id='news'>
-  <div class='news left'>
-    <h2>
-      <div class='title'>
-        Product Development
-      </div>
-      <div class='clear'></div>
-    </h2>
-
-<?php
-   $result = mysql_query("select * from news where section = 'News'") or die('Query failed. ' . mysql_error());
-?>
-
-
-    <div class='body'>
-      <div class='container'>
-        <div class='description'>
-          <?php
-             while($row = mysql_fetch_assoc($result)) {
-               if ($row['section'] == 'News') {
-           ?>
-
-            <p>
-              <?php echo $row['content']; ?>
-            </p>
-          <?php
-              }
-            }
-          ?>
-        </div>
-      </div>
-      <div class='clear'></div>
-    </div>
-  </div>
+        <h1>The PG 1000 Line</h1>
+<div id='products'>
 
   <?php
-   $result = mysql_query("select * from news where section = 'Tradeshows'") or die('Query failed. ' . mysql_error());
+    $result = mysql_query("select * from products order by position ASC") or die('Query failed. ' . mysql_error());
 
+    $productIds = array(); // to use in the quote request form   
+    while($product = mysql_fetch_assoc($products)) {
+     $productIds[] = $product['product_id'];
+    }
 
-     while($row = mysql_fetch_assoc($result)) {
-       if ($row['section'] == 'Tradeshows') {
+    $productIdList = implode(", ", $productIds);
+
+    while($row = mysql_fetch_assoc($result)) {
+
+     //if ($row['product_id']) {     
+     //  $upload_result = mysql_query("select * from upload where product_id = {$row['product_id']}") or die('Query failed. ' . mysql_error());
+      // $upload = mysql_fetch_object($upload_result);
+     //}
   ?>
 
-    <div class='news'>
-      <h2>
-        <div class='title'>
-            <?php echo $row['title']; ?>
-        </div>
-        <div class='clear'></div>
-      </h2>
-      <div class='body'>
-        <div class='container'>
-          <img src='images/products/pg1000_basic.jpg' width='210' />
-          <div class='description'>
-            <?php echo $row['content']; ?>
-          </div>
-        </div>
-        <div class='clear'></div>
-      </div>
-    </div>
+     <div class='product'>
+       <h2>
+         <div class='title'>
+           <?php echo $row['product_name']; ?>
+         <div class='model'>Model# <?php echo $row['product_name']; ?></div>
+         </div>
+         <div class='links'>
+           <a class='view' href='some_link.html'>360&deg View</a>
+           <a href='screenshot.html'>Screenshot</a>
+           <a href='spec_sheet.html'>Spec Sheet</a>
+         </div>
+         <div class='clear'></div>
+       </h2>
+       <div class='body'>
+         <div class='container'>
+           <img src='<?php //if ($row['product_id']) { echo $upload['path']; } ?>' width='210' />
+           <div class='description'>
+             <?php echo $row['product_text']; ?>
+           </div>
+         </div>
+         <div class='clear'></div>
+       </div>
+     </div>
 
   <?php
-      }
     }
   ?>
-
 </div>
 <div class='clear'></div>
 
@@ -117,11 +98,11 @@
               Home
             </a>
           
-            <a href="products.html" >
+            <a href="products.html" class="active" >
               Products
             </a>
           
-            <a href="news.html" class="active" >
+            <a href="news.html" >
               News
             </a>
           
