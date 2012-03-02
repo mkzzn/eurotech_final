@@ -42,7 +42,7 @@
 <div id='products'>
 
   <?php
-    $result = mysql_query("select products.*, upload.path from products LEFT JOIN upload ON products.product_id = upload.product_id order by position ASC") or die('Query failed. ' . mysql_error());
+    $result = mysql_query("select products.*, upload.path from products LEFT JOIN upload ON products.product_id = upload.product_id where upload.type = 'image/jpeg' or upload.type = 'image/pjpeg' order by position ASC") or die('Query failed. ' . mysql_error());
 
     $productIds = array(); // to use in the quote request form   
     while($product = mysql_fetch_assoc($products)) {
