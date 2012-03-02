@@ -42,7 +42,7 @@
 <div id='products'>
 
   <?php
-    $result = mysql_query("select * from products order by position ASC") or die('Query failed. ' . mysql_error());
+    $result = mysql_query("select products.*, upload.path from products, upload where products.product_id = upload.product_id order by position ASC") or die('Query failed. ' . mysql_error());
 
     $productIds = array(); // to use in the quote request form   
     while($product = mysql_fetch_assoc($products)) {
@@ -74,7 +74,7 @@
        </h2>
        <div class='body'>
          <div class='container'>
-           <img src='<?php //if ($row['product_id']) { echo $upload['path']; } ?>' width='210' />
+           <img src='<?php echo $row['path']; ?>' width='210' />
            <div class='description'>
              <?php echo $row['product_text']; ?>
            </div>
