@@ -1,4 +1,11 @@
  <!DOCTYPE html>
+
+<?php
+   include 'db/config.php';
+   include 'db/open_db.php';
+   $active_page = "software";
+?>
+
 <html>
   <head>
 
@@ -27,42 +34,8 @@
         <div class="clear"></div>
       </div>
       <div class="clear"></div>
-
-      <div id="navigation">
-        
-          <a href="./"  class="home" >
-            <div class="link-title">Home</div>
-            <div class="link-summary">About the PG 1000</div>
-          </a>
-        
-          <a href="products.html"  class="products" >
-            <div class="link-title">Products</div>
-            <div class="link-summary">View the entire PG product line</div>
-          </a>
-        
-          <a href="news.html"  class="news" >
-            <div class="link-title">News</div>
-            <div class="link-summary">What's going on in our labs</div>
-          </a>
-        
-          <a href="software.html" class="active software" >
-            <div class="link-title">Software</div>
-            <div class="link-summary">Cutting-edge user interfaces</div>
-          </a>
-        
-          <a href="downloads.html"  class="downloads" >
-            <div class="link-title">Downloads</div>
-            <div class="link-summary">Software demos and updates</div>
-          </a>
-        
-          <a href="contact.html"  class="contact" >
-            <div class="link-title">Contact</div>
-            <div class="link-summary">Corporate Offices and Representatives</div>
-          </a>
-        
-
-        <div class="clear"></div>
-      </div>
+ 
+      <?php include "app/views/_nav.php"; ?>
 
       <div id="content">
         <h1>Software</h1>

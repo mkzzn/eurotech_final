@@ -6,7 +6,6 @@
    $active_page = "home";
 ?>
 
-
 <html>
   <head>
 

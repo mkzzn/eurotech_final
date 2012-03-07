@@ -3,7 +3,7 @@
 <?php
    include 'db/config.php';
    include 'db/open_db.php';
-   $active_page = "home";
+   $active_page = "products";
 ?>
 
 <html>
