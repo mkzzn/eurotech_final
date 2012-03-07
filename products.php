@@ -42,21 +42,33 @@
 <div id='products'>
 
   <?php
-    $result = mysql_query("select products.*, upload.path from products LEFT JOIN upload ON products.product_id = upload.product_id where upload.type = 'image/jpeg' or upload.type = 'image/pjpeg' order by position ASC") or die('Query failed. ' . mysql_error());
+    $result = mysql_query("select * from products order by position ASC") or die('Query failed. ' . mysql_error());
+
+    $products = array(); // to use in the quote request form   
+    while($product = mysql_fetch_assoc($result)) {
+     $products[] = $product;
+    }
 
     $productIds = array(); // to use in the quote request form   
-    while($product = mysql_fetch_assoc($products)) {
-     $productIds[] = $product['product_id'];
+    foreach($products as $product) {
+      arrayPush($productIds, $product["product_id"]);
     }
 
     $productIdList = implode(", ", $productIds);
 
-    while($row = mysql_fetch_assoc($result)) {
+    $upload_query = mysql_query("select * from upload where product_id in ($productIdList)") or die('Query failed. ' . mysql_error())
 
-     //if ($row['product_id']) {     
-     //  $upload_result = mysql_query("select * from upload where product_id = {$row['product_id']}") or die('Query failed. ' . mysql_error());
-      // $upload = mysql_fetch_object($upload_result);
-     //}
+    $uploads = array(); // to use in the quote request form   
+    while($upload = mysql_fetch_assoc($upload_query)) {
+     $uploads[] = $upload;
+    }
+
+    $productUploadMap = array();
+    foreach($uploads as $upload) {
+      if (in_array($uploads["product_id"], $productIds)) {
+        
+      }
+    }
   ?>
 
      <div class='product'>
