@@ -24,6 +24,31 @@
     
     <link rel="stylesheet" type="text/css" media="all" href="css/primary.css" />
     <link href='http://fonts.googleapis.com/css?family=Droid+Sans|Cabin|Ubuntu|Cantarell|Open+Sans|Nobile|Telex' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="css/style4.css" />
+
+    <script language="javascript" type="text/javascript" src="js/jquery.js"></script>
+    <script language="javascript" type="text/javascript" src="js/jquery.easing.js"></script>
+    <script language="javascript" type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript">
+     $(document).ready( function(){	
+        // buttons for next and previous item						 
+        var buttons = { previous:$('#jslidernews1 .button-previous') ,
+                next:$('#jslidernews1 .button-next') };
+         $obj = $('#jslidernews1').lofJSidernews( { interval : 4000,
+                            easing			: 'easeInOutQuad',
+                            duration		: 1200,
+                            auto		 	: false,
+                            maxItemDisplay  : 3,
+                            startItem:1,
+                            navPosition     : 'horizontal', // horizontal
+                            navigatorHeight : null,
+                            navigatorWidth  : null,
+                            mainWidth:980,
+                            buttons:buttons} );		
+      });
+    </script>
+
   </head>
 
   <body>
@@ -39,7 +64,18 @@
 
       <div id="content">
         <h1>The PG 1000 Line</h1>
-<div id='products'>
+
+
+
+
+<div id="jslidernews1" class="lof-slidecontent">
+	<div class="preload"><div></div></div>
+    		 <div class="button-previous">Previous</div>
+              <div  class="button-next">Next</div>
+    		 <!-- MAIN CONTENT --> 
+
+              <div id="products" class="main-slider-content" style="width:966px; height:480px;">
+                <ul class="sliders-wrap-inner">
 
   <?php
     $result = mysql_query("select * from products order by position ASC") or die('Query failed. ' . mysql_error());
@@ -50,15 +86,6 @@
      $products[] = $product;
      $productIds[] = $product["product_id"];
     }
-    echo(count($products));
-
-    foreach($products as $product) {
-      echo $product["product_id"]."\n";
-    }
-
-    foreach($productIds as $productId) {
-      echo $productId."\n";
-    }
 
     $productIdList = implode(", ", $productIds);
 
@@ -68,7 +95,6 @@
     while($upload = mysql_fetch_assoc($upload_query)) {
      $uploads[] = $upload;
     }
-    echo(count($uploads));
 
     $productUploads = array();
     foreach($uploads as $upload) {
@@ -79,14 +105,17 @@
       }
     }
 
-    foreach($productUploads as $productUpload) {
-      echo $productUpload["productImage"];
-    }
+  $counter = 0;
+  foreach($products as $product) {
 
-    foreach($products as $product) {
+  if ($counter % 2 == 0) {
+  ?>
+  <li>
+  <?php
+    }
   ?>
 
-     <div class='product'>
+     <div class='product <?php if ($counter % 2 == 0) { echo "left"; } ?>'>
        <h2>
          <div class='title'>
            <?php echo $product['product_name']; ?>
@@ -123,9 +152,38 @@
      </div>
 
   <?php
+    if ($counter % 2 == 1) {
+  ?>
+  </li>
+  <?php
     }
+    $counter++;
+  }
 
   ?>
+                  </ul>  	
+            </div>
+ 		   <!-- END MAIN CONTENT --> 
+           <!-- NAVIGATOR -->
+           	<div class="navigator-content">
+                  <div class="button-control"><span></span></div>	
+                  <div class="navigator-wrapper">
+                        <ul class="navigator-wrap-inner">
+                           <li><span>1</span></li>
+                           <li><span>2</span></li>
+                           <li><span>3</span></li>
+                           <li><span>4</span></li>    
+                           <li><span>5</span></li>
+                           <li><span>6</span></li>       
+                           <li><span>7</span></li>       
+                           <li><span>8</span></li>          		
+                        </ul>
+                  </div>
+             </div> 
+          <!----------------- END OF NAVIGATOR --------------------->
+<div class='clear'></div>
+ </div> 
+<div class='clear'></div>
 </div>
 <div class='clear'></div>
 

@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Lof JSliderNews 2.0 - Jquery 1.7.x</title>
+<link rel="stylesheet" type="text/css" href="css/layout.css" />
+<link rel="stylesheet" type="text/css" href="css/style1.css" />
+<script language="javascript" type="text/javascript" src="js/jquery.js"></script>
+<script language="javascript" type="text/javascript" src="js/jquery.easing.js"></script>
+<script language="javascript" type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript">
+ $(document).ready( function(){	
+		// buttons for next and previous item						 
+		var buttons = { previous:$('#jslidernews1 .button-previous') ,
+						next:$('#jslidernews1 .button-next') };			
+		 $('#jslidernews1').lofJSidernews( { interval : 4000,
+											direction		: 'opacitys',	
+											easing			: 'easeInOutExpo',
+											duration		: 1200,
+											auto		 	: true,
+											maxItemDisplay  : 4,
+											navPosition     : 'horizontal', // horizontal
+											navigatorHeight : 32,
+											navigatorWidth  : 80,
+											mainWidth		: 980,
+											buttons			: buttons } );	
+	});
+</script>
+
+</head>
+<body>
+	<div id="container">
+    		<h1><strong>Lof JSliderNews 2.0</strong> -  Jquery 1.7.x & Easing plugin</h1>
+       
+ <p>
+	<strong> Direction: Right - Left. The Navigator is the list of thumbnails.</strong> 
+    The plugin allow to use the wheelup and wheeldown to previous|next item in the list
+</p>       
+<!------------------------------------- THE CONTENT ------------------------------------------------->
+<div id="jslidernews1" class="lof-slidecontent" style="width:980px; height:340px;">
+	<div class="preload"><div></div></div>
+    		 <!-- MAIN CONTENT --> 
+              <div class="main-slider-content" style="width:980px; height:340px;">
+                <ul class="sliders-wrap-inner">
+                    <li>
+                            <img src="images/thumbl_980x340.png" title="Newsflash 2" >           
+                          <div class="slider-description">
+                            <div class="slider-meta"><a target="_parent" title="Newsflash 1" href="#Category-1">/ Newsflash 1 /</a> <i> — Monday, February 15, 2010 12:42</i></div>
+                            <h4>Content of Newsflash 1</h4>
+                            <p>The one thing about a Web site, it always changes! Joomla! makes it easy to add Articles, content,...
+                            <a class="readmore" href="#">Read more </a>
+                            </p>
+                         </div>
+                    </li> 
+                   <li>
+                      <img src="images/thumbl_980x340_002.png" title="Newsflash 1" >           
+                         <div class="slider-description">
+                           <div class="slider-meta"><a target="_parent" title="Newsflash 2" href="#Category-2">/ Newsflash 2 /</a> 	<i> — Monday, February 15, 2010 12:42</i></div>
+                            <h4>Content of Newsflash 2</h4>
+                            <p>Joomla! makes it easy to launch a Web site of any kind. Whether you want a brochure site or you are...
+                            <a class="readmore" href="#">Read more </a>
+                            </p>
+                         </div>
+                    </li> 
+                   <li>
+                      <img src="images/thumbl_980x340_003.png" title="Newsflash 3" >            
+                        <div class="slider-description">
+                          <div class="slider-meta"><a target="_parent" title="Newsflash 3" href="#Category-3">/ Newsflash 3 /</a> 	<i> — Monday, February 15, 2010 12:42</i></div>
+                            <h4>Content of Newsflash 3</h4>
+                            <p>With a library of thousands of free Extensions, you can add what you need as your site grows. Don't...
+                            <a class="readmore" href="#">Read more </a>
+                            </p>
+                         </div>
+                    </li> 
+                    <li>
+                      <img src="images/thumbl_980x340_004.png" title="Newsflash 5" >            
+                        <div class="slider-description">
+                          <div class="slider-meta"><a target="_parent" title="Newsflash 4" href="#Category-4">/ Newsflash 4 /</a>	<i> — Monday, February 15, 2010 12:42</i></div>
+                            <h4>Content of Newsflash 4</h4>
+                            <p>Joomla! 1.5 - 'Experience the Freedom'!. It has never been easier to create your own dynamic Web...
+                            <a class="readmore" href="#">Read more </a>
+                            </p>
+                         </div>
+                    </li> 
+                    <li>
+                      <img src="images/thumbl_980x340_005.png" title="Newsflash 5" >            
+                        <div class="slider-description">
+                           <div class="slider-meta"><a target="_parent" title="Newsflash 5" href="#">/ Newsflash 5 /</a>	<i> — Monday, February 15, 2010 12:42</i></div>
+                           <h4>Content of Newsflash 5</h4>
+                            <p>Joomla! 1.5 - 'Experience the Freedom'!. It has never been easier to create your own dynamic Web...
+                            <a class="readmore" href="#">Read more </a>
+                            </p>
+                         </div>
+                    </li> 
+                    <li>
+            
+                      <img src="images/thumbl_980x340_006.png" title="Newsflash 5" >            
+                        <div class="slider-description">
+                          <div class="slider-meta"><a target="_parent" title="Newsflash 6" href="#">/ Newsflash 6 /</a>	<i> — Monday, February 15, 2010 12:42</i></div>
+                            <h4>Content of Newsflash 6</h4>
+                            <p>Joomla! 1.5 - 'Experience the Freedom'!. It has never been easier to create your own dynamic Web...
+                            <a class="readmore" href="#">Read more </a>
+                            </p>
+                         </div>
+                    </li> 
+                     <li>
+                      <img src="images/thumbl_980x340_007.png" title="Newsflash 5" >            
+                        <div class="slider-description">
+                          <div class="slider-meta"><a target="_parent" title="Newsflash 7" href="#">/ Newsflash 7 /</a>	<i> — Monday, February 15, 2010 12:42</i></div>
+                            <h4>Content of Newsflash 7</h4>
+                            <p>Joomla! 1.5 - 'Experience the Freedom'!. It has never been easier to create your own dynamic Web...
+                            <a class="readmore" href="#">Read more </a>
+                            </p>
+                         </div>
+                    </li> 
+                      <li>
+                      <img src="images/thumbl_980x340_008.png" title="Newsflash 8" >            
+                        <div class="slider-description">
+        
+                          <div class="slider-meta"><a target="_parent" title="Newsflash 8" href="#">/ Newsflash 8 /</a>	<i> — Monday, February 15, 2010 12:42</i></div>
+                            <h4>Content of Newsflash 8</h4>
+                            <p>Joomla! 1.5 - 'Experience the Freedom'!. It has never been easier to create your own dynamic Web...
+                                <a class="readmore" href="#">Read more </a>
+                            </p>
+                         </div>
+                    </li> 
+                  </ul>  	
+            </div>
+ 		   <!-- END MAIN CONTENT --> 
+           <!-- NAVIGATOR -->
+           	<div class="navigator-content">
+                  <div class="button-next">Next</div>
+                  <div class="navigator-wrapper">
+                        <ul class="navigator-wrap-inner">
+                           <li><img src="images/thumbs/thumbl_980x340.png" /></li>
+                           <li><img src="images/thumbs/thumbl_980x340_002.png" /></li>
+                           <li><img src="images/thumbs/thumbl_980x340_003.png" /></li>
+                           <li><img src="images/thumbs/thumbl_980x340_004.png" /></li>    
+                           <li><img src="images/thumbs/thumbl_980x340_005.png" /></li>
+                           <li><img src="images/thumbs/thumbl_980x340_006.png" /></li>       
+                           <li><img src="images/thumbs/thumbl_980x340_007.png" /></li>       
+                           <li><img src="images/thumbs/thumbl_980x340_008.png" /></li>       		
+                        </ul>
+                  </div>
+                  <div  class="button-previous">Previous</div>
+             </div> 
+          <!----------------- END OF NAVIGATOR --------------------->
+          <!-- BUTTON PLAY-STOP -->
+          <div class="button-control"><span></span></div>
+           <!-- END OF BUTTON PLAY-STOP -->
+          
+ </div> 
+
+
+<!------------------------------------- END OF THE CONTENT ------------------------------------------------->
+ <p> 
+<a href="index.html">Demo 1</a>  | <a href="index2.html">Demo 2</a>  |  <a href="index3.html">Demo 3</a> | <a href="index4.html">Demo 4</a> | <a href="index5.html">Demo 5</a> | <a href="index6.html">Demo 6</a>
+<div id="footer">
+ <a href="http://landofcoder.com">LandOfCoder.Com</a>
+</div>
+    </div>
+</body>
+</html>
