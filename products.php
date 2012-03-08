@@ -44,51 +44,78 @@
   <?php
     $result = mysql_query("select * from products order by position ASC") or die('Query failed. ' . mysql_error());
 
-    $products = array(); // to use in the quote request form   
+    $products = array(); // to use in the quote request form
+    $productIds = array(); // to use in the quote request form   
     while($product = mysql_fetch_assoc($result)) {
      $products[] = $product;
+     $productIds[] = $product["product_id"];
+    }
+    echo(count($products));
+
+    foreach($products as $product) {
+      echo $product["product_id"]."\n";
     }
 
-    $productIds = array(); // to use in the quote request form   
-    foreach($products as $product) {
-      arrayPush($productIds, $product["product_id"]);
+    foreach($productIds as $productId) {
+      echo $productId."\n";
     }
 
     $productIdList = implode(", ", $productIds);
 
-    $upload_query = mysql_query("select * from upload where product_id in ($productIdList)") or die('Query failed. ' . mysql_error())
+    $upload_query = mysql_query("select * from upload where product_id in ($productIdList)") or die('Query failed. ' . mysql_error());
 
     $uploads = array(); // to use in the quote request form   
     while($upload = mysql_fetch_assoc($upload_query)) {
      $uploads[] = $upload;
     }
+    echo(count($uploads));
 
-    $productUploadMap = array();
+    $productUploads = array();
     foreach($uploads as $upload) {
-      if (in_array($uploads["product_id"], $productIds)) {
-        
+      if ($productUploads[$upload["product_id"]]) {
+        $productUploads[$upload["product_id"]][$upload["section"]] = $upload["path"];
+      } else {
+        $productUploads[$upload["product_id"]] = array($upload["section"] => $upload["path"]);
       }
     }
+
+    foreach($productUploads as $productUpload) {
+      echo $productUpload["productImage"];
+    }
+
+    foreach($products as $product) {
   ?>
 
      <div class='product'>
        <h2>
          <div class='title'>
-           <?php echo $row['product_name']; ?>
-         <div class='model'>Model# <?php echo $row['product_name']; ?></div>
+           <?php echo $product['product_name']; ?>
+         <div class='model'>Model# <?php echo $product['product_name']; ?></div>
          </div>
          <div class='links'>
            <a class='view' href='some_link.html'>360&deg View</a>
            <a href='screenshot.html'>Screenshot</a>
-           <a href='spec_sheet.html'>Spec Sheet</a>
+           <?php 
+              if ($productUploads[$product["product_id"]]['productSpecSheet']) {
+           ?>
+           <a href='<?php echo $productUploads[$product["product_id"]]['productSpecSheet']; ?>'>Spec Sheet</a>
+           <?php
+              }
+           ?>
          </div>
          <div class='clear'></div>
        </h2>
        <div class='body'>
          <div class='container'>
-           <img src='<?php echo $row['path']; ?>' width='210' />
+           <?php
+             if (!!$productUploads[$product["product_id"]]['productImage']) {
+           ?>
+           <img src='<?php echo $productUploads[$product["product_id"]]['productImage']; ?>' width='210' />
+           <?php
+             }
+           ?>
            <div class='description'>
-             <?php echo $row['product_text']; ?>
+             <?php echo $product['product_text']; ?>
            </div>
          </div>
          <div class='clear'></div>
@@ -97,6 +124,7 @@
 
   <?php
     }
+
   ?>
 </div>
 <div class='clear'></div>
