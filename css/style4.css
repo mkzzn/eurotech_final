@@ -15,7 +15,7 @@
 .lof-slidecontent  .navigator-content { position:absolute;
   background: none repeat scroll 0 0 #000000;
     border-radius: 5px 5px 5px 5px;
-    bottom: 10px;
+    bottom: 0;
     padding: 5px 15px;
     position: absolute;
     right: 10px;

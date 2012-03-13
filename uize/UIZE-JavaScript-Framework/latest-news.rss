@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rss xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0" version="2.0">
+	<channel>
+		<title>UIZE JavaScript Framework | Latest News</title>
+		<link>http://www.uize.com/latest-news.rss</link>
+		<description>UIZE JavaScript Framework (AJAX, RIA, widgets, JSON, OOP, Class Inheritance, XMLHttpRequest, DOM manipulation, and all that stuff)</description>
+		<language>en-us</language>
+		<copyright>© 1996-2008 UIZE</copyright>
+		<pubDate>Tue, 13 Mar 2012 06:02:28 UT</pubDate>
+		<ttl>10080</ttl>
+		<image>
+			<title>UIZE JavaScript Framework | Latest News</title>
+			<link>http://www.uize.com/latest-news.rss</link>
+			<url>http://www.uize.com/images/uize-50x50.gif</url>
+			<width>50</width>
+			<height>50</height>
+			<description>UIZE JavaScript Framework (AJAX, RIA, widgets, JSON, OOP, Class Inheritance, XMLHttpRequest, DOM manipulation, and all that stuff)</description>
+		</image>
+		<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" href="http://www.uize.com/latest-news.rss" type="application/rss+xml" />
+		<item>
+			<title>2012-02-19 - NEW MODULE: Uize.Data.Combinations</title>
+			<link>http://www.uize.com/news/2012-02-19-NEW-MODULE-Uize.Data.Combinations.html</link>
+			<guid>http://www.uize.com/news/2012-02-19-NEW-MODULE-Uize.Data.Combinations.html</guid>
+			<description>The new Uize.Data.Combinations module provides methods for generating object or array combinations from a combination specifier, with support for an optional combination transformer and combination matcher.</description>
+			<pubDate>Sun, 19 Feb 2012 08:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2012-02-19-NEW-MODULE-Uize.Data.Combinations.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2012-01-28 - New Uize.now Method</title>
+			<link>http://www.uize.com/news/2012-01-28-New-Uize.now-Method.html</link>
+			<guid>http://www.uize.com/news/2012-01-28-New-Uize.now-Method.html</guid>
+			<description>The new Uize.now static method, implemented in the Uize base module, returns the current time in milliseconds since 1970 (POSIX time).</description>
+			<pubDate>Sat, 28 Jan 2012 08:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2012-01-28-New-Uize.now-Method.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2012-01-22 - New Uize.mergeInto Method</title>
+			<link>http://www.uize.com/news/2012-01-22-New-Uize.mergeInto-Method.html</link>
+			<guid>http://www.uize.com/news/2012-01-22-New-Uize.mergeInto-Method.html</guid>
+			<description>The new Uize.mergeInto static method, implemented in the Uize base module, merges the contents of one or more source objects into the specified target object, and returns the target object as the result.</description>
+			<pubDate>Sun, 22 Jan 2012 08:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2012-01-22-New-Uize.mergeInto-Method.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2012-01-15 - New Uize.getClass Method</title>
+			<link>http://www.uize.com/news/2012-01-15-New-Uize.getClass-Method.html</link>
+			<guid>http://www.uize.com/news/2012-01-15-New-Uize.getClass-Method.html</guid>
+			<description>The new Uize.getClass static method, implemented in the Uize base module, gets the class of which a specified value is an instance, or returns the value if it is a class or function.</description>
+			<pubDate>Sun, 15 Jan 2012 08:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2012-01-15-New-Uize.getClass-Method.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2012-01-14 - New Uize.toNumber Method</title>
+			<link>http://www.uize.com/news/2012-01-14-New-Uize.toNumber-Method.html</link>
+			<guid>http://www.uize.com/news/2012-01-14-New-Uize.toNumber-Method.html</guid>
+			<description>The new Uize.toNumber static method, implemented in the Uize base module, lets you coerce a value to a number, with defaulting if it cannot be coerced successfully.</description>
+			<pubDate>Sat, 14 Jan 2012 08:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2012-01-14-New-Uize.toNumber-Method.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2012-01-12 - New Uize.isSameAs Method</title>
+			<link>http://www.uize.com/news/2012-01-12-New-Uize.isSameAs-Method.html</link>
+			<guid>http://www.uize.com/news/2012-01-12-New-Uize.isSameAs-Method.html</guid>
+			<description>The new Uize.isSameAs static method tests if two values are the same in a strict equality test, with support for NaN values.</description>
+			<pubDate>Thu, 12 Jan 2012 08:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2012-01-12-New-Uize.isSameAs-Method.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2012-01-11 - New Uize.isNaN Method</title>
+			<link>http://www.uize.com/news/2012-01-11-New-Uize.isNaN-Method.html</link>
+			<guid>http://www.uize.com/news/2012-01-11-New-Uize.isNaN-Method.html</guid>
+			<description>The new Uize.isNaN static method, implemented in the Uize base module, returns a boolean value, indicating whether or not the specified value is the JavaScript special value NaN.</description>
+			<pubDate>Wed, 11 Jan 2012 08:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2012-01-11-New-Uize.isNaN-Method.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2012-01-10 - Class Mechanism Moved Into Uize.Class</title>
+			<link>http://www.uize.com/news/2012-01-10-Class-Mechanism-Moved-Into-Uize.Class.html</link>
+			<guid>http://www.uize.com/news/2012-01-10-Class-Mechanism-Moved-Into-Uize.Class.html</guid>
+			<description>The class mechanism that was implemented in the Uize module has been moved out of that module and into the new Uize.Class module.</description>
+			<pubDate>Tue, 10 Jan 2012 08:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2012-01-10-Class-Mechanism-Moved-Into-Uize.Class.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2011-12-26 - New Uize.isList Static Method</title>
+			<link>http://www.uize.com/news/2011-12-26-New-Uize.isList-Static-Method.html</link>
+			<guid>http://www.uize.com/news/2011-12-26-New-Uize.isList-Static-Method.html</guid>
+			<description>The new Uize.isList static method returns a boolean, indicating whether or not the specified value is considered a list.</description>
+			<pubDate>Mon, 26 Dec 2011 08:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2011-12-26-New-Uize.isList-Static-Method.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2011-12-24 - Dummy Functions Added to Uize Base Module</title>
+			<link>http://www.uize.com/news/2011-12-24-Dummy-Functions-Added-to-Uize-Base-Module.html</link>
+			<guid>http://www.uize.com/news/2011-12-24-Dummy-Functions-Added-to-Uize-Base-Module.html</guid>
+			<description>A handful of dummy functions have been added to the Uize base module, that can be used in certain situations where you need to supply a dummy function as a handler, callback, or iterator function.</description>
+			<pubDate>Sat, 24 Dec 2011 08:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2011-12-24-Dummy-Functions-Added-to-Uize-Base-Module.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2011-12-22 - JavaScript new Operator Now Optional</title>
+			<link>http://www.uize.com/news/2011-12-22-JavaScript-new-Operator-Now-Optional.html</link>
+			<guid>http://www.uize.com/news/2011-12-22-JavaScript-new-Operator-Now-Optional.html</guid>
+			<description>The JavaScript new operator is now optional when creating instances of Uize subclasses, and you can make the new operator optional for your own object constructors using the newly added Uize.noNew static method.</description>
+			<pubDate>Thu, 22 Dec 2011 08:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2011-12-22-JavaScript-new-Operator-Now-Optional.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2011-12-03 - Improved Uize.lookup and Uize.reverseLookup</title>
+			<link>http://www.uize.com/news/2011-12-03-Improved-Uize.lookup-and-Uize.reverseLookup.html</link>
+			<guid>http://www.uize.com/news/2011-12-03-Improved-Uize.lookup-and-Uize.reverseLookup.html</guid>
+			<description>The Uize.lookup and Uize.reverseLookup static methods have been improved with the added ability to specify a target object for adding entries.</description>
+			<pubDate>Sat, 3 Dec 2011 08:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2011-12-03-Improved-Uize.lookup-and-Uize.reverseLookup.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2011-11-29 - Unit Tests for Uize.Data.NameValueRecords</title>
+			<link>http://www.uize.com/news/2011-11-29-Unit-Tests-For-Uize.Data.NameValueRecords.html</link>
+			<guid>http://www.uize.com/news/2011-11-29-Unit-Tests-For-Uize.Data.NameValueRecords.html</guid>
+			<description>Comprehensive unit tests have been created for the Uize.Data.NameValueRecords module.</description>
+			<pubDate>Tue, 29 Nov 2011 08:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2011-11-29-Unit-Tests-For-Uize.Data.NameValueRecords.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2011-11-27 - Uize Base Gets Uize.forEach and Uize.map</title>
+			<link>http://www.uize.com/news/2011-11-27-Uize-Base-Gets-Uize.forEach-and-Uize.map.html</link>
+			<guid>http://www.uize.com/news/2011-11-27-Uize-Base-Gets-Uize.forEach-and-Uize.map.html</guid>
+			<description>The Uize base module has been improved with the addition of the new Uize.forEach and Uize.map static methods.</description>
+			<pubDate>Sun, 27 Nov 2011 08:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2011-11-27-Uize-Base-Gets-Uize.forEach-and-Uize.map.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2011-11-13 - New Utility Belt Features</title>
+			<link>http://www.uize.com/news/2011-11-13-New-Utility-Belt-Features.html</link>
+			<guid>http://www.uize.com/news/2011-11-13-New-Utility-Belt-Features.html</guid>
+			<description>The Uize base module has been given a boost with the addition of a slew of convenient utility belt features.</description>
+			<pubDate>Sun, 13 Nov 2011 08:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2011-11-13-New-Utility-Belt-Features.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2011-10-30 - NEW MODULE: Uize.Array.Util</title>
+			<link>http://www.uize.com/news/2011-10-30-NEW-MODULE-Uize.Array.Util.html</link>
+			<guid>http://www.uize.com/news/2011-10-30-NEW-MODULE-Uize.Array.Util.html</guid>
+			<description>The new Uize.Array.Util module provides a home for miscellaneous array utility methods that are not yet deemed ready for promototion to the Uize.Array or Uize modules.</description>
+			<pubDate>Sun, 30 Oct 2011 07:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2011-10-30-NEW-MODULE-Uize.Array.Util.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2011-10-18 - Deprecated Features of Uize.Template Killed</title>
+			<link>http://www.uize.com/news/2011-10-18-Deprecated-Features-of-Uize.Template-Killed.html</link>
+			<guid>http://www.uize.com/news/2011-10-18-Deprecated-Features-of-Uize.Template-Killed.html</guid>
+			<description>The Uize.Template.encoders and Uize.Template.decoders static properties of the Uize.Template module, that were deprecated back in April of 2010, have finally been killed.</description>
+			<pubDate>Tue, 18 Oct 2011 07:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2011-10-18-Deprecated-Features-of-Uize.Template-Killed.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2011-10-11 - Various Broken Examples Fixed</title>
+			<link>http://www.uize.com/news/2011-10-11-Various-Broken-Examples-Fixed.html</link>
+			<guid>http://www.uize.com/news/2011-10-11-Various-Broken-Examples-Fixed.html</guid>
+			<description>Various JavaScript examples on the uize.com Web site that had become victims to bit rot have been restored to their former glory.</description>
+			<pubDate>Tue, 11 Oct 2011 07:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2011-10-11-Various-Broken-Examples-Fixed.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2011-09-22 - Buttons With Incorrect Styling in IE9 Fixed</title>
+			<link>http://www.uize.com/news/2011-09-22-Buttons-With-Incorrect-Styling-in-IE9-Fixed.html</link>
+			<guid>http://www.uize.com/news/2011-09-22-Buttons-With-Incorrect-Styling-in-IE9-Fixed.html</guid>
+			<description>An issue that was causing button widgets to not have the correct mouse cursor when mousing over them in IE9 has been fixed.</description>
+			<pubDate>Thu, 22 Sep 2011 07:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2011-09-22-Buttons-With-Incorrect-Styling-in-IE9-Fixed.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2011-09-21 - Broken Drag-and-drop in IE9 Fixed</title>
+			<link>http://www.uize.com/news/2011-09-21-Broken-Drag-and-drop-in-IE9-Fixed.html</link>
+			<guid>http://www.uize.com/news/2011-09-21-Broken-Drag-and-drop-in-IE9-Fixed.html</guid>
+			<description>An issue that was breaking the drag-and-drop functionality of the Uize.Widget.Drag class in IE9 has been fixed.</description>
+			<pubDate>Wed, 21 Sep 2011 07:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2011-09-21-Broken-Drag-and-drop-in-IE9-Fixed.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2011-09-20 - Broken Pages in IE9 Fixed</title>
+			<link>http://www.uize.com/news/2011-09-20-Broken-Pages-in-IE9-Fixed.html</link>
+			<guid>http://www.uize.com/news/2011-09-20-Broken-Pages-in-IE9-Fixed.html</guid>
+			<description>An issue that was breaking pages of the uize.com Web site in IE9 has been fixed.</description>
+			<pubDate>Tue, 20 Sep 2011 07:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2011-09-20-Broken-Pages-in-IE9-Fixed.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2011-09-19 - Cloning of Regular Expressions in Safari Fixed</title>
+			<link>http://www.uize.com/news/2011-09-19-Cloning-of-Regular-Expressions-in-Safari-Fixed.html</link>
+			<guid>http://www.uize.com/news/2011-09-19-Cloning-of-Regular-Expressions-in-Safari-Fixed.html</guid>
+			<description>A minor issue that was discovered in Safari with the Uize.clone method when cloning regular expressions (ie. instances of the RegExp object) has been fixed.</description>
+			<pubDate>Mon, 19 Sep 2011 07:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2011-09-19-Cloning-of-Regular-Expressions-in-Safari-Fixed.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2011-09-18 - Fixed Running of Unit Tests in Browser</title>
+			<link>http://www.uize.com/news/2011-09-18-Fixed-Running-of-Unit-Tests-in-Browser.html</link>
+			<guid>http://www.uize.com/news/2011-09-18-Fixed-Running-of-Unit-Tests-in-Browser.html</guid>
+			<description>A problem that was causing the UIZE Unit Tests page to fail to run the test suite for UIZE has been fixed.</description>
+			<pubDate>Sun, 18 Sep 2011 07:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2011-09-18-Fixed-Running-of-Unit-Tests-in-Browser.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2011-09-17 - Ad Hoc Property Registration Fixed</title>
+			<link>http://www.uize.com/news/2011-09-17-Ad-Hoc-Property-Registration-Fixed.html</link>
+			<guid>http://www.uize.com/news/2011-09-17-Ad-Hoc-Property-Registration-Fixed.html</guid>
+			<description>A problem that was discovered with the set-get properties mechanism and its support for ad hoc registration of properties has been fixed.</description>
+			<pubDate>Sat, 17 Sep 2011 07:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2011-09-17-Ad-Hoc-Property-Registration-Fixed.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2011-08-30 - Workaround for JScript For In Issue</title>
+			<link>http://www.uize.com/news/2011-08-30-Workaround-for-JScript-For-In-Issue.html</link>
+			<guid>http://www.uize.com/news/2011-08-30-Workaround-for-JScript-For-In-Issue.html</guid>
+			<description>An issue was discovered with the way that Microsoft&amp;apos;s JScript interpreter, which is used in Internet Explorer and Windows Script Host, iterates through arrays in for...in loops.</description>
+			<pubDate>Tue, 30 Aug 2011 07:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2011-08-30-Workaround-for-JScript-For-In-Issue.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2011-07-26 - Thorough Set-get Properties Unit Tests</title>
+			<link>http://www.uize.com/news/2011-07-26-Thorough-Set-get-Properties-Unit-Tests.html</link>
+			<guid>http://www.uize.com/news/2011-07-26-Thorough-Set-get-Properties-Unit-Tests.html</guid>
+			<description>Thorough unit tests have been created for the set-get properties feature implemented in the Uize base class.</description>
+			<pubDate>Tue, 26 Jul 2011 07:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2011-07-26-Thorough-Set-get-Properties-Unit-Tests.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2011-07-03 - Improved set Method in the Uize Base Class</title>
+			<link>http://www.uize.com/news/2011-07-03-Improved-set-Method-in-the-Uize-Base-Class.html</link>
+			<guid>http://www.uize.com/news/2011-07-03-Improved-set-Method-in-the-Uize-Base-Class.html</guid>
+			<description>The Uize.set static method and the set instance method, implemented in the Uize base class, have been improved to support an arbitrary number of arguments, allowing the values for multiple set-get properties to be specified as name-value pair arguments.</description>
+			<pubDate>Sun, 3 Jul 2011 07:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2011-07-03-Improved-set-Method-in-the-Uize-Base-Class.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2011-05-31 - More Uize Base Class Unit Tests</title>
+			<link>http://www.uize.com/news/2011-05-31-More-Uize-Base-Class-Unit-Tests.html</link>
+			<guid>http://www.uize.com/news/2011-05-31-More-Uize-Base-Class-Unit-Tests.html</guid>
+			<description>To help ensure the robustness and stability of the UIZE JavaScript Framework over time, more unit tests have been created for the Uize base class.</description>
+			<pubDate>Tue, 31 May 2011 07:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2011-05-31-More-Uize-Base-Class-Unit-Tests.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2011-05-22 - Improved Uize.pairUp Method</title>
+			<link>http://www.uize.com/news/2011-05-22-Improved-Uize.pairUp-Method.html</link>
+			<guid>http://www.uize.com/news/2011-05-22-Improved-Uize.pairUp-Method.html</guid>
+			<description>The Uize.pairUp method, implemented in the Uize base class, has been improved with support for two new variations.</description>
+			<pubDate>Sun, 22 May 2011 07:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2011-05-22-Improved-Uize.pairUp-Method.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2011-05-21 - JSON Serialization Improvements</title>
+			<link>http://www.uize.com/news/2011-05-21-JSON-Serialization-Improvements.html</link>
+			<guid>http://www.uize.com/news/2011-05-21-JSON-Serialization-Improvements.html</guid>
+			<description>The Uize.Json module has been improved with the addition of two convenient presets for serializing JavaScript objects to strict JSON format, according to the specification at json.org.</description>
+			<pubDate>Sat, 21 May 2011 07:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2011-05-21-JSON-Serialization-Improvements.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2011-05-11 - Improved Declarative Widget Properties</title>
+			<link>http://www.uize.com/news/2011-05-11-Improved-Declarative-Widget-Properties.html</link>
+			<guid>http://www.uize.com/news/2011-05-11-Improved-Declarative-Widget-Properties.html</guid>
+			<description>The declarative syntax for widget properties has been improved to cover more cases.</description>
+			<pubDate>Wed, 11 May 2011 07:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2011-05-11-Improved-Declarative-Widget-Properties.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2011-05-05 - SimpleDoc Now Supports Section Title Aliases</title>
+			<link>http://www.uize.com/news/2011-05-05-SimpleDoc-Now-Supports-Section-Title-Aliases.html</link>
+			<guid>http://www.uize.com/news/2011-05-05-SimpleDoc-Now-Supports-Section-Title-Aliases.html</guid>
+			<description>The SimpleDoc format, a  Wikitext like document format for easily writing structured documents, has added support for section title aliases.</description>
+			<pubDate>Thu, 5 May 2011 07:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2011-05-05-SimpleDoc-Now-Supports-Section-Title-Aliases.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2011-04-12 - NEW METHOD: Uize.String.split</title>
+			<link>http://www.uize.com/news/2011-04-12-NEW-METHOD-Uize.String.split.html</link>
+			<guid>http://www.uize.com/news/2011-04-12-NEW-METHOD-Uize.String.split.html</guid>
+			<description>The new Uize.String.split method, implemented in the Uize.String module, splits a string into an array of elements using the specified splitter string or regular expression, in strict accordance with the ECMA-262 language&amp;apos;s specified behavior for the String object&amp;apos;s split instance method.</description>
+			<pubDate>Tue, 12 Apr 2011 07:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2011-04-12-NEW-METHOD-Uize.String.split.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2011-04-03 - NEW MODULE: Uize.Color.xCmyk</title>
+			<link>http://www.uize.com/news/2011-04-03-NEW-MODULE-Uize.Color.xCmyk.html</link>
+			<guid>http://www.uize.com/news/2011-04-03-NEW-MODULE-Uize.Color.xCmyk.html</guid>
+			<description>The new Uize.Color.xCmyk module extends the Uize.Color object by adding a profile for the CMYK color space, and by providing encodings for this color space.</description>
+			<pubDate>Sun, 3 Apr 2011 07:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2011-04-03-NEW-MODULE-Uize.Color.xCmyk.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2011-03-29 - Uize on GitHub</title>
+			<link>http://www.uize.com/news/2011-03-29-Uize-on-GitHub.html</link>
+			<guid>http://www.uize.com/news/2011-03-29-Uize-on-GitHub.html</guid>
+			<description>The UIZE JavaScript Framework is now available on GitHub, so anybody can now fork the project to their heart&amp;apos;s content.</description>
+			<pubDate>Tue, 29 Mar 2011 07:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2011-03-29-Uize-on-GitHub.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2011-03-24 - NEW EXAMPLE - Color Format Converter</title>
+			<link>http://www.uize.com/news/2011-03-24-NEW-EXAMPLE-Color-Format-Converter.html</link>
+			<guid>http://www.uize.com/news/2011-03-24-NEW-EXAMPLE-Color-Format-Converter.html</guid>
+			<description>The new Color Format Converter Tool lets you easily convert color values from one format to another.</description>
+			<pubDate>Thu, 24 Mar 2011 07:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2011-03-24-NEW-EXAMPLE-Color-Format-Converter.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2011-03-23 - NEW MODULE: Uize.Util.PropertyAdapter</title>
+			<link>http://www.uize.com/news/2011-03-23-NEW-MODULE-Uize.Util.PropertyAdapter.html</link>
+			<guid>http://www.uize.com/news/2011-03-23-NEW-MODULE-Uize.Util.PropertyAdapter.html</guid>
+			<description>The new Uize.Util.PropertyAdapter module implements a mechanism for connecting two set-get properties together, with optional bi-directional value adapter code.</description>
+			<pubDate>Wed, 23 Mar 2011 07:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2011-03-23-NEW-MODULE-Uize.Util.PropertyAdapter.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2011-03-11 - Bug Fix For toString and valueOf Intrinsic Methods</title>
+			<link>http://www.uize.com/news/2011-03-11-Bug-Fix-For-toString-and-valueOf-Intrinsic-Methods.html</link>
+			<guid>http://www.uize.com/news/2011-03-11-Bug-Fix-For-toString-and-valueOf-Intrinsic-Methods.html</guid>
+			<description>An Internet Explorer specific problem with the toString intrinsic method and the valueOf intrinsic method, that are specially implemented for Uize subclasses, has been fixed.</description>
+			<pubDate>Fri, 11 Mar 2011 08:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2011-03-11-Bug-Fix-For-toString-and-valueOf-Intrinsic-Methods.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2011-03-10 - Improved Process for Announcing News</title>
+			<link>http://www.uize.com/news/2011-03-10-Improved-Process-for-Announcing-News.html</link>
+			<guid>http://www.uize.com/news/2011-03-10-Improved-Process-for-Announcing-News.html</guid>
+			<description>For developers of the UIZE JavaScript Framework, the process for adding news announcements has been improved and simplified, so that all that is required is to create a .simple file for a news item, and then the build process for the site will do the rest.</description>
+			<pubDate>Thu, 10 Mar 2011 08:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2011-03-10-Improved-Process-for-Announcing-News.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2011-03-05 - Deprecated Features of Uize.Widget.Tree Killed</title>
+			<link>http://www.uize.com/news/2011-03-05-Deprecated-Features-of-Uize.Widget.Tree-Killed.html</link>
+			<guid>http://www.uize.com/news/2011-03-05-Deprecated-Features-of-Uize.Widget.Tree-Killed.html</guid>
+			<description>A number of instance and static methods of the Uize.Widget.Tree module that were deprecated a year ago have finally been killed.</description>
+			<pubDate>Sat, 5 Mar 2011 08:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2011-03-05-Deprecated-Features-of-Uize.Widget.Tree-Killed.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2011-02-21 - Unit Test Improvements</title>
+			<link>http://www.uize.com/news/2011-02-21-Unit-Test-Improvements.html</link>
+			<guid>http://www.uize.com/news/2011-02-21-Unit-Test-Improvements.html</guid>
+			<description>Unit tests for the UIZE JavaScript Framework have been improved in a number of ways, as outlined below...</description>
+			<pubDate>Mon, 21 Feb 2011 08:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2011-02-21-Unit-Test-Improvements.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2011-02-11 - New ajax Method in Uize.Widget</title>
+			<link>http://www.uize.com/news/2011-02-11-New-ajax-Method-in-Uize.Widget.html</link>
+			<guid>http://www.uize.com/news/2011-02-11-New-ajax-Method-in-Uize.Widget.html</guid>
+			<description>The Uize.Widget module has been improved with the addition of the new ajax instance method.</description>
+			<pubDate>Fri, 11 Feb 2011 08:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2011-02-11-New-ajax-Method-in-Uize.Widget.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2011-01-31 - Major Improvements to Module References</title>
+			<link>http://www.uize.com/news/2011-01-31-Major-Improvements-to-Module-References.html</link>
+			<guid>http://www.uize.com/news/2011-01-31-Major-Improvements-to-Module-References.html</guid>
+			<description>Reference documentation for modules of the UIZE JavaScript Framework has been substantially improved, with the addition of automatically generated documentation for features of modules for which no documentation has explicitly been written.</description>
+			<pubDate>Mon, 31 Jan 2011 08:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2011-01-31-Major-Improvements-to-Module-References.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2011-01-22 - FRAMEWORK CHANGE: Non-inheritable Statics</title>
+			<link>http://www.uize.com/news/2011-01-22-FRAMEWORK-CHANGE-Non-inheritable-Statics.html</link>
+			<guid>http://www.uize.com/news/2011-01-22-FRAMEWORK-CHANGE-Non-inheritable-Statics.html</guid>
+			<description>A number of static methods that are implemented in the Uize base class, and that have (up until now) been inherited by all subclasses of Uize, are now no longer inheritable.</description>
+			<pubDate>Sat, 22 Jan 2011 08:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2011-01-22-FRAMEWORK-CHANGE-Non-inheritable-Statics.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2011-01-01 - Documentation System Improvements</title>
+			<link>http://www.uize.com/news/2011-01-01-Documentation-System-Improvements.html</link>
+			<guid>http://www.uize.com/news/2011-01-01-Documentation-System-Improvements.html</guid>
+			<description>The JavaScript Documentation System, that is used to produce all the documentation for the UIZE JavaScript Framework, has been improved in a number of ways.</description>
+			<pubDate>Sat, 1 Jan 2011 08:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2011-01-01-Documentation-System-Improvements.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2010-12-19 - Various Deprecated Features Killed</title>
+			<link>http://www.uize.com/news/2010-12-19-Various-Deprecated-Features-Killed.html</link>
+			<guid>http://www.uize.com/news/2010-12-19-Various-Deprecated-Features-Killed.html</guid>
+			<description>A variety of features in various modules, that were deprecated over a year ago, have finally been killed.</description>
+			<pubDate>Sun, 19 Dec 2010 08:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2010-12-19-Various-Deprecated-Features-Killed.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2010-12-18 - Introducing the DELVE Tool</title>
+			<link>http://www.uize.com/news/2010-12-18-Introducing-the-DELVE-Tool.html</link>
+			<guid>http://www.uize.com/news/2010-12-18-Introducing-the-DELVE-Tool.html</guid>
+			<description>The UIZE project is excited to announce the release of DELVE, a powerful new Web based tool that lets developers delve into the inner workings of pages that use the UIZE JavaScript Framework.</description>
+			<pubDate>Sat, 18 Dec 2010 08:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2010-12-18-Introducing-the-DELVE-Tool.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2010-11-19 - NEW METHOD: Uize.isFunction</title>
+			<link>http://www.uize.com/news/2010-11-19-NEW-METHOD-Uize.isFunction.html</link>
+			<guid>http://www.uize.com/news/2010-11-19-NEW-METHOD-Uize.isFunction.html</guid>
+			<description>The new Uize.isFunction static method of the Uize base class returns a boolean, indicating whether or not the specified value is a function.</description>
+			<pubDate>Fri, 19 Nov 2010 08:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2010-11-19-NEW-METHOD-Uize.isFunction.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2010-11-04 - NEW EXPLAINER: JavaScript Bookmarklets</title>
+			<link>http://www.uize.com/news/2010-11-04-NEW-EXPLAINER-JavaScript-Bookmarklets.html</link>
+			<guid>http://www.uize.com/news/2010-11-04-NEW-EXPLAINER-JavaScript-Bookmarklets.html</guid>
+			<description>The new JavaScript Bookmarklets explainer provides some useful bookmarklets that should come in handy when doing development using the UIZE JavaScript Framework.</description>
+			<pubDate>Thu, 4 Nov 2010 07:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2010-11-04-NEW-EXPLAINER-JavaScript-Bookmarklets.html</feedburner:origLink>
+		</item>
+		<item>
+			<title>2010-11-03 - NEW METHOD: Uize.getModuleByName</title>
+			<link>http://www.uize.com/news/2010-11-03-NEW-METHOD-Uize.getModuleByName.html</link>
+			<guid>http://www.uize.com/news/2010-11-03-NEW-METHOD-Uize.getModuleByName.html</guid>
+			<description>The Uize base class has been improved with the addition of the new Uize.getModuleByName static method.</description>
+			<pubDate>Wed, 3 Nov 2010 07:00:00 UT</pubDate>
+			<feedburner:origLink>http://www.uize.com/news/2010-11-03-NEW-METHOD-Uize.getModuleByName.html</feedburner:origLink>
+		</item>
+	</channel>
+</rss>

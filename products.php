@@ -40,7 +40,7 @@
                             duration		: 1200,
                             auto		 	: false,
                             maxItemDisplay  : 3,
-                            startItem:1,
+                            startItem:0,
                             navPosition     : 'horizontal', // horizontal
                             navigatorHeight : null,
                             navigatorWidth  : null,
@@ -166,7 +166,6 @@
  		   <!-- END MAIN CONTENT --> 
            <!-- NAVIGATOR -->
            	<div class="navigator-content">
-                  <div class="button-control"><span></span></div>	
                   <div class="navigator-wrapper">
                         <ul class="navigator-wrap-inner">
                            <li><span>1</span></li>
@@ -181,11 +180,6 @@
                   </div>
              </div> 
           <!----------------- END OF NAVIGATOR --------------------->
-<div class='clear'></div>
- </div> 
-<div class='clear'></div>
-</div>
-<div class='clear'></div>
 
       </div>
 
