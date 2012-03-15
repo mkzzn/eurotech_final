@@ -122,7 +122,7 @@
          <div class='model'>Model# <?php echo $product['product_name']; ?></div>
          </div>
          <div class='links'>
-           <a class='view' href='some_link.html'>360&deg View</a>
+           <a class='view' href='view_product.php?id=<?php echo $product["id"]; ?>'>360&deg View</a>
            <a href='screenshot.html'>Screenshot</a>
            <?php 
               if ($productUploads[$product["product_id"]]['productSpecSheet']) {
@@ -182,43 +182,9 @@
           <!----------------- END OF NAVIGATOR --------------------->
 
       </div>
+ 
+      <?php include 'app/views/_footer.php'; ?>
 
-      <div id="footer">
-        <div class="footer-links pages">
-          
-            <a href="./" >
-              Home
-            </a>
-          
-            <a href="products.html" class="active" >
-              Products
-            </a>
-          
-            <a href="news.html" >
-              News
-            </a>
-          
-            <a href="software.html" >
-              Software
-            </a>
-          
-            <a href="downloads.html" >
-              Downloads
-            </a>
-          
-            <a href="contact.html" >
-              Contact
-            </a>
-          
-        </div>
-
-        <div class="footer-links links">
-          <a href="terms.html">Terms and Conditions</a>
-          <a href="rental_agreement.html">Reticle Rental Agreement</a>
-        </div>
-
-        <div class="clear"></div>
-      </div>
       <div class="clear"></div>
 	  </div>
   </body>
