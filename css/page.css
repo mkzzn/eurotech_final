@@ -1,10 +1,5 @@
 /*** General ***/
 	/*** Common Properties ***/
-		body {
-			background:#728088;
-			margin:48px 0 0 0;
-			_margin-top:0; /* hack for IE6, because the title isn't fixed positioned for this browser */
-		}
 		.main {
 			width:780px;
 			min-height:490px;
@@ -19,32 +14,6 @@
 			font-family:Arial, Helvetica, Verdana;
 			font-size:13px;
 		}
-		ul li {
-			list-style-type:disc;
-		}
-		/*** links ***/
-			a, a:link, a:visited, a:hover, a:active {
-				text-decoration:none;
-				outline:none;
-				color:#830;
-				border-bottom:1px dotted #aaa;
-			}
-			a:hover, a:active {
-				color:#f00;
-			}
-			a:hover {
-				border-bottom:1px dotted #f00;
-			}
-			a:active {
-				border-bottom:1px solid #f00;
-			}
-			/*** special decoration for external site links ***/
-				a.externalSiteLink {
-					padding-right:13px;
-					margin-left:1px;
-					margin-right:2px;
-					background:url(../images/external-link.png) right top no-repeat;
-				}
 
 	/*** plain old links styled like buttons, and button widget ***/
 		a.buttonLink, a.buttonLink:link, a.buttonLink:visited,
@@ -222,35 +191,6 @@
 			border-radius:10px;
 			-moz-border-radius:10px;
 			-webkit-border-radius:10px;
-		}
-
-	/*** footer ***/
-		.footer {
-			position:relative;
-			text-align:center;
-			padding-bottom:10px;
-			background:#becacd url(../images/page-contents-bg.gif) repeat-x left top;
-			border-bottom:5px solid #ddd;
-		}
-		.footer * {
-			font-size:11px;
-		}
-		.footer a {
-			border:none;
-		}
-		.footer .legalese {
-			font-size:13px;
-			margin-bottom:5px;
-			padding:5px 0;
-			border-top:1px solid #fff;
-			border-bottom:1px solid #999;
-			background:#b7babf url(../images/title-bg-brushed-metal.jpg) repeat left top;
-			text-shadow:0 -1px 1px #fff, 0 1px 1px #fff;
-		}
-		.footer span.label {
-			font-size:10px;
-			padding-right:5px;
-			text-transform:uppercase;
 		}
 
 /*** tree menu ***/

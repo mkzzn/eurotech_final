@@ -25,8 +25,8 @@
     <title>PG 1000 Cutting Tool Inspection System by Euro-Tech | View Product</title>
     
     <link rel="stylesheet" type="text/css" media="all" href="css/primary.css" />
+
 	  <link rel="stylesheet" href="css/page.css"/>
-	  <link rel="stylesheet" href="css/page.example.css"/>
 
     <link href='http://fonts.googleapis.com/css?family=Droid+Sans|Cabin|Ubuntu|Cantarell|Open+Sans|Nobile|Telex' rel='stylesheet' type='text/css'>
 
@@ -64,22 +64,21 @@
 
       <?php include "app/views/_nav.php"; ?>
 
+<?php
+   $result = mysql_query("select * from products where id = {$_GET['id']}") or die('Query failed. ' . mysql_error());
+   $row = mysql_fetch_assoc($result);
+?>
+
+
       <div id="content">
-        <h1>What's New?</h1>
+        <h1>EuroTech <?php echo $row["product_name"]; ?></h1>
+        <br /><br />
 
 	<div id="page_rotationViewer" class="rotationViewer insetBorderColor"></div>
 
 	<div style="text-align:center;">
 		<a href="javascript://" class="linkedJs buttonLink" title="spin (360,2700,Uize.Curve.easeInOutPow (4))">360 clockwise</a><a href="javascript://" class="linkedJs buttonLink" title="spin (-360,2700,Uize.Curve.easeInOutPow (4))">360 counter-clockwise</a><a href="javascript://" class="linkedJs buttonLink" title="spin (1080,4000,Uize.Curve.easeInOutPow (4))">3 spins</a><a href="javascript://" class="linkedJs buttonLink" title="spin (360,2700,Uize.Curve.Rubber.easeOutBounce (5,-2,1.5))">spin with bounce</a><a href="javascript://" class="linkedJs buttonLink" title="spin (360,4000,Uize.Curve.Mod.bend (Uize.Curve.Rubber.easeOutElastic (.1),3))">spin with elasticity</a>
 	</div>
-
-<?php
-   $result = mysql_query("select * from products where id = {$_GET['id']}") or die('Query failed. ' . mysql_error());
-   $row = mysql_fetch_assoc($result);
-?>
-      <p>
-        <?php echo $row["product_name"]; ?>
-      </p>
 
       </div>
 
