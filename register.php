@@ -114,7 +114,6 @@ if (count($errors) == 0) {
       <?php include 'app/views/_nav.php'; ?>
 
       <div id="content">
-        <h1>Downloads</h1>
 
 <?php
 // include forms
