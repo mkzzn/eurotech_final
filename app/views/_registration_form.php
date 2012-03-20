@@ -16,6 +16,7 @@
     }
 ?>
   </ul>
+  <div class="clear"></div>
 <?php
   }
 

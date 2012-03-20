@@ -118,6 +118,32 @@ body {
   padding-right: 24px;
   height: 360px; }
 
+#warning, #errors {
+  background: #8F0007;
+  font-family: sans;
+  list-style-type: none;
+  color: white;
+  font-family: sans;
+  padding: 8px 24px;
+  margin: 24px 0 0 0;
+  float: left;
+}
+
+#errors li {
+  padding: 4px 0;
+}
+
+#notice {
+  background: #257B0D;
+  color: white;
+  padding: 20px;
+  float: left;
+  font-family: sans;
+  padding: 8px 24px;
+  margin: 24px 0 0 0;
+  float: left;
+}
+
 #header {
   padding: 20px 0;
   margin: 0;
