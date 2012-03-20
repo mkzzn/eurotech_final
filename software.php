@@ -78,7 +78,7 @@
 
       </div>
 
-      <?php include 'app/views/_footer.php'; >?
+      <?php include 'app/views/_footer.php'; ?>
 
       <div class="clear"></div>
 	  </div>
