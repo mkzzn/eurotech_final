@@ -20,7 +20,16 @@
 <?php
   }
 
-if (count($errors) > 0) {
+if (count($errors) ==  0  && count($_POST) == 0) {
+?>
+
+  <div id="notice">You've successfully registered!  Enter your username and password below to log in.</div>
+
+<?php  
+    include '_login_form.php';
+
+  } else {
+
 ?>
 
 <div id='register'>
@@ -61,13 +70,4 @@ if (count($errors) > 0) {
   </form>
 </div>
 
-<?php
-  } else {
-?>
-
-  <div id="notice">You've successfully registered!  Enter your username and password below to log in.</div>
-
-<?php  
-    include '_login_form.php';
-  }
 ?>

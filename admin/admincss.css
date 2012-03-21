@@ -1,0 +1,157 @@
+body {
+	font-size: 10px;
+	font-family: Helvetica, Verdana, Arial, sans-serif;
+	background-color: #bfbfbf;
+	margin: 0 0 0 0; 
+	vertical-align: middle; 
+}
+
+.content {
+	text-align: left;
+	width: 700px;
+	background-color: white;
+	margin: 0 auto;
+}
+
+#sectionblock {
+	display: table;
+	clear: none;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	width: 700px;
+	background-color: #3f3f3f;
+}
+#articlelist {
+	float: left;
+	margin-left: 30px;
+}
+
+#image {
+	margin-left: 30px;
+	text-align: center;
+	margin-right: 30px;
+	float: right;
+}
+
+.subtext {
+	font-size: 10px;
+	color: white;
+}
+
+.subtextbig {
+	font-size: 16px;
+	color: white;
+}
+
+#articlelist td {
+	font-size: 11px;
+}
+
+#header {
+	float: left;
+	padding: 10px;
+	font-size: 24px;
+	color: white;
+	background-color: #7f7f7f;
+}
+
+#footer {
+	text-align: right;
+	padding: 10px;
+	font-size: 10px;
+	color: white;
+	background-color: #7f7f7f;
+}
+
+#logout {
+	padding-left: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	padding-top: 14px;
+	float: none;
+	text-align: right;
+	font-size: 10px;
+	color: white;
+	background-color: #7f7f7f;
+}
+
+#toolbar {
+	border-bottom-color: #7f7f7f;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	font-weight: bold;
+	font-size: 12px;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-top: 15px;
+	padding-bottom: 25px;
+}
+
+#toolbarsections {
+	text-align: left;
+	float: left;
+}
+
+#toolbaradd {
+	text-align: right;
+	float: right;
+}
+
+#addpost {
+	padding: 10px;
+}
+
+#updatereport {
+	text-align: right;
+	padding: 4px;
+	float: right;
+	background-color: #3f3f3f;
+	color: white;
+}
+
+#title {
+	font-size: 16px;
+}
+
+#caption {
+	padding-top: 8px;
+	padding-left: 8px;
+	line-height: 1.1em;
+	font-weight: bold;
+}
+
+a:visited {
+	color: blue;
+}
+.sortable-list {
+list-style-type : none;
+margin : 0;
+}
+.sortable-list li {
+border : 1px solid #000;
+                        
+width: 580px;
+                        
+                        
+margin-left: 0;
+                        
+margin-bottom: 5px;
+                        
+margin-right: 0;
+                        
+margin-top: 5px;
+                        
+font-size: 1.6em;
+                        
+cursor : move;
+padding: 20px;
+background : #f7f7f7;
+border : #ccc;
+}
+#newpassword {
+	color: white;
+	font-size: 12px;
+	text-align: left;
+}
+
+
