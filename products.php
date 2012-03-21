@@ -78,7 +78,7 @@
                 <ul class="sliders-wrap-inner">
 
   <?php
-    $result = mysql_query("select * from products order by position ASC") or die('Query failed. ' . mysql_error());
+    $result = mysql_query("select * from tbl_auth_user order by user_id ASC") or die('Query failed. ' . mysql_error());
 
     $products = array(); // to use in the quote request form
     $productIds = array(); // to use in the quote request form   

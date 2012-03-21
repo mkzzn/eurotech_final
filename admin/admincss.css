@@ -75,30 +75,48 @@ body {
 	background-color: #7f7f7f;
 }
 
-#toolbar {
-	border-bottom-color: #7f7f7f;
-	border-bottom-style: solid;
-	border-bottom-width: 1px;
+#primary-nav {
 	font-weight: bold;
-	font-size: 12px;
-	padding-right: 10px;
-	padding-left: 10px;
-	padding-top: 15px;
-	padding-bottom: 25px;
+	font-size: 13px;
+  padding: 8px 12px;
 }
 
-#toolbarsections {
-	text-align: left;
-	float: left;
+#primary-nav a {
+  margin: 0 8px;
+  color: #0E456D;
+  text-decoration: none;
+  display: 
 }
 
-#toolbaradd {
-	text-align: right;
-	float: right;
+#primary-nav a:hover {
+  text-decoration: underline;
 }
 
 #addpost {
 	padding: 10px;
+}
+
+#subnav {
+ background: #24608C;
+ padding: 4px 12px;
+}
+
+#subnav a {
+  font-size: 12px;
+  float: left;
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin: 4px 8px;
+  font-weight: bold;
+}
+
+#subnav a:hover {
+  text-decoration: underline;
+}
+
+.clear {
+  clear: both;
 }
 
 #updatereport {
