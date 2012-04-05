@@ -13,5 +13,5 @@
   <a href="cms-admin-pdfs.php">Users List / Reticle</a>
   <a href="cms-admin-downloads.php">Downloads</a>
   <a href="cms-admin-privatedownloads.php">Private Downloads</a>
-  <a href="users.php">Users</a>
+  <a href="users/index.php">Users</a>
 </div>
