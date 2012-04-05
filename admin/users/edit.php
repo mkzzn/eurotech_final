@@ -1,16 +1,5 @@
 <?php
-  // like i said, we must never forget to start the session
-  session_start();
-
-  // is the one accessing this page logged in or not?
-  if (!isset($_SESSION['db_is_logged_in']) || $_SESSION['db_is_logged_in'] !== true) {
-    // not logged in, move to login page
-    header('Location: login.php');
-    exit;
-  }
-  include '../library/config.php';
-  include '../library/opendb.php';
-
+  include '../session.php';
 ?>
 <html>
   <head>
@@ -31,6 +20,7 @@
       ?>
 
       <form action="update.php" method="POST">
+        <input type="hidden" name="user_id" value="<?php echo $_GET['id']; ?>" />
         <div id="users">
           <?php
             $result = mysql_query("select * from tbl_auth_user where user_id='" . $_GET['id']."'") or die('Query failed. ' . mysql_error());
@@ -40,22 +30,60 @@
             }
             
             $user = $users[0];
-          ?>
 
+            $checkbox_fields = array( 
+              "Admin?"      => "isAdmin",
+              "File Admin?" => "isFileAdmin",
+              "Private Download?" => "private_download"
+            );
+
+            $text_fields = array(
+              "Company"     => "company",
+              "Customer Name"     => "custname",
+              "address1"    => "address1",
+              "Address 2"   => "address2",
+              "City"        => "city",
+              "State"       => "state",
+              "Zip"         => "zipcode",
+              "Phone"       => "phone",
+              "Fax"         => "fax"
+            );
+
+            $all_fields = array_merge($text_fields, $checkbox_fields);
+
+            foreach($all_fields as $label => $field): 
+              $$field = isset($_POST[$field]) ? $_POST[$field] : $user[$field];
+            endforeach;
+          ?>
 
           <h1 class="page-title">Edit User "<?php echo $user["user_id"]; ?>"</h1>
 
-          <div class="user <?php echo $oddeven; ?>">
-            <div class="name"><a href="edit.php?id=<?php echo $user_id; ?>">
-              <?php echo $user_id; ?>
+          <?php
+            foreach($text_fields as $label => $field):
+          ?>
+            <div class="input_pair">
+              <label><?php echo $label; ?></label>
+              <input type="text" name="<?php echo $$field; ?>" value="<?php echo $$field; ?>" />
             </div>
-          </div>
+          <?php
+            endforeach;
+
+            foreach($checkbox_fields as $label => $field):
+          ?>
+            <div class="input_pair">
+              <label><?php echo $label; ?></label>
+              <input type="checkbox" <?php echo $$field ? "checked='checked'" : ""; ?> />
+            </div>
+          <?php
+            endforeach;
+          ?>
 
           <?php
             include '../library/closedb.php';
           ?>
 
         </div>
+        <input type="submit" />
       </form>
 
       <div id="footer">
