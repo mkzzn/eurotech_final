@@ -4,6 +4,7 @@
    include 'db/config.php';
    include 'db/open_db.php';
    $active_page = "products";
+   $tableName = "tbl_auth_user";
 ?>
 
 <html>
@@ -78,7 +79,7 @@
                 <ul class="sliders-wrap-inner">
 
   <?php
-    $result = mysql_query("select * from tbl_auth_user order by user_id ASC") or die('Query failed. ' . mysql_error());
+    $result = mysql_query("select * from products") or die('Query failed. ' . mysql_error());
 
     $products = array(); // to use in the quote request form
     $productIds = array(); // to use in the quote request form   
@@ -111,6 +112,7 @@
   if ($counter % 2 == 0) {
   ?>
   <li>
+
   <?php
     }
   ?>
