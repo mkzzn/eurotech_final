@@ -1,26 +1,26 @@
-
-
 <?php
   $text_fields = array('name', 'company', 'address1', 'address2', 'city', 'state', 'zip', 'country', 'phone', 'fax', 'email', 'login');
 
-  if (count($errors) > 0) {
+  if (isset($errors) && count($errors) > 0) {
 ?>
   <ul id="errors">
+
 <?php
-    foreach($errors as $error) {
+  foreach($errors as $error) {
 ?>
 
   <li class="error"><?php echo $error; ?></li>
 
 <?php
-    }
+  }
 ?>
   </ul>
   <div class="clear"></div>
+
 <?php
   }
 
-if (count($errors) ==  0  && count($_POST) == 0) {
+  if (isset($errors) && count($errors) ==  0  && count($_POST) == 0) {
 ?>
 
   <div id="notice">You've successfully registered!  Enter your username and password below to log in.</div>
@@ -61,6 +61,7 @@ if (count($errors) ==  0  && count($_POST) == 0) {
 
 <?php
   }
+}
 ?>      
 
       <input name='password' type='password' />
@@ -69,5 +70,3 @@ if (count($errors) ==  0  && count($_POST) == 0) {
     </div>
   </form>
 </div>
-
-?>
