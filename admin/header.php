@@ -8,10 +8,10 @@
 </div>
 
 <div id="primary-nav">
-  <a href="cms-admin.php">News/About/Tradeshows</a>
-  <a href="cms-admin-products.php">Products</a>
-  <a href="cms-admin-pdfs.php">Users List / Reticle</a>
-  <a href="cms-admin-downloads.php">Downloads</a>
-  <a href="cms-admin-privatedownloads.php">Private Downloads</a>
+  <a href="/admin/cms-admin.php">News/About/Tradeshows</a>
+  <a href="/admin/cms-admin-products.php">Products</a>
+  <a href="/admin/cms-admin-pdfs.php">Users List / Reticle</a>
+  <a href="/admin/cms-admin-downloads.php">Downloads</a>
+  <a href="/admin/cms-admin-privatedownloads.php">Private Downloads</a>
   <a href="users/index.php">Users</a>
 </div>

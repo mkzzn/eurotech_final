@@ -31,32 +31,46 @@
       ?>
 
       <form action="../user_response.php" method="POST">
-        <div id="users">
-        <?php
-        $result = mysql_query("select * from tbl_auth_user where user_id != '' and user_id is not null order by user_id ASC") or die('Query failed. ' . mysql_error());
+        <table id="users">
+          <col></col>
+          <col></col>
+          <thead> 
+            <th>User</th>
+            <th>Private Download?</th>
+          </thead>
 
-        $users = array(); // to use in the quote request form
-        while($user = mysql_fetch_assoc($result)) {
-          $users[] = $user;
-        }
-        
-        $count = 0;
-        foreach($users as $user) {
-          $user_id = $user['user_id'];
-          $oddeven = ($count % 2) > 0 ? "even" : "odd";
-          $count++;
-        ?>
+          <tbody>
+            <?php
+            $result = mysql_query("select * from tbl_auth_user where user_id != '' and user_id is not null order by user_id ASC") or die('Query failed. ' . mysql_error());
 
-        <div class="user <?php echo $oddeven; ?>">
-          <div class="name"><a href="edit.php?id=<?php echo $user_id; ?>"><?php echo $user_id; ?></div>
-        </div>
+            $users = array(); // to use in the quote request form
+            while($user = mysql_fetch_assoc($result)) {
+              $users[] = $user;
+            }
 
-      <?php
-        }
-        include '../library/closedb.php';
-      ?>
+            $count = 0;
+            foreach($users as $user) {
+              $user_id = $user['user_id'];
+              $oddeven = ($count % 2) > 0 ? "even" : "odd";
+              $count++;
+            ?>
 
-        </div>
+            <tr class="user <?php echo $oddeven; ?>">
+              <td class="username">
+                <a href="edit.php?id=<?php echo $user_id; ?>"><?php echo $user_id; ?>
+              </td>
+              <td class="private_download">
+                <?php echo $user['private_download'] ? "Yes" : "No"; ?>
+              </td>
+           </tr>
+
+
+          <?php
+            }
+            include '../library/closedb.php';
+          ?>
+          </tbody>
+        </table>
       </form>
 
       <div id="footer">
