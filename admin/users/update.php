@@ -5,6 +5,7 @@
     "isAdmin",
     "isFileAdmin",
     "private_download",
+    "download_alias",
     "company",
     "custname",
     "address1",
@@ -21,13 +22,12 @@
   foreach($fields as $field): 
     $fields_array[] = $field;
     $values_array[] = $_POST[$field];
+    $update_array[] = "$field = '$_POST[$field]'";
   endforeach;
   
-  $fields_string = join(", ", $fields);
-  $values_string = join(", ", $values);
-
-  $result = mysql_query("insert into tbl_auth_user ($fields_string)
-  values ($values_string) where user_id='" . $_GET['id']."'") or die('Query failed. ' . mysql_error());
-
+  $update_string = join(", ", $update_array);
+  $query_string = "update tbl_auth_user SET $update_string WHERE user_id='" . $_POST['user_id'] . "'";
+  $result = mysql_query($query_string) or die('Query failed. ' . mysql_error());
+  // echo $query_string;
   header( 'Location: index.php?user_id=' . $_POST['user_id'] ) ;
 ?>

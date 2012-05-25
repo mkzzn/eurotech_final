@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="../admincss.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="../../css/admin/users.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../../css/admin/users/edit.css" type="text/css" media="screen" />
 
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
   </head>
@@ -40,6 +41,7 @@
             $text_fields = array(
               "Company"     => "company",
               "Customer Name"     => "custname",
+              "Download Alias"     => "download_alias",
               "address1"    => "address1",
               "Address 2"   => "address2",
               "City"        => "city",
@@ -63,7 +65,7 @@
           ?>
             <div class="input_pair">
               <label><?php echo $label; ?></label>
-              <input type="text" name="<?php echo $$field; ?>" value="<?php echo $$field; ?>" />
+              <input type="text" name="<?php echo $field; ?>" value="<?php echo $$field; ?>" />
             </div>
           <?php
             endforeach;
@@ -72,7 +74,7 @@
           ?>
             <div class="input_pair">
               <label><?php echo $label; ?></label>
-              <input type="checkbox" <?php echo $$field ? "checked='checked'" : ""; ?> />
+              <input type="checkbox" name="<?php echo $field; ?>" <?php echo $$field ? "checked='checked'" : ""; ?> />
             </div>
           <?php
             endforeach;
@@ -82,8 +84,8 @@
             include '../library/closedb.php';
           ?>
 
+          <input type="submit" />
         </div>
-        <input type="submit" />
       </form>
 
       <div id="footer">

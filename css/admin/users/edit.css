@@ -1,0 +1,35 @@
+label {
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.input_pair {
+  margin-bottom: 12px;
+  padding: 4px 8px;
+  display: block;
+  width: 300px;
+}
+
+.input_pair input[type=text] {
+  padding: 2px 4px;
+  border: 1px solid #aaa;
+  font-size: 15px;
+}
+
+#users h1 {
+  margin: 4px 8px;
+  padding: 4px 0;
+}
+
+#users {
+  margin: 20px 40px;
+  background: #efefef;
+  padding: 12px 16px;
+  width: 500px;
+  border: 1px solid #ddd;
+}
+
+input[type=submit] {
+  font-size: 16px;
+}
