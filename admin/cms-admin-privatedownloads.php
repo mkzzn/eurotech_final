@@ -16,8 +16,6 @@ include 'library/config.php';
 include 'library/opendb.php';
 
 
-
-
 if(isset($_GET['del']))
 {
 	//search for the path in the db
@@ -102,50 +100,24 @@ if(isset($_POST['link']))
 
 
 	
-if(isset($_POST['int_section']))
-	{
+if(isset($_POST['int_section'])) {
 
-		if($_POST['int_section'] == "USA" || $_POST['int_section'] == "PrivateDownload"){
-			$int_section = "PrivateDownload";
-			$int_section_user = "US_downloads";
-			echo "<br>Now Editing USA Private Downloads<br>";
-			}
-		else if($_POST['int_section'] == "CN" || $_POST['int_section'] == "PrivateDownload_CN"){
-			$int_section = "PrivateDownload_CN";
-			$int_section_user = "CN_downloads";
-			echo "<br>Now Editing China Private Downloads<br>";
-			}
-		else if($_POST['int_section'] == "ET" || $_POST['int_section'] == "PrivateDownload_ET"){
-			$int_section = "PrivateDownload_ET";
-			$int_section_user = "ET_downloads";
-			echo "<br>Now Editing Euro-Tech Private Downloads<br>";
-			}
-		else if($_POST['int_section'] == "DE" || $_POST['int_section'] == "PrivateDownload_DE"){
-			$int_section = "PrivateDownload_DE";
-			$int_section_user = "DE_downloads";
-			echo "<br>Now Editing Germany Private Downloads<br>";
-			}
-		else if($_POST['int_section'] == "PG" || $_POST['int_section'] == "PrivateDownload_PG"){
-			$int_section = "PrivateDownload_PG";
-			$int_section_user = "PG1000_downloads";
-			echo "<br>Now Editing PG1000 Private Downloads<br>";
-			}
-		else if($_POST['int_section'] == "IT" || $_POST['int_section'] == "PrivateDownload_IT"){
-			$int_section = "PrivateDownload_IT";
-			$int_section_user = "IT_downloads";
-			echo "<br>Now Editing Italy Private Downloads<br>";
-			}
-		else if($_POST['int_section'] == "GEN" || $_POST['int_section'] == "PrivateDownload_GEN"){
-			$int_section = "PrivateDownload_GEN";
-			$int_section_user = "General_downloads";
-			echo "<br>Now Editing General Private Downloads<br>";
-			}
-	}
-else 
-	{
-		$int_section_user = "US_downloads";
-		$int_section = "PrivateDownload";
-	}
+	$query = "SELECT user_id, download_alias, download_abbreviation FROM tbl_auth_user WHERE download_abbreviation = '" . $_POST['int_section'] . "'"; 
+	$result = mysql_query($query) or die('Error : ' . mysql_error());
+	while(list($user_id, $alias, $abbrv) = mysql_fetch_array($result, MYSQL_NUM)) {
+
+    $int_section = "PrivateDownload";
+    if ($abbrv != "USA") {
+      $int_section .= "_" . $abbrv;
+    }
+    $int_section_user = $user_id;
+    echo "<br>Now Editing $alias Private Downloads<br>";
+  }
+
+} else {
+	$int_section_user = "US_downloads";
+	$int_section = "PrivateDownload";
+}
 	
 if(isset($_POST['password']))
 	{
@@ -190,13 +162,16 @@ if(isset($_POST['password']))
 <form method="post" action="cms-admin-privatedownloads.php">
 <select name="int_section" id="int_section">
     <option value="">Select an international page...</option>
-    <option value="USA" <?php if($int_section_user == 'US_downloads')echo "SELECTED";?>>USA</option>
-    <option value="DE" <?php if($int_section_user == 'DE_downloads')echo "SELECTED";?>>Germany</option>
-    <option value="CN" <?php if($int_section_user == 'CN_downloads')echo "SELECTED";?>>China</option>
-    <option value="ET" <?php if($int_section_user == 'ET_downloads')echo "SELECTED";?>>Euro-Tech</option>
-    <option value="PG" <?php if($int_section_user == 'PG1000_downloads')echo "SELECTED";?>>PG1000</option>
-    <option value="IT" <?php if($int_section_user == 'IT_downloads')echo "SELECTED";?>>Italy</option>
-    <option value="GEN" <?php if($int_section_user == 'General_downloads')echo "SELECTED";?>>General</option>
+
+<?php
+	$query = "SELECT user_id, download_alias, download_abbreviation FROM tbl_auth_user WHERE private_download = 'on' order by user_id ASC"; 
+	$result = mysql_query($query) or die('Error : ' . mysql_error());
+	while(list($user_id, $alias, $abbrv) = mysql_fetch_array($result, MYSQL_NUM)) {
+?>	
+  <option value=<?php echo $abbrv; ?> <?php if($int_section_user == $user_id)echo "SELECTED";?>><?php echo $alias; ?></option>
+
+                                                                                                               <?php } ?>
+
 </select>
 <input name="int_section_select" type="submit" class="box" id="int_section_select" value="go">
 </form>
@@ -206,7 +181,7 @@ if(isset($_POST['password']))
 	$query .= $int_section; 
 	$query .= "' ORDER BY id";
 	$result = mysql_query($query) or die('Error : ' . mysql_error());
-
+ 
 	while(list($id, $name, $caption, $path) = mysql_fetch_array($result, MYSQL_NUM))
 	{	
 ?>

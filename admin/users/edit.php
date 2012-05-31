@@ -42,6 +42,7 @@
               "Company"     => "company",
               "Customer Name"     => "custname",
               "Download Alias"     => "download_alias",
+              "Download Abbreviation"     => "download_abbreviation",
               "address1"    => "address1",
               "Address 2"   => "address2",
               "City"        => "city",
