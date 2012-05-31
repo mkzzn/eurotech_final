@@ -43,6 +43,7 @@
               "Customer Name"     => "custname",
               "Download Alias"     => "download_alias",
               "Download Abbreviation"     => "download_abbreviation",
+              "Password"     => "user_password",
               "address1"    => "address1",
               "Address 2"   => "address2",
               "City"        => "city",

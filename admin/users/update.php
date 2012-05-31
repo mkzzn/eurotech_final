@@ -6,6 +6,7 @@
     "isFileAdmin",
     "private_download",
     "download_alias",
+    "user_password",
     "download_abbreviation",
     "company",
     "custname",
