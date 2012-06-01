@@ -5,7 +5,8 @@
   include 'db/open_db.php';
   $active_page = "downloads";
 
-  $query   = "SELECT custname, user_id FROM tbl_auth_user WHERE BINARY user_id = '" . $_GET['username'] . "' AND user_password = '" . $_GET['password'] . "' LIMIT 1";
+  $query   = "SELECT custname, user_id FROM tbl_auth_user WHERE BINARY user_id = '" . $_POST['username'] . "' AND user_password = '" . $_POST['password'] . "' LIMIT 1";
+echo $query;
 
   $result  = mysql_query($query) or die('Error, query failed');
 

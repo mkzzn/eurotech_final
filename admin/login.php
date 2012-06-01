@@ -68,6 +68,7 @@ if (isset($_POST['txtUserId']) && isset($_POST['txtPassword'])) {
 	<?php
 	}
 	?>
+
 	<form action="" method="post" name="frmLogin" id="frmLogin">
 	 <table width="400" border="1" align="center" cellpadding="2" cellspacing="2">
 	  <tr>
