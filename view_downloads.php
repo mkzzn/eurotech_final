@@ -94,7 +94,16 @@
           $i++;
         } // end numerical while
       } // end query while
+
+      echo $user['user_id'];
+      if ($user['private_download'] == true) {
+      ?>
+        <h3>Private Downloads</h3>
+      <?php
+      }
+
     ?>    
+    
         
 <div class='clear'></div>
 
