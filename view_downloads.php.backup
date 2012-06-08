@@ -4,13 +4,17 @@
 // like i said, we must never forget to start the session
 session_start();
 
-// is the one accessing this page logged in or not?
-if (isset($_SESSION['db_is_logged_in']) && $_SESSION['db_is_logged_in'] == true) {
-	// not logged in, move to login page
-	header('Location: /downloads/view.php');
-	exit;
-}
+  if (isset($_SESSION['user_id'])) {
+  echo $_SESSION['user_id'];
+    $query   = "SELECT * FROM tbl_auth_user WHERE user_id = '" . $_SESSION['user_id'] . "' LIMIT 1";
+    //echo $query;
+    $result  = mysql_query($query) or die('Error, query failed');
+    while($row = mysql_fetch_array($result)) {
+      $user = $row;
+    }
+  }
 ?>
+
 
       <?php
         include 'db/config.php';
@@ -35,7 +39,6 @@ if (isset($_SESSION['db_is_logged_in']) && $_SESSION['db_is_logged_in'] == true)
     <title>PG 1000 Cutting Tool Inspection System by Euro-Tech | Downloads</title>
     
     <link rel="stylesheet" type="text/css" media="all" href="css/primary.css" />
-    <link rel="stylesheet" type="text/css" media="all" href="css/downloads.css" />
     <link href='http://fonts.googleapis.com/css?family=Droid+Sans|Cabin|Ubuntu|Cantarell|Open+Sans|Nobile|Telex' rel='stylesheet' type='text/css'>
   </head>
 
@@ -52,12 +55,40 @@ if (isset($_SESSION['db_is_logged_in']) && $_SESSION['db_is_logged_in'] == true)
 
       <div id="content">
         <h1>Downloads</h1>
+    <?php
+
+    $query   = "SELECT * from gen_downloads";
+    $result  = mysql_query($query) or die('Error, query failed');
+    while($row = mysql_fetch_array($result)) {
+
+    if (($row['install1'] && strlen($row['install1']) > 0)) || ($row['help1'] && strlen($row['help1'])) > 0 {
+      ?>
+
+        <div class="download">
+          <div class="title">New PG1000 Install</div>
+          <?php
+          if (strlen($row['install1']) > 0) {
+            <a href="">Download 1 Install File</a>
+          <?php
+          }
+          if (strlen($row['help1']) > 0) {
+          ?>
+            <a href="">Download 1 Help File</a>
+          <?php 
+          }
+          ?>    
+      </div>
+      <?php 
+      }
+      ?>    
+
+    <?php 
+      }
+    ?>    
+
+
         
-<?php
-// include forms
-include 'app/views/_registration_form.php';
-include 'app/views/_login_form.php';
-?>
+        
 <div class='clear'></div>
 
       </div>

@@ -8,6 +8,7 @@
     header('Location: login.php');
     exit;
   }
+
   include '../library/config.php';
   include '../library/opendb.php';
 

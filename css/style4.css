@@ -84,6 +84,7 @@ ul.sliders-wrap-inner li img{	padding:0px;	}
 .lof-slidecontent ul.navigator-wrap-inner li {
 	cursor:hand; 
 	cursor:pointer;
+  font-family: Arial, Verdana, sans;
 	list-style:none;
 	padding:0;
 	margin-left:0px;

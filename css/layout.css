@@ -10,3 +10,7 @@ a{
 	padding:10px;
 	border:#999 dotted 1px;
 }
+
+ul.navigator-wrap-inner li span {
+  font-family: Arial, Verdana, sans;
+}

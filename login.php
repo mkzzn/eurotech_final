@@ -1,24 +1,39 @@
  <!DOCTYPE html>
-
 <?php
   include 'db/config.php';
   include 'db/open_db.php';
   $active_page = "downloads";
 
+  // like i said, we must never forget to start the session
+  session_start();
+
   $query   = "SELECT custname, user_id FROM tbl_auth_user WHERE BINARY user_id = '" . $_POST['username'] . "' AND user_password = '" . $_POST['password'] . "' LIMIT 1";
-echo $query;
+//echo $query;
 
   $result  = mysql_query($query) or die('Error, query failed');
 
   $rowcount = mysql_num_rows($result);
-  echo "success=$rowcount";
+//echo "success=$rowcount";
 
   while($row = mysql_fetch_array($result)) {
     $name = $row['custname'];
-    $user_id = $_GET['username'];
-    echo "&user_id=$user_id&custname=Welcome $name!";
+    $user_id = $row['user_id'];
+    $_SESSION['db_is_logged_in'] = true;
+    $_SESSION['user'] = $row;
+    //echo "&user_id=$user_id&custname=Welcome $name!";
   }
 ?>
+
+<?php
+
+// is the one accessing this page logged in or not?
+if (isset($_SESSION['db_is_logged_in']) && $_SESSION['db_is_logged_in'] == true) {
+	// not logged in, move to login page
+	header('Location: view_downloads.php');
+	exit;
+}
+?>
+
 
 <html>
   <head>
