@@ -1,3 +1,14 @@
+<?php if (isset($errors) && count($errors) > 0) { ?>
+
+  <ul id="errors">
+    <?php foreach($errors as $error) { ?>
+      <li class="error"><?php echo $error; ?></li>
+    <?php } ?>
+  </ul>
+
+  <div class="clear"></div>
+<?php } ?>
+
 <div id='login'>
   <h2>Login</h2>
   <form action="login.php" method="post">

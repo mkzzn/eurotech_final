@@ -7,6 +7,39 @@
   // like i said, we must never forget to start the session
   session_start();
 
+$login = $_POST['username'];
+$password = $_POST['password'];
+
+// error checking
+$errors = array();
+
+if ($_POST['form_type'] == "login") {
+  if ($login == "") {
+    $errors[] = "Username cannot be blank.";
+  } else {
+    //grab all the usernames in the table
+    $sql1 = mysql_query("SELECT * FROM $tableName WHERE user_id = '$login'");
+    $row1 = mysql_num_rows($sql1);
+
+    if ($row1 == 0) {
+      $errors[] = "Username does not exist in database.";
+    }
+  }
+
+  if ($password == "") {
+    $errors[] = "Password cannot be blank.";
+  } else {
+    //grab all the passwords in the table
+    $sql2 = mysql_query("SELECT * FROM $tbl_auth_user WHERE user_id = '$login' and user_password = '$password'");
+    $row2 = mysql_num_rows($sql2);
+
+    if($row2 == 0) {
+      $errors[] = "Password does not match the provided username.";
+    }
+  }
+}
+
+
   $query   = "SELECT custname, user_id FROM tbl_auth_user WHERE BINARY user_id = '" . $_POST['username'] . "' AND user_password = '" . $_POST['password'] . "' LIMIT 1";
 //echo $query;
 

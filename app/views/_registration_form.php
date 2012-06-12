@@ -1,36 +1,20 @@
-<?php
-  $text_fields = array('name', 'company', 'address1', 'address2', 'city', 'state', 'zip', 'country', 'phone', 'fax', 'email', 'login');
+<?php $text_fields = array('name', 'company', 'address1', 'address2', 'city', 'state', 'zip', 'country', 'phone', 'fax', 'email', 'login'); ?>
+<?php if (isset($errors) && count($errors) > 0) { ?>
 
-  if (isset($errors) && count($errors) > 0) {
-?>
   <ul id="errors">
-
-<?php
-  foreach($errors as $error) {
-?>
-
-  <li class="error"><?php echo $error; ?></li>
-
-<?php
-  }
-?>
+    <?php foreach($errors as $error) { ?>
+      <li class="error"><?php echo $error; ?></li>
+    <?php } ?>
   </ul>
+
   <div class="clear"></div>
+<?php } ?>
+<?php if (isset($errors) && count($errors) ==  0  && count($_POST) == 0) { ?>
 
-<?php
-  }
+<div id="notice">You've successfully registered!  Enter your username and password below to log in.</div>
 
-  if (isset($errors) && count($errors) ==  0  && count($_POST) == 0) {
-?>
-
-  <div id="notice">You've successfully registered!  Enter your username and password below to log in.</div>
-
-<?php  
-    include '_login_form.php';
-
-  } else {
-
-?>
+<?php include '_login_form.php'; ?>
+<?php } else { ?>
 
 <div id='register'>
   <h2>Register</h2>
@@ -53,16 +37,12 @@
     </div>
     <div class='inputs'>
       <input name='form_type' type='hidden' value='register'/>
-<?php
-  foreach($text_fields as $field) {
-?>      
+
+<?php foreach($text_fields as $field) { ?>      
 
       <input name='<?php echo $field; ?>' type='text' value='<?php echo $$field; ?>'>
 
-<?php
-  }
-}
-?>      
+<?php }} ?>
 
       <input name='password' type='password' />
       <input name='confirm_password' type='password' />
