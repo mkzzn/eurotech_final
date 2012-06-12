@@ -8,7 +8,7 @@ h3 {
   font-family: "Open Sans", Cabin, Arial, sans-serif;
 }
 
-.download {
+.download, .private_download {
   display: block;
   background: #ccc;
   border: 1px solid #999;
@@ -16,19 +16,26 @@ h3 {
   margin: 18px;
 }
 
-.download .title {
+.download .title, .private_download .name {
   font-family: "Open Sans", Cabin, Arial, sans-serif;
   font-weight: bold;
   font-size: 16px;
 }
 
-.download a {
+.download a, .private_download a {
   font-family: "Open Sans", Cabin, Arial, sans-serif;
   font-size: 14px;
   color: #006272;
   text-decoration: none;
 }
 
-.download a:hover {
+.download a:hover, .private_download a:hover {
   text-decoration: underline;
+}
+
+.private_download .caption {
+  font-size: 14px;
+  font-family: "Open Sans", Cabin, Arial, sans-serif;
+  color: #333;
+  font-style: italic;
 }

@@ -10,7 +10,7 @@
   session_start();
 
   if (isset($_SESSION['user_id'])) {
-    $query   = "select * from tbl_auth_user where user_id = '" . $_SESSION['user_id'] . "'";
+    $query   = "select * from tbl_auth_user where user_id = '" . $_SESSION['user_id'] . "' limit 1";
     $result  = mysql_query($query) or die('Error, query failed');
     while($row = mysql_fetch_array($result)) {
       $user = $row;
@@ -96,10 +96,35 @@
       } // end query while
 
       echo $user['user_id'];
+      echo $user['private_download'];
       if ($user['private_download'] == true) {
+
+        $query = "SELECT * from upload where section = 'PrivateDownload_" . $user['download_abbreviation'] . "'";
+        echo $query;
+        $result  = mysql_query($query) or die('Error, query failed');
+        
       ?>
         <h3>Private Downloads</h3>
       <?php
+
+         while($row = mysql_fetch_array($result)) {
+      ?>
+
+         <div class="private_download">
+           <div class="name">
+             <?php echo $row["name"]; ?>
+         <?php if ((int)$row["size"] > 0) { ?>
+             <span class="size"> (<?php echo $row["size"]; ?> bytes)</span>
+         <?php } ?>
+           </div>
+           <?php if ($row["caption"] && strlen($row["caption"]) > 0) { ?>
+             <div class="caption"><?php echo $row["caption"]; ?></div>
+           <?php } ?>
+           <div class="filetype"><?php echo $row["type"]; ?></div>
+           <div class="download_link"><a href="<?php echo $row["path"]; ?>">Download</a></div>
+         </div>
+      <?php
+         }
       }
 
     ?>    

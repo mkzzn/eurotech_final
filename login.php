@@ -20,6 +20,7 @@
     $user_id = $row['user_id'];
     $_SESSION['db_is_logged_in'] = true;
     $_SESSION['user'] = $row;
+    $_SESSION['user_id'] = $user_id;
     //echo "&user_id=$user_id&custname=Welcome $name!";
   }
 ?>
