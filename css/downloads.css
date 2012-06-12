@@ -39,3 +39,34 @@ h3 {
   color: #333;
   font-style: italic;
 }
+
+.user-info {
+  background: #0B3D45;
+  width: 100%;
+  height: 30px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.user-info div, .user-info a {
+  font-family: "Open Sans", Cabin, Arial, sans-serif;
+  float: right;
+  text-align: right;
+  display: block;
+  margin: 4px 16px 4px 10px;
+  background: #0B3D45;
+}
+
+.user-info a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.user-info a:hover {
+  text-decoration: underline;
+}
+
+.clear-right {
+  clear: right;
+}

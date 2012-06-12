@@ -52,7 +52,14 @@
       <?php include 'app/views/_nav.php'; ?>
 
       <div id="content">
-        <h1>Downloads</h1>
+        <h1 class="download-headline">Downloads</h1>
+        <div class="user-info">
+          <?php if( $_SESSION['user_id'] ) { ?>
+            <a href="logout.php">Logout</a>
+            <div class="logged-in-as">You are logged in as <?php echo $_SESSION['user_id']; ?></div>
+          <?php } ?>
+          <div class="clear-right"></div>
+        </div>
 
         <h3>General Downloads</h3>
       <div id="downloads">
@@ -95,12 +102,11 @@
         } // end numerical while
       } // end query while
 
-      echo $user['user_id'];
-      echo $user['private_download'];
+// echo $user['user_id'];
+// echo $user['private_download'];
       if ($user['private_download'] == true) {
 
         $query = "SELECT * from upload where section = 'PrivateDownload_" . $user['download_abbreviation'] . "'";
-        echo $query;
         $result  = mysql_query($query) or die('Error, query failed');
         
       ?>
