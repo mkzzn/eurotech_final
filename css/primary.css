@@ -129,16 +129,18 @@ body {
   float: left;
 }
 
-#errors li {
+#errors li, #notices li {
   padding: 4px 0;
 }
 
-#notice {
+#notice, #notices {
   background: #257B0D;
   color: white;
+  list-style-type: none;
   padding: 20px;
   float: left;
   font-family: sans;
+  max-width: 500px;
   padding: 8px 24px;
   margin: 24px 0 0 0;
   float: left;
@@ -202,6 +204,13 @@ body {
       font-style: italic;
       padding: 0 0 2px 0;
       font-family: "Telex", sans-serif; }
+
+#login h2 .notation {
+  font-size: 13px;
+  font-style: italic;
+  color: #80BCC6;
+  width: 240px;
+}
 
 #register, #login {
   margin-top: 20px;

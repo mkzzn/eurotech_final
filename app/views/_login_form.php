@@ -21,7 +21,7 @@
       <input name='username' type='text' />
       <input name='password' type='password' />
       <input type='submit' />
-      <a href='forgot_password.html'>Forgot Your Password?</a>
+      <a href='forgot_password.php'>Forgot Your Password?</a>
     </div>
   </form>
 </div>
