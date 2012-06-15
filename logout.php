@@ -14,5 +14,5 @@ if (isset($_SESSION['user_id'])) {
 
 // now that the user is logged out,
 // go to login page
-header('Location: login.php');
+header('Location: downloads.php');
 ?>
