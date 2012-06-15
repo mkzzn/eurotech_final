@@ -23,6 +23,7 @@
     <title>PG 1000 Cutting Tool Inspection System by Euro-Tech | Contact</title>
     
     <link rel="stylesheet" type="text/css" media="all" href="css/primary.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="css/contact.css" />
     <link href='http://fonts.googleapis.com/css?family=Droid+Sans|Cabin|Ubuntu|Cantarell|Open+Sans|Nobile|Telex' rel='stylesheet' type='text/css'>
   </head>
 
@@ -51,26 +52,28 @@
       <div class='text'>
         Euro-Tech Corporation
         <br />
-        N48 W 14170 Hampton Ave
-        <br />
-        Menomonee Falls, WI 53051
+        <a href="http://maps.google.com?q=N48+W+14170+Hampton+Ave+Menomonee+Falls+WI+53051">
+          N48 W 14170 Hampton Ave
+          <br />
+          Menomonee Falls, WI 53051
+        </a>
       </div>
       <div class='label'>Phone</div>
       <div class='text'>262.781.6777</div>
       <div class='label'>Fax</div>
       <div class='text'>262.781.2822</div>
       <div class='label'>Email</div>
-      <div class='text'>pg1000@eurotechcorp.com</div>
+      <div class='text'><a href="mailto:pg1000@eurotechcorp.com">pg1000@eurotechcorp.com</a></div>
       <br />
       <div class='label heading'>Our Staff</div>
       <div class='label'>Accounting</div>
-      <div class='text'>Greg See</div>
+      <div class='text'>Ann</div>
       <div class='label'>Shipping and Receiving</div>
-      <div class='text'>Greg See</div>
+      <div class='text'>Rosemary</div>
       <div class='label'>Literature Requests</div>
-      <div class='text'>Greg See</div>
+      <div class='text'>Jan</div>
       <div class='label'>Website/Ads/Trade Shows</div>
-      <div class='text'>Greg See</div>
+      <div class='text'>Pat</div>
       <div class='label'>Design and Development</div>
       <div class='text'>Michael</div>
     </div>
@@ -83,16 +86,18 @@
       <div class='text'>Greg See</div>
       <div class='label'>Address</div>
       <div class='text'>
-        3951 Brighton Lane
-        <br />
-        Canton, MI 48188
+        <a href="http://maps.google.com/?q=3951+brighton+lane+canton+mi+48188+usa">
+          3951 Brighton Lane
+          <br />
+          Canton, MI 48188
+        </a>
       </div>
       <div class='label'>Phone</div>
       <div class='text'>248.894.7774</div>
       <div class='label'>Fax</div>
       <div class='text'>734.340.9832</div>
       <div class='label'>Email</div>
-      <div class='text'>pg1000@eurotechcorp.com</div>
+      <div class='text'><a href="mailto:pg1000@eurotechcorp.com">pg1000@eurotechcorp.com</a></div>
     </div>
   </div>
   <div class='content rightmost'>
@@ -103,14 +108,22 @@
       <div class='text'>
         MESAS
         <br />
-        Hinten auf der Gass 3
+        Gesellschaft f&uuml;r Mess-,
         <br />
-        66646 Marpingen
+        Erfassungs- und Auswerte-
+        <br />
+        Computersysteme mbH
+        <br />
+        <a href="http://maps.google.com?q=hinten+auf+der+Gass+3+66646+Marpingen+Germany">
+          Hinten auf der Gass 3
+          <br />
+          66646 Marpingen
+        </a>
       </div>
       <div class='label'>Fax</div>
       <div class='text'>(+49) 6853 30858</div>
       <div class='label'>Email</div>
-      <div class='text'>pg1000@eurotechcorp.com</div>
+      <div class='text'><a href="mailto:info@mesas.de">info@mesas.de</a></div>
     </div>
   </div>
 </div>

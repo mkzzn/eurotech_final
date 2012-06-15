@@ -1,0 +1,10 @@
+a {
+  font-family: "Open Sans", Cabin, Arial, sans-serif;
+  font-size: 14px;
+  color: #006272;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
