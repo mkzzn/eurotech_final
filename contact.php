@@ -117,42 +117,8 @@
 
       </div>
 
-      <div id="footer">
-        <div class="footer-links pages">
-          
-            <a href="./" >
-              Home
-            </a>
-          
-            <a href="products.html" >
-              Products
-            </a>
-          
-            <a href="news.html" >
-              News
-            </a>
-          
-            <a href="software.html" >
-              Software
-            </a>
-          
-            <a href="downloads.html" >
-              Downloads
-            </a>
-          
-            <a href="contact.html" class="active" >
-              Contact
-            </a>
-          
-        </div>
+      <?php include 'app/views/_footer.php'; ?>
 
-        <div class="footer-links links">
-          <a href="terms.html">Terms and Conditions</a>
-          <a href="rental_agreement.html">Reticle Rental Agreement</a>
-        </div>
-
-        <div class="clear"></div>
-      </div>
       <div class="clear"></div>
 	  </div>
   </body>

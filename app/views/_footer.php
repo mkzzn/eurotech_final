@@ -1,26 +1,26 @@
 <div id="footer">
   <div class="footer-links pages">
-    <a href="./" >
+    <a href="./" <?php if ($active_page == "home") { ?> class="active" <?php } ?> >
       Home
     </a>
 
-    <a href="products.php" class="active" >
+ <a href="products.php" <?php if ($active_page == "products") { ?> class="active" <?php } ?> >
       Products
     </a>
 
-    <a href="news.php" >
+    <a href="news.php" <?php if ($active_page == "news") { ?> class="active" <?php } ?> >
       News
     </a>
 
-    <a href="software.php" >
+    <a href="software.php" <?php if ($active_page == "software") { ?> class="active" <?php } ?> >
       Software
     </a>
 
-    <a href="downloads.php" >
+    <a href="downloads.php" <?php if ($active_page == "downloads") { ?> class="active" <?php } ?> >
       Downloads
     </a>
 
-    <a href="contact.php" >
+    <a href="contact.php" <?php if ($active_page == "contact") { ?> class="active" <?php } ?> >
       Contact
     </a>
   </div>
