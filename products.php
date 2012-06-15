@@ -40,7 +40,7 @@
                             easing			: 'easeInOutQuad',
                             duration		: 1200,
                             auto		 	: false,
-                            maxItemDisplay  : 3,
+                            maxItemDisplay  : 5,
                             startItem:0,
                             navPosition     : 'horizontal', // horizontal
                             navigatorHeight : null,

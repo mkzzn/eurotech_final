@@ -12,13 +12,15 @@
 .lof-slidecontent  .lof-opacity  li{position:absolute;	top:0;	left:0;	float:inherit; }
 
 
-.lof-slidecontent  .navigator-content { position:absolute;
+.lof-slidecontent  .navigator-content { 
   background: none repeat scroll 0 0 #000000;
     border-radius: 5px 5px 5px 5px;
-    bottom: 0;
     padding: 5px 15px;
-    position: absolute;
+    margin-top: 0;
     right: 10px;
+    height: 30px;
+    width: 140px;
+    float: right;
 }
 .lof-slidecontent  .navigator-wrapper{	position:relative;	z-index:10;
 	height:180px;
@@ -27,7 +29,9 @@
 	color:#FFF;
 	float:left
 }
-.lof-slidecontent  ul.navigator-wrap-inner{	top:0;	padding:0;	margin:0;	position:absolute;	width:100%; }
+
+
+.lof-slidecontent  ul.navigator-wrap-inner{	top:0; padding:0;	margin: 0;	position:absolute;	width:100%; }
 .lof-slidecontent  ul.navigator-wrap-inner li{ cursor:hand; 	cursor:pointer;	list-style:none;	padding:0;	margin-left:0px;	overflow:hidden;	float:left;	display:block;	text-align:center;}
 
 /*******************************************************/

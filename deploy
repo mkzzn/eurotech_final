@@ -1,8 +1,8 @@
 #!/bin/bash
-app_name=zopio-site
+app_name=eurotech-dynamic
 tmp_path=/tmp/$app_name
-remote_path=/var/www/zopio
-remote_host=doblock
+remote_path=/var/www/eurotech-dynamic
+remote_host=doblock2
 
 # Add the necessary ssh key to the ssh-agent if it hasn't been added in this session
 ssh $remote_host "echo 2>&1" || ssh-add ~/.ssh/`echo $app_name`_dsa
@@ -14,4 +14,4 @@ ssh $remote_host "echo 2>&1" || ssh-add ~/.ssh/`echo $app_name`_dsa
 git clone zopio_github:zopio/$app_name.git $tmp_path
 
 # Sync the temporary repository clone with the remote repository
-rsync -avz -e ssh $tmp_path $remote_host:$remote_path
+rsync -avzr -e ssh $tmp_path $remote_host:$remote_path
