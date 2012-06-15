@@ -27,6 +27,7 @@
     <link href='http://fonts.googleapis.com/css?family=Droid+Sans|Cabin|Ubuntu|Cantarell|Open+Sans|Nobile|Telex' rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet" type="text/css" href="css/style4.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="css/products.css" />
 
     <script language="javascript" type="text/javascript" src="js/jquery.js"></script>
     <script language="javascript" type="text/javascript" src="js/jquery.easing.js"></script>

@@ -60,12 +60,14 @@ body {
       font-size: 28px; }
 
 #products .product, #products .news, #news .product, #news .news {
-  margin-top: 32px;
+  margin-top: 6px;
   width: 47%;
   opacity: 1;
   float: left; }
-  #products .product.left, #products .news.left, #news .product.left, #news .news.left {
-    margin-right: 6%; }
+  #products .product, #products .news, #news .product.left, #news .news.left {
+    margin-left: 13px;
+    margin-right: 13px;
+  }
   #products .product h2, #products .news h2, #news .product h2, #news .news h2 {
     padding: 10px 20px 16px 20px;
     font-size: 24px; }
