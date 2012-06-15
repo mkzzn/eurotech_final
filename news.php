@@ -23,6 +23,7 @@
     <title>PG 1000 Cutting Tool Inspection System by Euro-Tech | News</title>
     
     <link rel="stylesheet" type="text/css" media="all" href="css/primary.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="css/news.css" />
     <link href='http://fonts.googleapis.com/css?family=Droid+Sans|Cabin|Ubuntu|Cantarell|Open+Sans|Nobile|Telex' rel='stylesheet' type='text/css'>
   </head>
 

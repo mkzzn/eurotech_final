@@ -1,0 +1,16 @@
+#content h1 {
+  margin-bottom: 15px;
+}
+
+#products .product, #products .news, #news .product, #news .news {
+  margin-top: 6px;
+  width: 47%;
+  opacity: 1;
+  float: left; }
+  #products .product.left, #products .news.left, #news .product.left, #news .news.left {
+    margin-left: 0;
+  }
+
+  #products .product, #products .news, #news .product, #news .news {
+    margin-left: 4%;
+  }
