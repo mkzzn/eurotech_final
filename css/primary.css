@@ -60,6 +60,7 @@ body {
       font-size: 28px; }
 
 #products .product, #products .news, #news .product, #news .news {
+  margin-top: 32px;
   width: 47%;
   opacity: 1;
   float: left; }
@@ -94,7 +95,7 @@ body {
         display: block;
         margin-bottom: -4px; }
   #products .product .body, #products .news .body, #news .product .body, #news .news .body {
-    padding: 0 16px 16px 16px;
+    padding: 4px 32px 16px 12px;
     margin: 0;
     background: #dddddd;
     opacity: 1;
