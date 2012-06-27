@@ -1,0 +1,28 @@
+#content h1 {
+  margin-bottom: 15px;
+}
+
+#terms {
+  font-family: "Open Sans", sans;
+  background: #ccc;
+  padding: 40px;
+}
+
+#content h3 {
+  font-size: 16px;
+}
+
+#content p {
+  font-size: 14px;
+}
+
+a {
+  font-family: "Open Sans", Cabin, Arial, sans-serif;
+  font-size: 15px;
+  color: #006272;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
