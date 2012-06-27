@@ -1,3 +1,11 @@
 #content h1 {
   margin-bottom: 14px;
 }
+
+/* #index .copy.right { */
+/*   font-size: 12px; */
+/* } */
+
+#content .content .copy.right {
+  font-size: 13px;
+}
