@@ -41,40 +41,50 @@
       <div id="content">
         <h1>What's New?</h1>
 <div id='news'>
-  <div class='news left'>
-    <h2>
-      <div class='title'>
-        Product Development
-      </div>
-      <div class='clear'></div>
-    </h2>
 
-<?php
-   $result = mysql_query("select * from news where section = 'News'") or die('Query failed. ' . mysql_error());
-?>
-
-
-    <div class='body'>
-      <div class='container'>
-        <div class='description'>
-          <?php
-             while($row = mysql_fetch_assoc($result)) {
-               if ($row['section'] == 'News') {
-           ?>
-
-            <p>
-              <?php echo $row['content']; ?>
-            </p>
-          <?php
-              }
-            }
-          ?>
+    <div class='news left'>
+      <h2>
+        <div class='title'>
+          Product Development
         </div>
-      </div>
-      <div class='clear'></div>
-    </div>
-  </div>
+        <div class='clear'></div>
+      </h2>
+      <div class='body'>
+        <div class='container'>
+          <div class='description'>
 
+  <?php
+   $result = mysql_query("select * from news where section = 'News'") or die('Query failed. ' . mysql_error());
+
+
+     while($row = mysql_fetch_assoc($result)) {
+       if ($row['section'] == 'News') {
+  ?>
+            <h3><?php echo $row['title']; ?></h3>
+            <?php echo $row['content']; ?>
+
+  <?php
+      }
+    }
+  ?>
+
+          </div>
+        </div>
+        <div class='clear'></div>
+      </div>
+    </div>
+
+
+    <div class='news<?php echo $add_class; ?>'>
+      <h2>
+        <div class='title'>
+          Trade Shows
+        </div>
+        <div class='clear'></div>
+      </h2>
+      <div class='body'>
+        <div class='container'>
+          <div class='description'>
   <?php
    $result = mysql_query("select * from news where section = 'Tradeshows'") or die('Query failed. ' . mysql_error());
 
@@ -83,28 +93,20 @@
        if ($row['section'] == 'Tradeshows') {
   ?>
 
-    <div class='news'>
-      <h2>
-        <div class='title'>
-            <?php echo $row['title']; ?>
-        </div>
-        <div class='clear'></div>
-      </h2>
-      <div class='body'>
-        <div class='container'>
-          <img src='images/products/pg1000_basic.jpg' width='210' />
-          <div class='description'>
+            <h3><?php echo $row['title']; ?></h3>
             <?php echo $row['content']; ?>
-          </div>
-        </div>
-        <div class='clear'></div>
-      </div>
-    </div>
+
 
   <?php
       }
     }
   ?>
+
+          </div>
+        </div>
+        <div class='clear'></div>
+      </div>
+    </div>
 
 </div>
 <div class='clear'></div>

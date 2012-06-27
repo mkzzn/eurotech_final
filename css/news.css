@@ -14,3 +14,8 @@
   #products .product, #products .news, #news .product, #news .news {
     margin-left: 4%;
   }
+
+#news .news .body {
+  height: 100%;
+  padding-bottom: 32px;
+  }
