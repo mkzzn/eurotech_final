@@ -3,11 +3,11 @@
 
 /* slider layout */
 .lof-slidecontent { position:relative;	overflow:hidden;}
-.lof-slidecontent .preload{	height:100%;	width:100%;	position:absolute;	top:0;	left:0;	z-index:100000;	text-align:center;	background:#333}
-.lof-slidecontent .preload div{	height:100%;	width:100%;	background:transparent url(../images/load-indicator.gif) no-repeat scroll 50% 50%;}
+.lof-slidecontent .preload{	height:100%;	width:100%;	position:absolute;	top:0;	left:0;	z-index:100000;	text-align:center;	background: none}
+.lof-slidecontent .preload div{	height:100%;	width:100%;;}
 
 .lof-slidecontent  .sliders-wrapper{	position:relative;	height:100%;	width:900px;	z-index:3px;	overflow:hidden; }
-.lof-slidecontent  ul.sliders-wrap-inner{overflow:hidden;	background:transparent url(../images/load-indicator.gif) no-repeat scroll 50% 50%;	padding:0px;	margin:0;	position:absolute;	overflow:hidden;}
+.lof-slidecontent  ul.sliders-wrap-inner{overflow:hidden;	padding:0px;	margin:0;	position:absolute;	overflow:hidden;}
 .lof-slidecontent  ul.sliders-wrap-inner li{overflow:hidden;	padding:0px;margin:0px;	float:left;	position:relative; list-style-type: none;}
 .lof-slidecontent  .lof-opacity  li{position:absolute;	top:0;	left:0;	float:inherit; }
 
