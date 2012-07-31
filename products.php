@@ -126,7 +126,6 @@
          </div>
          <div class='links'>
            <a class='view' href='view_product.php?id=<?php echo $product["id"]; ?>'>360&deg View</a>
-           <a href='screenshot.html'>Screenshot</a>
            <?php 
               if ($productUploads[$product["product_id"]]['productSpecSheet']) {
            ?>

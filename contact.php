@@ -48,23 +48,44 @@
       Offices
     </h2>
     <div class='copy'>
+
+   <?php 
+    $query = mysql_query("select * from offices where corporate = true") or die('Query failed. ' . mysql_error());
+
+    // put all of the offics into an array
+    $offices = array();
+    while($office = mysql_fetch_assoc($query)) {
+      $offices[] = $office;
+    }
+
+    // iterate over and print the offices 
+    foreach($offices as $office) {
+      $google_map_address = implode(" ", $office["address1"], $office["address2"], $office["city"], $office["city"],$office["state"],$office["zip"],$office["country"]);
+      $google_map_address = str_replace(" ", "+", $google_map_address);
+    ?>
+
       <div class='label'>Address</div>
       <div class='text'>
-        Euro-Tech Corporation
-        <br />
-        <a href="http://maps.google.com?q=N48+W+14170+Hampton+Ave+Menomonee+Falls+WI+53051">
-          N48 W 14170 Hampton Ave
-          <br />
-          Menomonee Falls, WI 53051
+       <?php echo $office['addressee']; ?><br />
+        <a href="http://maps.google.com?q=<?php echo $google_map_address; ?>">
+       <?php echo $office['contact']; ?>
+       <?php echo $office['address1']; ?>
+       <?php echo $office['address2']; ?><br />
+       <?php echo $office['city']; ?>, <?php echo $office['state']; ?> <?php echo $office['zip']; ?>
         </a>
       </div>
       <div class='label'>Phone</div>
-      <div class='text'>262.781.6777</div>
+    <div class='text'><?php echo $office['phone']; ?></div>
       <div class='label'>Fax</div>
-      <div class='text'>262.781.2822</div>
+      <div class='text'><?php echo $office['fax']; ?></div>
       <div class='label'>Email</div>
-      <div class='text'><a href="mailto:pg1000@eurotechcorp.com">pg1000@eurotechcorp.com</a></div>
+      <div class='text'><a href="mailto:<?php echo $office['email']; ?>"><?php echo $office['email']; ?></a></div>
       <br />
+
+    <?php
+    }
+?>
+
       <div class='label heading'>Our Staff</div>
       <div class='label'>Accounting</div>
       <div class='text'>Ann</div>
@@ -79,29 +100,56 @@
     </div>
   </div>
   <div class='content'>
-    <h2>Domestic Representatives</h2>
+    <h2>Domestic<br />Offices</h2>
     <div class='copy'>
+
+
       <div class='label heading'>Michigan Office</div>
+
+   <?php 
+    $query = mysql_query("select * from offices where domestic = true") or die('Query failed. ' . mysql_error());
+
+    // put all of the offics into an array
+    $offices = array();
+    while($office = mysql_fetch_assoc($query)) {
+      $offices[] = $office;
+    }
+
+    // iterate over and print the offices 
+    foreach($offices as $office) {
+      $google_map_address = implode(" ", $office["address1"], $office["address2"], $office["city"], $office["city"],$office["state"],$office["zip"],$office["country"]);
+      $google_map_address = str_replace(" ", "+", $google_map_address);
+    ?>
+
       <div class='label'>Contact</div>
-      <div class='text'>Greg See</div>
+      <div class='text'><?php echo $office['contact']; ?></div>
+
+
       <div class='label'>Address</div>
       <div class='text'>
-        <a href="http://maps.google.com/?q=3951+brighton+lane+canton+mi+48188+usa">
-          3951 Brighton Lane
-          <br />
-          Canton, MI 48188
+       <?php if ($office['addressee']) { echo $office['addressee']; }; ?>
+        <a href="http://maps.google.com?q=<?php echo $google_map_address; ?>">
+       <?php echo $office['address1']; ?>
+       <?php echo $office['address2']; ?><br />
+       <?php echo $office['city']; ?>, <?php echo $office['state']; ?> <?php echo $office['zip']; ?>
         </a>
       </div>
       <div class='label'>Phone</div>
-      <div class='text'>248.894.7774</div>
+    <div class='text'><?php echo $office['phone']; ?></div>
       <div class='label'>Fax</div>
-      <div class='text'>734.340.9832</div>
+      <div class='text'><?php echo $office['fax']; ?></div>
       <div class='label'>Email</div>
-      <div class='text'><a href="mailto:pg1000@eurotechcorp.com">pg1000@eurotechcorp.com</a></div>
+      <div class='text'><a href="mailto:<?php echo $office['email']; ?>"><?php echo $office['email']; ?></a></div>
+      <br />
+
+    <?php
+    }
+?>
+
     </div>
   </div>
   <div class='content rightmost'>
-    <h2>International Representatives</h2>
+    <h2>International Offices</h2>
     <div class='copy'>
       <div class='label heading'>Germany</div>
       <div class='label'>Address</div>
