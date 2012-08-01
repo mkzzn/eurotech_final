@@ -151,27 +151,46 @@
   <div class='content rightmost'>
     <h2>International Offices</h2>
     <div class='copy'>
-      <div class='label heading'>Germany</div>
+
+
+   <?php 
+    $query = mysql_query("select * from offices where international = true") or die('Query failed. ' . mysql_error());
+
+    // put all of the offics into an array
+    $offices = array();
+    while($office = mysql_fetch_assoc($query)) {
+      $offices[] = $office;
+    }
+
+    // iterate over and print the offices 
+    foreach($offices as $office) {
+      $google_map_address = implode(" ", $office["address1"], $office["address2"], $office["city"], $office["city"],$office["state"],$office["zip"],$office["country"]);
+      $google_map_address = str_replace(" ", "+", $google_map_address);
+    ?>
+
+      <div class='label heading'><?php echo $office['country']; ?></div>
+
       <div class='label'>Address</div>
       <div class='text'>
-        MESAS
-        <br />
-        Gesellschaft f&uuml;r Mess-,
-        <br />
-        Erfassungs- und Auswerte-
-        <br />
-        Computersysteme mbH
-        <br />
-        <a href="http://maps.google.com?q=hinten+auf+der+Gass+3+66646+Marpingen+Germany">
-          Hinten auf der Gass 3
-          <br />
-          66646 Marpingen
+       <?php if ($office['addressee']) { echo $office['addressee']; }; ?><br />
+        <a href="http://maps.google.com?q=<?php echo $google_map_address; ?>">
+       <?php echo $office['address1']; ?>
+       <?php echo $office['address2']; ?><br />
+       <?php echo $office['city']; ?>, <?php echo $office['state']; ?> <?php echo $office['zip']; ?>
         </a>
       </div>
+      <div class='label'>Phone</div>
+    <div class='text'><?php echo $office['phone']; ?></div>
       <div class='label'>Fax</div>
-      <div class='text'>(+49) 6853 30858</div>
+      <div class='text'><?php echo $office['fax']; ?></div>
       <div class='label'>Email</div>
-      <div class='text'><a href="mailto:info@mesas.de">info@mesas.de</a></div>
+      <div class='text'><a href="mailto:<?php echo $office['email']; ?>"><?php echo $office['email']; ?></a></div>
+      <br />
+
+    <?php
+    }
+?>
+
     </div>
   </div>
 </div>
