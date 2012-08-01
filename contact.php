@@ -50,7 +50,7 @@
     <div class='copy'>
 
    <?php 
-    $query = mysql_query("select * from offices where corporate = true") or die('Query failed. ' . mysql_error());
+    $query = mysql_query("select * from offices where corporate = 'on'") or die('Query failed. ' . mysql_error());
 
     // put all of the offics into an array
     $offices = array();
@@ -87,16 +87,18 @@
 ?>
 
       <div class='label heading'>Our Staff</div>
-      <div class='label'>Accounting</div>
-      <div class='text'>Ann</div>
-      <div class='label'>Shipping and Receiving</div>
-      <div class='text'>Rosemary</div>
-      <div class='label'>Literature Requests</div>
-      <div class='text'>Jan</div>
-      <div class='label'>Website/Ads/Trade Shows</div>
-      <div class='text'>Pat</div>
-      <div class='label'>Design and Development</div>
-      <div class='text'>Michael</div>
+   <?php 
+    $query = mysql_query("select * from offices where domestic = 'on'") or die('Query failed. ' . mysql_error());
+
+    // put all of the offics into an array
+    $offices = array();
+    while($office = mysql_fetch_assoc($query)) {
+    ?>
+      <div class='label'><?php echo $office['name']; ?></div>
+      <div class='text'><?php echo $office['role']; ?></div>
+    <?php
+    }
+   ?>
     </div>
   </div>
   <div class='content'>
@@ -107,7 +109,7 @@
       <div class='label heading'>Michigan Office</div>
 
    <?php 
-    $query = mysql_query("select * from offices where domestic = true") or die('Query failed. ' . mysql_error());
+    $query = mysql_query("select * from offices where domestic = 'on'") or die('Query failed. ' . mysql_error());
 
     // put all of the offics into an array
     $offices = array();
@@ -154,7 +156,7 @@
 
 
    <?php 
-    $query = mysql_query("select * from offices where international = true") or die('Query failed. ' . mysql_error());
+    $query = mysql_query("select * from offices where international = 'on'") or die('Query failed. ' . mysql_error());
 
     // put all of the offics into an array
     $offices = array();
@@ -174,9 +176,9 @@
       <div class='text'>
        <?php if ($office['addressee']) { echo $office['addressee']; }; ?><br />
         <a href="http://maps.google.com?q=<?php echo $google_map_address; ?>">
-       <?php echo $office['address1']; ?>
-       <?php echo $office['address2']; ?><br />
-       <?php echo $office['city']; ?>, <?php echo $office['state']; ?> <?php echo $office['zip']; ?>
+                                                                    <?php echo html_entity_decode(htmlspecialchars($office['address1'])); ?><br />
+                                                                    <?php echo html_entity_decode(htmlspecialchars($office['address2'])); ?><br />
+                                                                    <?php echo html_entity_decode(htmlspecialchars($office['city'])); ?>, <?php echo $office['state']; ?> <?php echo $office['zip']; ?>
         </a>
       </div>
       <div class='label'>Phone</div>

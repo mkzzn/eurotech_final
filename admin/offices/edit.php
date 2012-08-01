@@ -21,48 +21,45 @@
       ?>
 
       <form action="update.php" method="POST">
-        <input type="hidden" name="user_id" value="<?php echo $_GET['id']; ?>" />
+        <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>" />
         <div id="users">
           <?php
-            mysql_query("set names utf8;");
-
-            $result = mysql_query("select * from tbl_auth_user where user_id='" . $_GET['id']."'") or die('Query failed. ' . mysql_error());
-            $users = array(); // to use in the quote request form
-            while($user = mysql_fetch_assoc($result)) {
-              $users[] = $user;
+            $result = mysql_query("select * from offices where id='" . $_GET['id']."'") or die('Query failed. ' . mysql_error());
+            $offices = array(); // to use in the quote request form
+            while($office = mysql_fetch_assoc($result)) {
+              $offices[] = $office;
             }
             
-            $user = $users[0];
+            $office = $offices[0];
 
             $checkbox_fields = array( 
-              "Admin?"      => "isAdmin",
-              "File Admin?" => "isFileAdmin",
-              "Private Download?" => "private_download"
+              "International?"      => "international",
+              "Domestic?" => "domestic",
+              "Corporate?" => "corporate"
             );
 
             $text_fields = array(
-              "Company"     => "company",
-              "Customer Name"     => "custname",
-              "Download Alias"     => "download_alias",
-              "Download Abbreviation"     => "download_abbreviation",
-              "Password"     => "user_password",
-              "address1"    => "address1",
-              "Address 2"   => "address2",
-              "City"        => "city",
-              "State"       => "state",
-              "Zip"         => "zipcode",
-              "Phone"       => "phone",
-              "Fax"         => "fax"
+              "Location Name"     => "location_name",
+              "Contact"     => "contact",
+              "Addressee"     => "addressee",
+              "Address1"     => "address1",
+              "Address2"     => "address2",
+              "City"     => "city",
+              "State"    => "state",
+              "Zip"   => "zip",
+              "Country"   => "country",
+              "Fax"        => "fax",
+              "Phone"       => "phone"
             );
 
             $all_fields = array_merge($text_fields, $checkbox_fields);
 
             foreach($all_fields as $label => $field): 
-              $$field = isset($_POST[$field]) ? $_POST[$field] : $user[$field];
+              $$field = isset($_POST[$field]) ? $_POST[$field] : $office[$field];
             endforeach;
           ?>
 
-          <h1 class="page-title">Edit User "<?php echo $user["user_id"]; ?>"</h1>
+          <h1 class="page-title">Edit Office "<?php echo $office["location_name"]; ?>"</h1>
 
           <?php
             foreach($text_fields as $label => $field):
