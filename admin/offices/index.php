@@ -31,6 +31,8 @@
       ?>
 
       <form action="../user_response.php" method="POST">
+  
+        <a href="/admin/offices/new.php">New Office</a>
         <table id="users">
           <col></col>
           <col></col>
