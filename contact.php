@@ -60,8 +60,22 @@
 
     // iterate over and print the offices 
     foreach($offices as $office) {
-      $google_map_address = implode(" ", $office["address1"], $office["address2"], $office["city"], $office["city"],$office["state"],$office["zip"],$office["country"]);
+    $address_array = array($office["address1"], $office["address2"], $office["address3"], $office["city"], $office["city"], $office["state"], $office["zip"], $office["country"]);
+    $google_map_address = implode(" ", $address_array);
+    $google_map_address = str_replace("-", "", $google_map_address);
+    $google_map_address = str_replace("  ", " ", $google_map_address);
+    $google_map_address = str_replace("   ", " ", $google_map_address);
       $google_map_address = str_replace(" ", "+", $google_map_address);
+      $google_map_address = str_replace("++", "+", $google_map_address);
+
+    /* $google_map_address = array(); */
+    /* $address_fields = array("address1", "address2", "address3", "city", "state", "zip", "country"); */
+    /* foreach($address_fields as $field): */
+    /* $google_map_address[] = ($(office[$field]) || ""); */
+    /* endforeach; */
+
+    /* $google_map_address = implode(" ", $google_map_address); */
+    /*   $google_map_address = str_replace(" ", "+", $google_map_address); */
     ?>
 
       <div class='label'>Address</div>
@@ -88,7 +102,7 @@
 
       <div class='label heading'>Our Staff</div>
    <?php 
-    $query = mysql_query("select * from offices where domestic = 'on'") or die('Query failed. ' . mysql_error());
+    $query = mysql_query("select * from staff_members") or die('Query failed. ' . mysql_error());
 
     // put all of the offics into an array
     $offices = array();
@@ -119,8 +133,13 @@
 
     // iterate over and print the offices 
     foreach($offices as $office) {
-      $google_map_address = implode(" ", $office["address1"], $office["address2"], $office["city"], $office["city"],$office["state"],$office["zip"],$office["country"]);
+    $address_array = array($office["address1"], $office["address2"], $office["address3"], $office["city"], $office["city"], $office["state"], $office["zip"], $office["country"]);
+    $google_map_address = implode(" ", $address_array);
+    $google_map_address = str_replace("-", "", $google_map_address);
+    $google_map_address = str_replace("  ", " ", $google_map_address);
+    $google_map_address = str_replace("   ", " ", $google_map_address);
       $google_map_address = str_replace(" ", "+", $google_map_address);
+      $google_map_address = str_replace("++", "+", $google_map_address);
     ?>
 
       <div class='label'>Contact</div>
@@ -166,7 +185,11 @@
 
     // iterate over and print the offices 
     foreach($offices as $office) {
-      $google_map_address = implode(" ", $office["address1"], $office["address2"], $office["city"], $office["city"],$office["state"],$office["zip"],$office["country"]);
+    $address_array = array($office["address1"], $office["address2"], $office["address3"], $office["city"], $office["city"], $office["state"], $office["zip"], $office["country"]);
+    $google_map_address = implode(" ", $address_array);
+    $google_map_address = str_replace("-", "", $google_map_address);
+    $google_map_address = str_replace("  ", " ", $google_map_address);
+    $google_map_address = str_replace("   ", " ", $google_map_address);
       $google_map_address = str_replace(" ", "+", $google_map_address);
     ?>
 
@@ -176,9 +199,9 @@
       <div class='text'>
        <?php if ($office['addressee']) { echo $office['addressee']; }; ?><br />
         <a href="http://maps.google.com?q=<?php echo $google_map_address; ?>">
-                                                                    <?php echo html_entity_decode(htmlspecialchars($office['address1'])); ?><br />
-                                                                    <?php echo html_entity_decode(htmlspecialchars($office['address2'])); ?><br />
-                                                                    <?php echo html_entity_decode(htmlspecialchars($office['city'])); ?>, <?php echo $office['state']; ?> <?php echo $office['zip']; ?>
+                                                                    <?php echo $office['address1']; ?><br />
+                                                                    <?php echo $office['address2']; ?><br />
+                                                                    <?php echo $office['city']; ?>, <?php echo $office['state']; ?> <?php echo $office['zip']; ?>
         </a>
       </div>
       <div class='label'>Phone</div>

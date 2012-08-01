@@ -24,7 +24,6 @@
         <input type="hidden" name="user_id" value="<?php echo $_GET['id']; ?>" />
         <div id="users">
           <?php
-            mysql_query("set names utf8;");
 
             $result = mysql_query("select * from tbl_auth_user where user_id='" . $_GET['id']."'") or die('Query failed. ' . mysql_error());
             $users = array(); // to use in the quote request form
@@ -46,8 +45,9 @@
               "Download Alias"     => "download_alias",
               "Download Abbreviation"     => "download_abbreviation",
               "Password"     => "user_password",
-              "address1"    => "address1",
+              "Address 1"    => "address1",
               "Address 2"   => "address2",
+              "Address 3"   => "address3",
               "City"        => "city",
               "State"       => "state",
               "Zip"         => "zipcode",

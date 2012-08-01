@@ -42,8 +42,9 @@
               "Location Name"     => "location_name",
               "Contact"     => "contact",
               "Addressee"     => "addressee",
-              "Address1"     => "address1",
-              "Address2"     => "address2",
+              "Address 1"     => "address1",
+              "Address 2"     => "address2",
+              "Address 3"     => "address3",
               "City"     => "city",
               "State"    => "state",
               "Zip"   => "zip",
@@ -55,7 +56,7 @@
             $all_fields = array_merge($text_fields, $checkbox_fields);
 
             foreach($all_fields as $label => $field): 
-              $$field = isset($_POST[$field]) ? $_POST[$field] : $office[$field];
+$$field = isset($_POST[$field]) ? $_POST[$field] : htmlentities($office[$field], ENT_IGNORE);
             endforeach;
           ?>
 

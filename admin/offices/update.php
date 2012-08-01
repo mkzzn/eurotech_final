@@ -10,6 +10,7 @@
                   "Addressee"     => "addressee",
                   "Address1"     => "address1",
                   "Address2"     => "address2",
+                  "Address3"     => "address3",
                   "City"     => "city",
                   "State"    => "state",
                   "Zip"   => "zip",
