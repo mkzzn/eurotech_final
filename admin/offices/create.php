@@ -16,7 +16,6 @@
                   "Zip"   => "zip",
                   "Country"   => "country",
                   "Fax"        => "fax",
-                  "Location Name"       => "location_name",
                   "Phone"       => "phone"
                    );
   
@@ -28,13 +27,13 @@
     /* if ($field == "location_name" && ($value == null || $value == "")) { */
     /*   $value = "New Location"; */
     /* } */
-    $values_array[] = $value;
+    $values_array[] = "'".$value."'";
   endforeach;
 
   $values = implode(", ", $values_array);
   $fields = implode(", ", $fields_array);
   
-  $query_string = "insert into offices ($fields) values ($fields)";
+  $query_string = "insert into offices ($fields) values ($values)";
   $result = mysql_query($query_string) or die('Query failed. ' . mysql_error());
   // echo $query_string;
   header( 'Location: index.php');

@@ -18,6 +18,10 @@
 
     <link rel="stylesheet" href="../admincss.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="../../css/admin/users.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700"  type="text/css" media="screen" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" ></script>
+    <script src="../../js/admin/delete_confirm.js" ></script>
 
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
   </head>
@@ -31,14 +35,19 @@
       ?>
 
       <form action="../user_response.php" method="POST">
-  
-        <a href="/admin/offices/new.php">New Office</a>
+
+        <h1>Manage Offices</h1>
+        <div class="controls">
+          <a href="/admin/offices/new.php" class="new_resource">New Office</a>
+        </div>
         <table id="users">
+          <col></col>
           <col></col>
           <col></col>
           <thead> 
             <th>Office Name</th>
             <th>Country</th>
+            <th>Delete Location</th>
           </thead>
 
           <tbody>
@@ -59,11 +68,14 @@
             ?>
 
             <tr class="user <?php echo $oddeven; ?>">
-              <td class="username">
+              <td class="location_name">
                 <a href="edit.php?id=<?php echo $id; ?>"><?php echo $location_name; ?>
               </td>
-              <td class="private_download">
+              <td class="country">
                 <?php echo $office['country']; ?>
+              </td>
+              <td class="delete_link">
+                <a href="delete.php?id=<?php echo $id; ?>" class="delete_confirm">Delete</a>
               </td>
            </tr>
 

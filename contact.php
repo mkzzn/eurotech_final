@@ -114,6 +114,8 @@
     }
    ?>
     </div>
+
+    <div class="clear"></div>
   </div>
   <div class='content'>
     <h2>Domestic<br />Offices</h2>

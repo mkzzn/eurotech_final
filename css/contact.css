@@ -8,3 +8,9 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+#content #contact .content .copy {
+    min-height: 600px;
+    height: auto;
+    padding-bottom: 32px;
+}

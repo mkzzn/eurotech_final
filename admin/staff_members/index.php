@@ -19,6 +19,11 @@
     <link rel="stylesheet" href="../admincss.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="../../css/admin/users.css" type="text/css" media="screen" />
 
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700"  type="text/css" media="screen" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" ></script>
+    <script src="../../js/admin/delete_confirm.js" ></script>
+
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
   </head>
 
@@ -29,14 +34,20 @@
       <?php
         include '../header.php';
       ?>
-
       <form action="../user_response.php" method="POST">
+        <h1>Manage Staff Members</h1>
+        <div class="controls">
+          <a href="/admin/staff_members/new.php" class="new_resource">New Staff Member</a>
+        </div>
+
+
         <table id="users">
           <col></col>
           <col></col>
           <thead> 
             <th>Name</th>
             <th>Role</th>
+            <th>Delete Staff Member</th>
           </thead>
 
           <tbody>
@@ -57,11 +68,14 @@
             ?>
 
             <tr class="user <?php echo $oddeven; ?>">
-              <td class="username">
+              <td class="name">
                 <a href="edit.php?id=<?php echo $id; ?>"><?php echo $name; ?>
               </td>
-              <td class="private_download">
+              <td class="role">
                 <?php echo $staff_member['role']; ?>
+              </td>
+              <td class="delete_link">
+                <a href="delete.php?id=<?php echo $id; ?>" class="delete_confirm">Delete</a>
               </td>
            </tr>
 

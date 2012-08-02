@@ -16,12 +16,12 @@ table thead th {
   text-align: left;
   margin-left: 12px;
   width: 200px;
-  padding: 2px 4px;
+  padding: 4px 8px;
   font-size: 14px;
 }
 
 table {
-  margin: 20px auto;
+  margin: 8px auto 20px auto;
   border-spacing: 0; 
 }
 
@@ -35,6 +35,42 @@ table tbody td {
   text-align: left;
   width: 200px;
   margin: 0;
-  padding: 2px;
+  padding: 3px;
   font-size: 13px;
+}
+
+
+table#users a {
+    color: #0D73D1;
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+}
+
+table#users a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 32px;
+    margin: 0;
+    margin-left: 32px;
+    margin-top: 20px;
+    font-family: "Open Sans", sans-serif;
+}    
+
+.controls {
+  padding: 8px 32px 2px 32px;
+}
+
+a.new_resource {
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #0D73D1;
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+}
+
+a.new_resource:hover {
+    text-decoration: underline;
 }
