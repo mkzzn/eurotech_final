@@ -82,7 +82,16 @@
              <div class="caption"><?php echo $row["caption"]; ?></div>
            <?php } ?>
            <div class="filetype"><?php echo $row["type"]; ?></div>
-           <div class="download_link"><a href="<?php echo $row["path"]; ?>">Download</a></div>
+
+           <?php if ($row["path"] && strlen($row["path"]) > 0) { ?>
+             <div class="download_link"><a href="<?php echo $row["path"]; ?>">Download</a></div>
+           <?php } ?>
+
+           <?php if ($row["help_file"] && strlen($row["help_file"]) > 0) { ?>
+             <div class="download_link"><a href="<?php echo $row["help_file"]; ?>">Help File</a></div>
+           <?php } ?>
+
+             <div class="clear"></div>
          </div>
       <?php
          }
