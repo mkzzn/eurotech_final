@@ -61,59 +61,14 @@
           <div class="clear-right"></div>
         </div>
 
-        <h3>General Downloads</h3>
       <div id="downloads">
-    <?php
 
-      $query   = "SELECT * from gen_downloads LIMIT 1";
+     <?php
+
+      $query = "SELECT * from downloads";
       $result  = mysql_query($query) or die('Error, query failed');
 
-      $title1 = "New PG1000 Install";
-      $title2 = "Major PG1000 2010 Upgrade";
-      $title3 = "Minor PG1000 2010 Upgrade";
-      $title4 = "PG1000 2010 File Upgrade";
-      $title5 = "PG1000 Help File Upgrade";
-
       while($row = mysql_fetch_array($result)) {
-        $i = 1;
-        while ($i < 6) {
-          $n = strval($i);
-          if (strlen($row['install'.$n]) > 0 || strlen($row['help'.$n]) > 0) {
-          ?>
-
-            <div class="download">
-          <div class="title"><?php echo ${"title".$n}; ?></div>
-              <?php
-              if (strlen($row['install' . $n]) > 0) {
-              ?>
-              <a href="<?php echo $row['install'.$n]; ?>">Installation File</a>
-              <?php
-              } // end strlen install 1
-              if (strlen($row['help'.$n]) > 0) {
-              ?>
-                <a href="<?php echo $row['help'.$n]; ?>">Help File</a>
-              <?php 
-              } // end strlen help 1 
-              ?>    
-          </div>
-        <?php 
-            } // end nested help
-          $i++;
-        } // end numerical while
-      } // end query while
-
-// echo $user['user_id'];
-// echo $user['private_download'];
-//if ($user['private_download'] == true) {
-
-      $query = "SELECT * from upload where section like 'PrivateDownload%'";
-        $result  = mysql_query($query) or die('Error, query failed');
-        
-      ?>
-        <h3>Private Downloads</h3>
-      <?php
-
-         while($row = mysql_fetch_array($result)) {
       ?>
 
          <div class="private_download">

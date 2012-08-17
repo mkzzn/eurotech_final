@@ -19,7 +19,7 @@ include 'library/opendb.php';
 if(isset($_GET['del']))
 {
 	//search for the path in the db
-	$query   = "SELECT path, size FROM upload WHERE id = '{$_GET['del']}'";
+	$query   = "SELECT path FROM downloads WHERE id = '{$_GET['del']}'";
 	$result  = mysql_query($query) or die('Error, query failed');
 	list($path, $size) = mysql_fetch_array($result);
 	
@@ -32,7 +32,7 @@ if(isset($_GET['del']))
 	unlink($newpath);
 	endif;
 	// remove the article from the database
-	$query = "DELETE FROM upload WHERE id = '{$_GET['del']}'";
+	$query = "DELETE FROM downloads WHERE id = '{$_GET['del']}'";
 	mysql_query($query) or die('Error : ' . mysql_error());
 	
 	// redirect to current page so when the user refresh this page
@@ -57,10 +57,6 @@ function delFile(id, name)
 	}
 }
 
-function change_int_section(int_section)
-{
-	window.location.href = "cms-admin-privatedownloads.php?int_section=" + int_section;
-}
 </script>
 </head>
 
@@ -87,8 +83,8 @@ if(isset($_POST['link']))
     include 'library/opendb.php';
 
     
-	$query = "INSERT INTO upload (name, path, section, caption ) ".
-			 "VALUES ('$name', '$link', '$section', '$caption')";
+	$query = "INSERT INTO downloads (name, path, help_file, caption ) ".
+			 "VALUES ('$name', '$link', '$help_file', '$caption')";
 
     mysql_query($query) or die('Error, query failed : ' . mysql_error());                    
 
@@ -96,54 +92,6 @@ if(isset($_POST['link']))
     
     echo "<br>File added<br>";
 }		
-
-
-	
-if(isset($_POST['int_section'])) {
-
-	$query = "SELECT user_id, download_alias, download_abbreviation FROM tbl_auth_user WHERE download_abbreviation = '" . $_POST['int_section'] . "'"; 
-	$result = mysql_query($query) or die('Error : ' . mysql_error());
-	while(list($user_id, $alias, $abbrv) = mysql_fetch_array($result, MYSQL_NUM)) {
-
-    $int_section = "PrivateDownload";
-    if ($abbrv != "USA") {
-      $int_section .= "_" . $abbrv;
-    }
-    $int_section_user = $user_id;
-  }
-
-} else {
-	$int_section_user = "US_downloads";
-	$int_section = "PrivateDownload";
-}
-	
-if(isset($_POST['password']))
-	{
-		$password      = $_POST['password'];
-		$passwordverify = $_POST['passwordverify'];
-		
-		if($password == ""){
-			echo "<br>Passwords cannot be blank.<br>";
-		}
-		
-		else if($password == $passwordverify) {
-		
-		// update the article in the database
-		$query = "UPDATE tbl_auth_user ".
-				 "SET user_password = '$password' ".
-				 "WHERE user_id = '$int_section_user'";
-		mysql_query($query) or die('Error : ' . mysql_error());
-		
-		echo "<br>Password Changed.<br>";
-		}
-		
-		else {
-			echo "<br>Passwords are not the same.<br>";
-		}
-
-			
-	}
-
 
 ?>
 
@@ -156,7 +104,7 @@ if(isset($_POST['password']))
 <div ID=articlelist>
 <br />
 <?php
-	$query = "SELECT id, name, caption, path FROM upload WHERE section LIKE 'PrivateDownload%' ORDER BY id ASC"; 
+	$query = "SELECT id, name, caption, help_file, path FROM downloads ORDER BY id ASC"; 
 	$result = mysql_query($query) or die('Error : ' . mysql_error());
  
 	while(list($id, $name, $caption, $path) = mysql_fetch_array($result, MYSQL_NUM))
@@ -183,14 +131,31 @@ if(isset($_POST['password']))
 
 <br>
 <div ID=newpassword>
-Upload a new file:
-<br>
+<h1>Upload a new file</h1>
 	<form method="post" action="cms-admin-privatedownloads.php">
 		<input type="hidden" name="int_section" value="<?=$int_section;?>">
 		<input type="hidden" name="section" value="<?=$int_section;?>">
-		<br><br> Name:<input name="name" type="text" class="box" id="name" size=30>
-		<br><br> Link to File:<input name="link" type="text" class="box" id="link" size=30>
-		<br><br>Description: <textarea name="caption" cols="47" rows="2" class="box" id="caption"><?=$caption;?></textarea>
+
+		Name
+    <br/>
+    <input name="name" type="text" class="box" id="name" size=30>
+    <br/><br />
+
+		Link to File
+    <br/>
+    <input name="link" type="text" class="box" id="link" size=30>
+    <br/><br />
+
+		Help File
+    <br/>
+    <input name="link" type="text" class="box" id="help_file" size=30>
+    <br/><br />
+
+		Description
+    <br/>
+    <textarea name="caption" cols="47" rows="2" class="box" id="caption"><?=$caption;?></textarea>
+    <br />
+    <br />
 		<input name="upload" type="submit" class="box" id="upload" value="  Add  ">
 		</form>
 <br>
@@ -200,29 +165,8 @@ Upload a new file:
 		
 </div>
 </div>
-</td><td align="center">
-<div ID=image>
-
-<?php
-		$query   = "SELECT user_password FROM tbl_auth_user WHERE user_id = '" . $int_section_user . "' LIMIT 1";
-		$result  = mysql_query($query) or die('Error, query failed');
-		list($password) = mysql_fetch_array($result);
-		?>
-	<div ID=newpassword>
-	<br><b>Username:</b> <?=$int_section_user;?><br>
-	<b>Current Password:</b> <?php echo $password;?><br>
-	
-	<br>
-	<form method="post" action="cms-admin-privatedownloads.php">
-	<input type="hidden" name="int_section" value="<?=$int_section;?>">
-	New Password: <input name="password" type="text" class="box" id="password" size=20><br>
-	Verify Password: <input name="passwordverify" type="text" class="box" id="passwordverify" size=20><br>
-	<input name="update" type="submit" class="box" id="update" value="update password">
-	</form>
-	</div>
-
-</div>
-</td></tr></table>
+</td>
+</tr></table>
 </div>
 <br><br>
 

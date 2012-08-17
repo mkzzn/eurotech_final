@@ -30,9 +30,7 @@ if (!isset($_SESSION['db_is_logged_in']) || $_SESSION['db_is_logged_in'] !== tru
 	
 	if(isset($_GET['id']))
 	{
-		$query = "SELECT id, name, path, section, caption ".
-				 "FROM upload ".
-				 "WHERE id = '{$_GET['id']}'";
+		$query = "SELECT id, name, path, help_file, caption FROM downloads WHERE id = '{$_GET['id']}'";
 		$result = mysql_query($query) or die('Error : ' . mysql_error());
 		list($id, $name, $link, $section, $caption) = mysql_fetch_array($result, MYSQL_NUM);
 		
@@ -43,20 +41,20 @@ if (!isset($_SESSION['db_is_logged_in']) || $_SESSION['db_is_logged_in'] !== tru
 		$id      = $_POST['id'];
 		$name   = $_POST['name'];
 		$link = $_POST['link'];
-		$section = $_POST['section'];
+		$help_file = $_POST['help_file'];
 		$caption = $_POST['caption'];
 		
 		if(!get_magic_quotes_gpc())
 		{
 			$name   = addslashes($name);
 			$link = addslashes($link);
-			$section = addslashes($section);
+			$help_file = addslashes($help_file);
 			$caption = addslashes($caption);
 		}
 		
 		// update the article in the database
-		$query = "UPDATE upload ".
-				 "SET name = '$name', path = '$link', section = '$section', caption = '$caption' ".
+		$query = "UPDATE downloads ".
+				 "SET name = '$name', path = '$link', help_file = '$help_file', caption = '$caption' ".
 				 "WHERE id = '$id'";
 		mysql_query($query) or die('Error : ' . mysql_error());
 			
@@ -97,8 +95,10 @@ Edit File Attributes:
 	<form method="post" action="cms-admin-privatedownloads-edit.php">
 		<input type="hidden" name="section" value="<?=$section;?>">
 		<input type="hidden" name="id" value="<?=$id;?>">
-		<td> Name:</td><td<input name="name" type="text" class="box" id="name" size=30 value="<?=$name;?>"></td></tr>
+		<td> Name:</td><td>
+    <input name="name" type="text" class="box" id="name" size=30 value="<?=$name;?>"></td></tr>
 		<tr><td> Link to File:</td><td><input name="link" type="text" class="box" id="link" size=30 value="<?=$link;?>"></td></tr>
+		<tr><td> Help File</td><td><input name="help_file" type="text" class="box" id="help_file" size=30 value="<?=$help_file;?>"></td></tr>
 		<tr><td>Description:</td><td> <textarea name="caption" cols="47" rows="2" class="box" id="caption"><?=$caption;?></textarea></td></tr>
 		<tr><td></td><td><input name="update" type="submit" class="box" id="update" value="  Update  "></td></tr>
 		</form>
