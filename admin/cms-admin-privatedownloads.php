@@ -107,7 +107,7 @@ if(isset($_POST['link']))
 	$query = "SELECT id, name, caption, help_file, path FROM downloads ORDER BY id ASC"; 
 	$result = mysql_query($query) or die('Error : ' . mysql_error());
  
-	while(list($id, $name, $caption, $path) = mysql_fetch_array($result, MYSQL_NUM))
+while(list($id, $name, $caption, $help_file, $path) = mysql_fetch_array($result, MYSQL_NUM))
 	{	
 ?>
 <table width="400" border="0" cellpadding="5" cellspacing="1">

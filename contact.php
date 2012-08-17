@@ -78,22 +78,47 @@
     /*   $google_map_address = str_replace(" ", "+", $google_map_address); */
     ?>
 
+
+      <?php if ($office['contact'] && strlen($office['contact']) > 0) { ?>
+        <div class='label'>Contact</div>
+        <div class='text'><?php echo $office['contact']; ?></div>
+      <?php } ?>
+
       <div class='label'>Address</div>
       <div class='text'>
-       <?php echo $office['addressee']; ?><br />
-        <a href="http://maps.google.com?q=<?php echo $google_map_address; ?>">
-       <?php echo $office['contact']; ?>
-       <?php echo $office['address1']; ?>
-       <?php echo $office['address2']; ?><br />
-       <?php echo $office['city']; ?>, <?php echo $office['state']; ?> <?php echo $office['zip']; ?>
+       <?php if ($office['addressee'] && strlen($office['addressee']) > 0) { ?>
+         <?php echo $office['addressee']; ?><br />
+       <?php } ?>
+
+       <a href="http://maps.google.com?q=<?php echo $google_map_address; ?>">
+
+       <?php if ($office['address1'] && strlen($office['address1']) > 0) { ?>
+         <?php echo $office['address1']; ?><br />
+       <?php } ?>
+
+       <?php if ($office['address2'] && strlen($office['address2']) > 0) { ?>
+         <?php echo $office['address2']; ?><br />
+       <?php } ?>
+
+       <?php if ($office['city'] && strlen($office['city']) > 0) { echo $office['city'] . ", "; } ?>
+       <?php if ($office['state'] && strlen($office['state']) > 0) { echo $office['state']; } ?>
+       <?php if ($office['zip'] && strlen($office['zip']) > 0) { echo $office['zip']; } ?>
         </a>
       </div>
-      <div class='label'>Phone</div>
-    <div class='text'><?php echo $office['phone']; ?></div>
-      <div class='label'>Fax</div>
-      <div class='text'><?php echo $office['fax']; ?></div>
-      <div class='label'>Email</div>
-      <div class='text'><a href="mailto:<?php echo $office['email']; ?>"><?php echo $office['email']; ?></a></div>
+          <?php if ($office['phone'] && strlen($office['phone']) > 0) { ?>
+         <div class='label'>Phone</div>
+         <div class='text'><?php echo $office['phone']; ?></div>
+       <?php } ?>
+
+      <?php if ($office['fax'] && strlen($office['fax']) > 0) { ?>
+        <div class='label'>Fax</div>
+        <div class='text'><?php echo $office['fax']; ?></div>
+      <?php } ?>
+
+      <?php if ($office['email'] && strlen($office['email']) > 0) { ?>
+        <div class='label'>Email</div>
+        <div class='text'><a href="mailto:<?php echo $office['email']; ?>"><?php echo $office['email']; ?></a></div>
+      <?php } ?>
       <br />
 
     <?php
@@ -118,7 +143,7 @@
     <div class="clear"></div>
   </div>
   <div class='content'>
-    <h2>Domestic<br />Offices</h2>
+    <h2>Offices</h2>
     <div class='copy'>
 
 
@@ -144,25 +169,44 @@
       $google_map_address = str_replace("++", "+", $google_map_address);
     ?>
 
-      <div class='label'>Contact</div>
-      <div class='text'><?php echo $office['contact']; ?></div>
-
+      <?php if ($office['contact'] && strlen($office['contact']) > 0) { ?>
+        <div class='label'>Contact</div>
+        <div class='text'><?php echo $office['contact']; ?></div>
+      <?php } ?>
 
       <div class='label'>Address</div>
       <div class='text'>
-       <?php if ($office['addressee']) { echo $office['addressee']; }; ?>
-        <a href="http://maps.google.com?q=<?php echo $google_map_address; ?>">
-       <?php echo $office['address1']; ?>
-       <?php echo $office['address2']; ?><br />
-       <?php echo $office['city']; ?>, <?php echo $office['state']; ?> <?php echo $office['zip']; ?>
+       <?php if ($office['addressee'] && strlen($office['addressee']) > 0) { echo $office['addressee'] ."<br />"; }; ?>
+       <a href="http://maps.google.com?q=<?php echo $google_map_address; ?>">
+
+       <?php if ($office['address1'] && strlen($office['address1']) > 0) { ?>
+         <?php echo $office['address1']; ?>
+         <br />
+       <?php } ?>
+
+       <?php if ($office['address2'] && strlen($office['address2']) > 0) { ?>
+         <?php echo $office['address2']; ?><br />
+       <?php } ?>
+
+       <?php if ($office['city'] && strlen($office['city']) > 0) { echo $office['city'] . ", "; } ?>
+       <?php if ($office['state'] && strlen($office['state']) > 0) { echo $office['state']; } ?>
+       <?php if ($office['zip'] && strlen($office['zip']) > 0) { echo $office['zip']; } ?>
         </a>
       </div>
-      <div class='label'>Phone</div>
-    <div class='text'><?php echo $office['phone']; ?></div>
-      <div class='label'>Fax</div>
-      <div class='text'><?php echo $office['fax']; ?></div>
-      <div class='label'>Email</div>
-      <div class='text'><a href="mailto:<?php echo $office['email']; ?>"><?php echo $office['email']; ?></a></div>
+          <?php if ($office['phone'] && strlen($office['phone']) > 0) { ?>
+         <div class='label'>Phone</div>
+         <div class='text'><?php echo $office['phone']; ?></div>
+       <?php } ?>
+
+      <?php if ($office['fax'] && strlen($office['fax']) > 0) { ?>
+        <div class='label'>Fax</div>
+        <div class='text'><?php echo $office['fax']; ?></div>
+      <?php } ?>
+
+      <?php if ($office['email'] && strlen($office['email']) > 0) { ?>
+        <div class='label'>Email</div>
+        <div class='text'><a href="mailto:<?php echo $office['email']; ?>"><?php echo $office['email']; ?></a></div>
+      <?php } ?>
       <br />
 
     <?php
@@ -172,7 +216,7 @@
     </div>
   </div>
   <div class='content rightmost'>
-    <h2>International Offices</h2>
+    <h2>Agents</h2>
     <div class='copy'>
 
 
@@ -195,23 +239,51 @@
       $google_map_address = str_replace(" ", "+", $google_map_address);
     ?>
 
+      <?php if ($office['country'] && strlen($office['country']) > 0) { ?>
       <div class='label heading'><?php echo $office['country']; ?></div>
+      <?php } ?>
+
+
+      <?php if ($office['contact'] && strlen($office['contact']) > 0) { ?>
+        <div class='label'>Contact</div>
+        <div class='text'><?php echo $office['contact']; ?></div>
+      <?php } ?>
 
       <div class='label'>Address</div>
       <div class='text'>
-       <?php if ($office['addressee']) { echo $office['addressee']; }; ?><br />
-        <a href="http://maps.google.com?q=<?php echo $google_map_address; ?>">
-                                                                    <?php echo $office['address1']; ?><br />
-                                                                    <?php echo $office['address2']; ?><br />
-                                                                    <?php echo $office['city']; ?>, <?php echo $office['state']; ?> <?php echo $office['zip']; ?>
+       <?php if ($office['addressee'] && strlen($office['addressee']) > 0) { ?>
+         <?php echo $office['addressee']; ?><br />
+       <?php } ?>
+
+       <a href="http://maps.google.com?q=<?php echo $google_map_address; ?>">
+
+       <?php if ($office['address1'] && strlen($office['address1']) > 0) { ?>
+         <?php echo $office['address1']; ?><br />
+       <?php } ?>
+
+       <?php if ($office['address2'] && strlen($office['address2']) > 0) { ?>
+         <?php echo $office['address2']; ?><br />
+       <?php } ?>
+
+       <?php if ($office['city'] && strlen($office['city']) > 0) { echo $office['city'] . ", "; } ?>
+       <?php if ($office['state'] && strlen($office['state']) > 0) { echo $office['state']; } ?>
+       <?php if ($office['zip'] && strlen($office['zip']) > 0) { echo $office['zip']; } ?>
         </a>
       </div>
-      <div class='label'>Phone</div>
-    <div class='text'><?php echo $office['phone']; ?></div>
-      <div class='label'>Fax</div>
-      <div class='text'><?php echo $office['fax']; ?></div>
-      <div class='label'>Email</div>
-      <div class='text'><a href="mailto:<?php echo $office['email']; ?>"><?php echo $office['email']; ?></a></div>
+          <?php if ($office['phone'] && strlen($office['phone']) > 0) { ?>
+         <div class='label'>Phone</div>
+         <div class='text'><?php echo $office['phone']; ?></div>
+       <?php } ?>
+
+      <?php if ($office['fax'] && strlen($office['fax']) > 0) { ?>
+        <div class='label'>Fax</div>
+        <div class='text'><?php echo $office['fax']; ?></div>
+      <?php } ?>
+
+      <?php if ($office['email'] && strlen($office['email']) > 0) { ?>
+        <div class='label'>Email</div>
+        <div class='text'><a href="mailto:<?php echo $office['email']; ?>"><?php echo $office['email']; ?></a></div>
+      <?php } ?>
       <br />
 
     <?php
