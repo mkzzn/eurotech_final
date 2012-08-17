@@ -39,8 +39,9 @@
       <?php include "app/views/_nav.php"; ?>
 
       <div id="content">
-        <h1>Software</h1>
+        <h1>Coming Soon...</h1>
 <div id='news'>
+  <!--
   <div class='news left'>
     <h2>
       <div class='title'>
@@ -73,7 +74,7 @@
       </div>
       <div class='clear'></div>
     </div>
-  </div>
+  </div> -->
 </div>
 <div class='clear'></div>
 

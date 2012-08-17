@@ -73,6 +73,7 @@ body {
     font-size: 24px; }
     #products .product h2 .title, #products .news h2 .title, #news .product h2 .title, #news .news h2 .title {
       width: 200;
+      font-size: 19px;
       float: left;
       padding: none;
       margin: none; }
