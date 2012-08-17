@@ -104,9 +104,9 @@
 
 // echo $user['user_id'];
 // echo $user['private_download'];
-      if ($user['private_download'] == true) {
+//if ($user['private_download'] == true) {
 
-        $query = "SELECT * from upload where section = 'PrivateDownload_" . $user['download_abbreviation'] . "'";
+      $query = "SELECT * from upload where section like 'PrivateDownload%'";
         $result  = mysql_query($query) or die('Error, query failed');
         
       ?>
@@ -131,7 +131,7 @@
          </div>
       <?php
          }
-      }
+// }
 
     ?>    
     

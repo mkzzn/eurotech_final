@@ -67,7 +67,6 @@ function change_int_section(int_section)
 <body>
 
 <div class=content>
-<div ID=updatereport>
 <?
 // you can change this to any directory you want
 // as long as php can write to it
@@ -111,7 +110,6 @@ if(isset($_POST['int_section'])) {
       $int_section .= "_" . $abbrv;
     }
     $int_section_user = $user_id;
-    echo "<br>Now Editing $alias Private Downloads<br>";
   }
 
 } else {
@@ -149,8 +147,6 @@ if(isset($_POST['password']))
 
 ?>
 
-</div>
-
 
 <?php include 'header.php'; ?>
 
@@ -158,28 +154,9 @@ if(isset($_POST['password']))
 
 <table><tr><td>
 <div ID=articlelist>
-
-<form method="post" action="cms-admin-privatedownloads.php">
-<select name="int_section" id="int_section">
-    <option value="">Select an international page...</option>
-
+<br />
 <?php
-	$query = "SELECT user_id, download_alias, download_abbreviation FROM tbl_auth_user WHERE private_download = 'on' order by user_id ASC"; 
-	$result = mysql_query($query) or die('Error : ' . mysql_error());
-	while(list($user_id, $alias, $abbrv) = mysql_fetch_array($result, MYSQL_NUM)) {
-?>	
-  <option value=<?php echo $abbrv; ?> <?php if($int_section_user == $user_id)echo "SELECTED";?>><?php echo $alias; ?></option>
-
-                                                                                                               <?php } ?>
-
-</select>
-<input name="int_section_select" type="submit" class="box" id="int_section_select" value="go">
-</form>
-
-<?php
-	$query = "SELECT id, name, caption, path FROM upload WHERE section = '"; 
-	$query .= $int_section; 
-	$query .= "' ORDER BY id";
+	$query = "SELECT id, name, caption, path FROM upload WHERE section LIKE 'PrivateDownload%' ORDER BY id ASC"; 
 	$result = mysql_query($query) or die('Error : ' . mysql_error());
  
 	while(list($id, $name, $caption, $path) = mysql_fetch_array($result, MYSQL_NUM))
