@@ -42,11 +42,8 @@
         <h1>Get In Touch</h1>
 <div id='contact'>
   <div class='content'>
-    <h2>
-      Corporate
-      <br />
-      Offices
-    </h2>
+
+    <h2>Corporate Offices</h2>
     <div class='copy'>
 
    <?php 
