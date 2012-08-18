@@ -66,12 +66,18 @@
 
 <?php
    $result = mysql_query("select * from products where id = {$_GET['id']}") or die('Query failed. ' . mysql_error());
-   $row = mysql_fetch_assoc($result);
+
+    // put all of the offics into an array
+    $products = array();
+    while($product = mysql_fetch_assoc($result)) {
+      $products[] = $product;
+    }
+    $product = $products[0];
 ?>
 
 
       <div id="content">
-        <h1>EuroTech <?php echo $row["product_name"]; ?></h1>
+        <h1>EuroTech <?php echo $product["product_name"]; ?></h1>
         <br /><br />
 
 	<div id="page_rotationViewer" class="rotationViewer insetBorderColor"></div>
@@ -106,9 +112,9 @@ Uize.module ({
 
 		/*** configuration variables ***/
 			var
-				totalFrames = 72,
+      totalFrames = <?php echo $product['image_quantity'] || 0; ?>,
 				frameUrlTemplate =
-					'http://www.apple.com/html5/showcase/threesixty/images/optimized/Seq_v04_640x378_[#frame].jpg'
+					"/images/360/<?php echo $product['images_directory']; ?>/PG1000-<?php echo $product['images_directory']; ?>_[#frame].jpg"
 			;
 
 		/*** state variables ***/
