@@ -33,11 +33,11 @@ if (!isset($_SESSION['db_is_logged_in']) || $_SESSION['db_is_logged_in'] !== tru
 	{
 		
 		//Get info from the main products table for display
-		$query = "SELECT id, product_name, images_directory, image_name, image_quantity, product_text, product_caption, product_id ".
+		$query = "SELECT id, product_name, sort_order, images_directory, image_name, image_quantity, product_text, product_caption, product_id ".
 				 "FROM products ".
 				 "WHERE id = '{$_GET['id']}'";
 		$result = mysql_query($query) or die('Error : ' . mysql_error());
-		list($id, $product_name, $images_directory, $image_name, $image_quantity, $product_text, $product_caption, $product_id) = mysql_fetch_array($result, MYSQL_NUM);
+		list($id, $product_name, $sort_order, $images_directory, $image_name, $image_quantity, $product_text, $product_caption, $product_id) = mysql_fetch_array($result, MYSQL_NUM);
 		
 		$product_text = htmlspecialchars($product_text);
 		
@@ -148,6 +148,7 @@ if (!isset($_SESSION['db_is_logged_in']) || $_SESSION['db_is_logged_in'] !== tru
 	{
 		$product_name   = $_POST['product_name'];
 		$product_text = $_POST['product_text'];
+		$sort_order = $_POST['sort_order'];
 		$images_directory = $_POST['images_directory']; 
 		$image_quantity = $_POST['image_quantity']; 
 		$image_name = $_POST['image_name']; 
@@ -162,7 +163,7 @@ if (!isset($_SESSION['db_is_logged_in']) || $_SESSION['db_is_logged_in'] !== tru
 			$product_caption = addslashes($product_caption);
 		}
 		
-		$query = "UPDATE products SET product_name = '$product_name', product_text = '$product_text', images_directory = '$images_directory', image_quantity = '$image_quantity', image_name = '$image_name', product_caption = '$product_caption' WHERE product_id = '$product_id'";
+		$query = "UPDATE products SET product_name = '$product_name', sort_order = '$sort_order', product_text = '$product_text', images_directory = '$images_directory', image_quantity = '$image_quantity', image_name = '$image_name', product_caption = '$product_caption' WHERE product_id = '$product_id'";
 		mysql_query($query) or die('Error ,query failed');
 		
 		$section = "productImage";
@@ -414,6 +415,12 @@ if (!isset($_SESSION['db_is_logged_in']) || $_SESSION['db_is_logged_in'] !== tru
 		  <td width="180">Product Name</td>
 		  <td><input name="product_name" type="text" class="box" id="product_name" size=52 value="<?=$product_name;?>"></td>
 		</tr>
+
+		<tr> 
+		  <td width="180">Sort Order</td>
+		  <td><input name="sort_order" type="text" class="box" id="product_name" size=52 value="<?=$sort_order;?>"></td>
+		</tr>
+
 		<tr> 
     <td width="180">360&deg; Images Directory</td>
 		  <td><input name="images_directory" type="text" class="box" id="images_directory" size=52 value="<?=$images_directory;?>"></td>

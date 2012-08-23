@@ -62,7 +62,7 @@ function delArticle(id, title)
 </div>
 
 <?php
-	$query = "SELECT id, product_name, product_id, product_text FROM products ORDER BY position ASC";
+	$query = "SELECT id, product_name, product_id, product_text FROM products ORDER BY sort_order ASC";
 	$result = mysql_query($query) or die('Error : ' . mysql_error());
 	
 		while(list($id, $product_name, $product_id, $product_text) = mysql_fetch_array($result, MYSQL_NUM))
@@ -109,7 +109,6 @@ function delArticle(id, title)
 		$softresult = mysql_query($softquery) or die('Error : ' . mysql_error());
 		list($softUpdateName) = mysql_fetch_array($softresult, MYSQL_NUM);
 	  	echo $softUpdateName;
-	  	
 	  ?>
 
 	  

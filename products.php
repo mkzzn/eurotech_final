@@ -80,7 +80,7 @@
                 <ul class="sliders-wrap-inner">
 
   <?php
-    $result = mysql_query("select * from products") or die('Query failed. ' . mysql_error());
+    $result = mysql_query("select * from products order by sort_order asc") or die('Query failed. ' . mysql_error());
 
     $products = array(); // to use in the quote request form
     $productIds = array(); // to use in the quote request form   
