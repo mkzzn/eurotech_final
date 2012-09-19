@@ -1,11 +1,22 @@
- <!DOCTYPE html>
 <?php
+ob_start();
+
+if (!isset($_SESSION)) {
+  // like i said, we must never forget to start the session
+  session_start();
+}
+
+// is the one accessing this page logged in or not?
+if (isset($_SESSION['db_is_logged_in']) && $_SESSION['db_is_logged_in'] == true) {
+	// not logged in, move to login page
+	header('Location: view_downloads.php');
+	exit;
+}
+
   include 'db/config.php';
   include 'db/open_db.php';
   $active_page = "downloads";
 
-  // like i said, we must never forget to start the session
-  session_start();
 
 $login = $_POST['username'];
 $password = $_POST['password'];
@@ -18,7 +29,7 @@ if ($_POST['form_type'] == "login") {
     $errors[] = "Username cannot be blank.";
   } else {
     //grab all the usernames in the table
-    $sql1 = mysql_query("SELECT * FROM $tableName WHERE user_id = '$login'");
+    $sql1 = mysql_query("SELECT * FROM tbl_auth_user WHERE user_id = '$login'");
     $row1 = mysql_num_rows($sql1);
 
     if ($row1 == 0) {
@@ -30,7 +41,7 @@ if ($_POST['form_type'] == "login") {
     $errors[] = "Password cannot be blank.";
   } else {
     //grab all the passwords in the table
-    $sql2 = mysql_query("SELECT * FROM $tbl_auth_user WHERE user_id = '$login' and user_password = '$password'");
+    $sql2 = mysql_query("SELECT * FROM tbl_auth_user WHERE user_id = '$login' and user_password = '$password'");
     $row2 = mysql_num_rows($sql2);
 
     if($row2 == 0) {
@@ -56,19 +67,11 @@ if ($_POST['form_type'] == "login") {
     $_SESSION['user_id'] = $user_id;
     //echo "&user_id=$user_id&custname=Welcome $name!";
   }
+
+ob_flush();
 ?>
 
-<?php
-
-// is the one accessing this page logged in or not?
-if (isset($_SESSION['db_is_logged_in']) && $_SESSION['db_is_logged_in'] == true) {
-	// not logged in, move to login page
-	header('Location: view_downloads.php');
-	exit;
-}
-?>
-
-
+<!DOCTYPE html>
 <html>
   <head>
 

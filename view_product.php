@@ -112,7 +112,7 @@ Uize.module ({
 
 		/*** configuration variables ***/
 			var
-      totalFrames = <?php echo $product['image_quantity'] || 0; ?>,
+      totalFrames = <?php echo $product['image_quantity']; ?>,
 				frameUrlTemplate =
 					"/images/360/<?php echo $product['images_directory']; ?>/<?php echo $product['image_name']; ?>_[#frame].jpg"
 			;

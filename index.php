@@ -67,10 +67,6 @@
   </div>
 </div>
 
-<?php
-  include '../close_db.php';
-?>
-
 <div class='clear'></div>
 
       </div>

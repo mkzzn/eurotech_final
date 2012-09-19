@@ -1,13 +1,12 @@
-<!DOCTYPE html>
-
 <?php
+  if (!isset($_SESSION)) {
+    // like i said, we must never forget to start the session
+    session_start();
+  }
 
   include 'db/config.php';
   include 'db/open_db.php';
   $active_page = "downloads";
-
-  // like i said, we must never forget to start the session
-  session_start();
 
   if (isset($_SESSION['user_id'])) {
     $query   = "select * from tbl_auth_user where user_id = '" . $_SESSION['user_id'] . "' limit 1";
@@ -18,7 +17,7 @@
   }
 ?>
 
-
+<!DOCTYPE html>
 <html>
   <head>
 

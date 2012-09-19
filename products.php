@@ -126,8 +126,7 @@
          </div>
          <div class='links'>
            <?php 
-                                                                            // if($product['images_directory'] && strlen($product['images_directory']) > 0) { 
-                                                                            if (false) {
+                                                                            if($product['images_directory'] && strlen($product['images_directory']) > 0) { 
            ?>
 
              <a class='view' href='view_product.php?id=<?php echo $product["id"]; ?>'>360&deg View</a>

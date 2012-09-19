@@ -62,7 +62,7 @@ function delArticle(id, title)
 </div>
 
 <?php
-	$query = "SELECT id, product_name, product_id, product_text FROM products ORDER BY sort_order ASC";
+	$query = "SELECT id, product_name, product_id, product_text FROM products ORDER BY position ASC";
 	$result = mysql_query($query) or die('Error : ' . mysql_error());
 	
 		while(list($id, $product_name, $product_id, $product_text) = mysql_fetch_array($result, MYSQL_NUM))

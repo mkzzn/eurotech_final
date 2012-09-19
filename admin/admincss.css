@@ -96,12 +96,12 @@ body {
 	padding: 10px;
 }
 
-#subnav {
+#subnav, #toolbaradd {
  background: #24608C;
  padding: 4px 12px;
 }
 
-#subnav a {
+#subnav a, #toolbaradd a {
   font-size: 12px;
   float: left;
   display: block;
@@ -111,7 +111,7 @@ body {
   font-weight: bold;
 }
 
-#subnav a:hover {
+#subnav a:hover, #toolbaradd a:hover {
   text-decoration: underline;
 }
 

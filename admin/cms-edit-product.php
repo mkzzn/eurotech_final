@@ -391,21 +391,11 @@ if (!isset($_SESSION['db_is_logged_in']) || $_SESSION['db_is_logged_in'] !== tru
 	include 'library/closedb.php';
 ?>
 	</div>
-	<div ID=header>
-	PG1000.com Administration Section
-	</div>
-	<div ID=logout>
-	<br>
-	<a href="logout.php">logout</a>
-	</div>
-	<div ID=toolbar>
-		<div ID=toolbarsections>
-<a href="cms-admin.php">news/about/tradeshows</a>  |  <a href="cms-admin-products.php">products</a>  |  <a href="cms-admin-pdfs.php">users list / reticle</a>  |  <a href="cms-admin-downloads.php">downloads</a>  |  <a href="cms-admin-privatedownloads.php">private downloads</a>
-	</div>
-		<div ID=toolbaradd>
-		<a href="cms-admin-products.php">back to products admin</a>
-		</div>
-	</div>
+
+  <?php include 'header.php'; ?>
+
+
+
 	<div ID=addpost>
 	<br>
 	<form action="cms-edit-product.php" method="post" enctype="multipart/form-data" name="uploadform">

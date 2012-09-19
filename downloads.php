@@ -1,6 +1,6 @@
-<!DOCTYPE html>
-
 <?php
+//error_reporting(E_ERROR);
+
 // like i said, we must never forget to start the session
 session_start();
 
@@ -17,6 +17,8 @@ header('Location: /view_downloads.php');
         include 'db/open_db.php';
         $active_page = "downloads";
       ?>
+
+<!DOCTYPE html>
 
 <html>
   <head>

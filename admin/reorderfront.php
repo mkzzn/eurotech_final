@@ -20,7 +20,7 @@ if (!isset($_SESSION['db_is_logged_in']) || $_SESSION['db_is_logged_in'] !== tru
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 
 <script src="../js/prototype.js" type="text/javascript"></script>
-<script src="../js/scriptaculous.js" type="text/javascript"></script>
+<script src="../js/scriptaculous/scriptaculous.js" type="text/javascript"></script>
 
 </head>
 
@@ -30,24 +30,16 @@ if (!isset($_SESSION['db_is_logged_in']) || $_SESSION['db_is_logged_in'] !== tru
 <div ID=updatereport>
 
 </div>
-<div ID=header>
-PG1000.com Administration Section
-</div>
 
-<div ID=logout>
-<br>
-<a href="logout.php">logout</a>
-</div>
-<div ID=toolbar>
-	<div ID=toolbarsections>
-<a href="cms-admin.php">news/about/tradeshows</a>  |  <a href="cms-admin-products.php">products</a>  |  <a href="cms-admin-pdfs.php">users list / reticle</a>  |  <a href="cms-admin-downloads.php">downloads</a>  |  <a href="cms-admin-privatedownloads.php">private downloads</a>
-	</div>
+  <?php include 'header.php'; ?>
+
+
 	<div ID=toolbaradd>
 	<a href="cms-add-product.php">Add a product</a>
+  <div class="clear"></div>
 	</div>
-</div>
 <br>
-      ** to reorder the products simply drag and drop the product names in the list **
+<h2>&nbsp;&nbsp;&nbsp;&nbsp;** to reorder the products simply drag and drop the product names in the list **</h2>
 <br><br>
 
 <ul id="item_list" class="sortable-list">
