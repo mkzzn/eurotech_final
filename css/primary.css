@@ -81,7 +81,9 @@ body {
     #products .product h2 .links, #products .news h2 .links, #news .product h2 .links, #news .news h2 .links {
       float: right;
       text-align: right;
+      height: 42px;
       margin-top: 4px; }
+    
     #products .product h2 .model, #products .news h2 .model, #news .product h2 .model, #news .news h2 .model {
       color: #92cfd8;
       font-size: 12px;
@@ -97,16 +99,16 @@ body {
       #products .product h2 a.view, #products .news h2 a.view, #news .product h2 a.view, #news .news h2 a.view {
         color: #ffff4a;
         display: block;
-        margin-bottom: -4px; }
+        margin-bottom: -8px; }
   #products .product .body, #products .news .body, #news .product .body, #news .news .body {
     padding: 4px 32px 16px 12px;
     margin: 0;
     background: #dddddd;
     opacity: 1;
-    height: 320px; }
+    height: 345px; }
     #products .product .body img, #products .news .body img, #news .product .body img, #news .news .body img {
       float: left;
-      margin: 22px 20px 0 20px; }
+      margin: 22px 20px 12px 20px; }
     #products .product .body .container, #products .news .body .container, #news .product .body .container, #news .news .body .container {
       font-size: 14px;
       padding: none;
@@ -117,7 +119,8 @@ body {
       font-weight: normal; }
     #products .product .body .description, #products .news .body .description, #news .product .body .description, #news .news .body .description {
       margin-left: 20px;
-      margin-top: 16px; }
+      margin-top: 16px;
+      font-size: 13px; }
 #products .news .body, #news .news .body {
   padding-top: 8px;
   padding-right: 24px;
