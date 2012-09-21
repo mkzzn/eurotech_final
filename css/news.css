@@ -16,8 +16,17 @@
     margin-left: 4%;
   }
 
+    #products .product h2 .title, #products .news h2 .title, #news .product h2 .title, #news .news h2 .title {
+      width: 200;
+      font-size: 19px;
+      font-weight: bold;
+      float: left;
+      padding: none;
+      margin: none; }
+
+
 #news .news .body {
   height: 100%;
-  padding-bottom: 32px;
-  min-height: 640px;
+  padding-bottom: 40px;
+  background: #ccc;
 }

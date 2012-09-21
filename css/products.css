@@ -2,3 +2,7 @@
   font-family: "Open Sans", sans-serif;
   color: white;
   margin: 32px 0 0 0; }
+
+#products .product .body {
+  background: #ccc;
+}
