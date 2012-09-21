@@ -1,4 +1,8 @@
 <?php
+if (!isset($_SESSION)) {
+// like i said, we must never forget to start the session
+  session_start();
+}
 
 	include 'library/config.php';
 	include 'library/opendb.php';

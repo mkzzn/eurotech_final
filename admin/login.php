@@ -1,6 +1,8 @@
 <?php
-// we must never forget to start the session
-session_start();
+if (!isset($_SESSION)) {
+// like i said, we must never forget to start the session
+  session_start();
+}
 
 $errorMessage = '';
 if (isset($_POST['txtUserId']) && isset($_POST['txtPassword'])) {

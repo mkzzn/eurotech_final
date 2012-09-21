@@ -1,7 +1,8 @@
 <?php
-// i will keep yelling this
-// DON'T FORGET TO START THE SESSION !!!
-session_start();
+if (!isset($_SESSION)) {
+// like i said, we must never forget to start the session
+  session_start();
+}
 
 // if the user is logged in, unset the session
 if (isset($_SESSION['db_is_logged_in'])) {
