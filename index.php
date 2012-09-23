@@ -25,9 +25,6 @@
     <link rel="stylesheet" type="text/css" media="all" href="css/primary.css" />
     <link rel="stylesheet" type="text/css" media="all" href="css/index.css" />
 
-    <script src="js/jquery.js"></script>
-    <script src="js/columns/index.js"></script>
-
     <link href='http://fonts.googleapis.com/css?family=Droid+Sans|Cabin|Ubuntu|Cantarell|Open+Sans|Nobile|Telex' rel='stylesheet' type='text/css'>
   </head>
 
@@ -46,30 +43,43 @@
 <?php
    $result = mysql_query("select * from news where section = 'About';") or die('Query failed. ' . mysql_error());
    $about = mysql_fetch_assoc($result);
-?>
-      <div id="content">
-        <h1>The Best in the Business</h1>
-<div class='content large'>
-  <h2><?php echo $about['title']; ?></h2>
-  <div class='copy left'>
-    <img src='images/homepage/machine1.jpg' width='320px' />
-    <p>
-      <?php echo $about['content']; ?>
-    </p>
-  </div>
-</div>
 
-<?php
    $result = mysql_query("select * from news where section = 'SubAbout';") or die('Query failed. ' . mysql_error());
    $sub_about = mysql_fetch_assoc($result);
-?>
 
-<div class='content small'>
-  <h2><?php echo $sub_about['title']; ?></h2>
-  <div class='copy right'>
-  <p><?php echo $sub_about['content']; ?></p>
-  </div>
-</div>
+?>
+      <div id="primary-content">
+        <h1>The Best in the Business</h1>
+
+<table>
+   <col class="large"></col>
+   <col class="gap"></col>
+   <col class="small"></col>
+   <thead>
+     <th>
+       <?php echo $about['title']; ?>
+     </th>
+     <th class="blank"></th>
+     <th>
+       <?php echo $sub_about['title']; ?>
+     </th>
+   </thead>
+   <tbody>
+   <tr>
+     <td class="copy">
+        <img src='images/homepage/machine1.jpg' width='320px' />
+        <p>
+          <?php echo $about['content']; ?>
+        </p>
+     </td>
+     <td class="blank"></td>
+     <td class="copy small">
+       <?php echo $sub_about['content']; ?></p>
+     </td>
+   </tr>
+   </tbody>
+</table>
+
 
 <div class='clear'></div>
 

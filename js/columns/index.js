@@ -10,5 +10,5 @@ jQuery(function($) {
     $(".copy").each(function() {
       $(this).height(max);
     });
-  }, 150);
+  }, 300);
 }); 

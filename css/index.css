@@ -1,12 +1,66 @@
-#content h1 {
+#primary-content h1 {
+  font-family: "Open Sans", sans-serif;
   margin-bottom: 14px;
+  color: white;
+  font-weight: normal;
+  font-size: 3.6em;
+  background: #111111;
+  margin: 0;
+  padding: 20px;
+  opacity: 0.95;
 }
 
-/* #index .copy.right { */
-/*   font-size: 12px; */
-/* } */
+table {
+  margin-top: 32px;
+  border-collapse: collapse;
+}
 
+table col.large {
+  width: 580px;
+}
 
-/* #content .content .copy.right { */
-/*   font-size: 13px; */
-/* } */
+table col.small {
+  width: 352px;
+}
+
+table col.gap {
+  width: 40px;
+}
+
+table thead th {
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  font-weight: normal;
+  font-size: 26px;
+  margin: 20px 0 0 0;
+  padding: 12px 20px;
+  opacity: 0.98;
+  background: #14505a;   
+  text-align: left;
+  vertical-align: top;
+}
+
+table tbody td {
+    font-family: "Open Sans", sans-serif;
+    color: black;
+    font-weight: normal;
+    font-size: 15px;
+    padding: 8px 32px 18px 32px;
+    margin: 0;
+    background: #dddddd;
+    opacity: 0.9;
+    vertical-align: top;
+}
+
+table tbody td.small {
+  padding-top: 24px;
+}
+
+table tbody td img {
+  padding: 16px 20px 8px 0;
+  float: left;
+}
+
+.blank {
+  background: none;   
+}
