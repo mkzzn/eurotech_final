@@ -9,16 +9,88 @@ a:hover {
   text-decoration: underline;
 }
 
-#content #contact .content .copy {
-    height: auto;
-    padding-bottom: 32px;
+#primary-content h1 {
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 14px;
+  color: white;
+  font-weight: normal;
+  font-size: 3.6em;
+  background: #111111;
+  margin: 0;
+  padding: 20px;
+  opacity: 0.95;
 }
 
-#content #contact .content h2 {
-    font-size: 24px;
-    height: auto;
+  .label {
+    margin-top: 12px;
+    font-weight: bold;
+    font-size: 13px;
+    font-family: "Telex", sans-serif; }
+  .heading {
+    font-size: 16px; }
+
+
+table {
+  margin-top: 40px;
+  border-collapse: collapse;
 }
 
-.copy {
-  background: #ccc;
+table col.large {
+  width: 580px;
+}
+
+table col.small {
+  width: 352px;
+}
+
+table col.gap {
+  width: 40px;
+}
+
+table h3 {
+  margin-bottom: -6px;
+}
+
+table p {
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 21px;
+}
+
+table thead th {
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  font-weight: normal;
+  font-size: 26px;
+  margin: 20px 0 0 0;
+  padding: 12px 20px;
+  opacity: 0.98;
+  background: #14505a;   
+  text-align: left;
+  vertical-align: top;
+}
+
+table tbody td {
+    font-family: "Open Sans", sans-serif;
+    color: black;
+    font-weight: normal;
+    font-size: 15px;
+    padding: 18px 32px 28px 32px;
+    margin: 0;
+    background: #dddddd;
+    opacity: 0.9;
+    vertical-align: top;
+}
+
+table tbody td.small {
+  padding-top: 24px;
+}
+
+table tbody td img {
+  padding: 16px 20px 8px 0;
+  float: left;
+}
+
+.blank {
+  background: none;   
 }

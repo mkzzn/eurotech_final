@@ -42,13 +42,28 @@
 
       <?php include "app/views/_nav.php"; ?>
 
-      <div id="content">
+      <div id="primary-content">
         <h1>Get In Touch</h1>
-<div id='contact'>
-  <div class='content'>
 
-    <h2>Corporate Offices</h2>
-    <div class='copy'>
+<table>
+   <col class="content"></col>
+   <col class="gap"></col>
+   <col class="content"></col>
+   <col class="gap"></col>
+   <col class="content"></col>
+   <thead>
+     <tr>
+       <th>Corporate Offices</th>
+       <th class="blank"></th>
+       <th>Offices</th>
+       <th class="blank"></th>
+       <th>Agents</th>
+     </tr>
+   </thead>
+   <tbody>
+   <tr>
+     <td class="copy">
+
 
    <?php 
     $query = mysql_query("select * from offices where corporate = 'on'") or die('Query failed. ' . mysql_error());
@@ -141,12 +156,11 @@
    ?>
     </div>
 
-    <div class="clear"></div>
-  </div>
-  <div class='content'>
-    <h2>Offices</h2>
-    <div class='copy'>
 
+
+     </td>
+     <td class="blank"></td>
+     <td class="copy column">
 
       <div class='label heading'>Michigan Office</div>
 
@@ -214,11 +228,10 @@
     }
 ?>
 
-    </div>
-  </div>
-  <div class='content rightmost'>
-    <h2>Agents</h2>
-    <div class='copy'>
+
+     </td>
+     <td class="blank"></td>
+     <td class="copy column">
 
 
    <?php 
@@ -291,9 +304,12 @@
     }
 ?>
 
-    </div>
-  </div>
-</div>
+
+     </td>
+   </tr>
+   </tbody>
+</table>
+
 
       </div>
 
