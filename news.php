@@ -43,51 +43,40 @@
 
       <div id="content">
         <h1>What's New?</h1>
-<div id='news'>
 
-    <div class='news left'>
-      <h2>
-        <div class='title'>
-          Product Development
-        </div>
-        <div class='clear'></div>
-      </h2>
-      <div class='body'>
-        <div class='container'>
-          <div class='description'>
+<table>
+   <col class="large"></col>
+   <col class="gap"></col>
+   <col class="small"></col>
+   <thead>
+     <th>
+       Product Development
+     </th>
+     <th class="blank"></th>
+     <th>
+       Trade Shows
+     </th>
+   </thead>
+   <tbody>
+   <tr>
+     <td class="copy">
+      <?php
+       $result = mysql_query("select * from news where section = 'News'") or die('Query failed. ' . mysql_error());
 
-  <?php
-   $result = mysql_query("select * from news where section = 'News'") or die('Query failed. ' . mysql_error());
-
-
-     while($row = mysql_fetch_assoc($result)) {
-       if ($row['section'] == 'News') {
-  ?>
-            <h3><?php echo $row['title']; ?></h3>
-            <?php echo $row['content']; ?>
-
-  <?php
-      }
-    }
-  ?>
-
-          </div>
-        </div>
-        <div class='clear'></div>
-      </div>
-    </div>
+         while($row = mysql_fetch_assoc($result)) {
+           if ($row['section'] == 'News') {
+      ?>
+        <h3><?php echo $row['title']; ?></h3>
+        <p><?php echo $row['content']; ?></p>
+      <?php
+           }
+         }
+      ?>
 
 
-    <div class='news<?php echo $add_class; ?>'>
-      <h2>
-        <div class='title'>
-          Trade Shows
-        </div>
-        <div class='clear'></div>
-      </h2>
-      <div class='body'>
-        <div class='container'>
-          <div class='description'>
+     </td>
+     <td class="blank"></td>
+     <td class="copy small">
   <?php
    $result = mysql_query("select * from news where section = 'Tradeshows'") or die('Query failed. ' . mysql_error());
 
@@ -97,21 +86,18 @@
   ?>
 
             <h3><?php echo $row['title']; ?></h3>
-            <?php echo $row['content']; ?>
+            <p><?php echo $row['content']; ?></p>
 
 
   <?php
       }
     }
   ?>
+     </td>
+   </tr>
+   </tbody>
+</table>
 
-          </div>
-        </div>
-        <div class='clear'></div>
-      </div>
-    </div>
-
-</div>
 <div class='clear'></div>
 
       </div>

@@ -1,32 +1,76 @@
-#content h1 {
-  margin-bottom: 15px;
+#primary-content h1 {
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 14px;
+  color: white;
+  font-weight: normal;
+  font-size: 3.6em;
+  background: #111111;
+  margin: 0;
+  padding: 20px;
+  opacity: 0.95;
 }
 
-#products .product, #products .news, #news .product, #news .news {
-  margin-top: 6px;
-  width: 47%;
-  height: 100%;
-  opacity: 1;
-  float: left; }
-  #products .product.left, #products .news.left, #news .product.left, #news .news.left {
-    margin-left: 0;
-  }
+table {
+  margin-top: 40px;
+  border-collapse: collapse;
+}
 
-  #products .product, #products .news, #news .product, #news .news {
-    margin-left: 4%;
-  }
+table col.large {
+  width: 580px;
+}
 
-    #products .product h2 .title, #products .news h2 .title, #news .product h2 .title, #news .news h2 .title {
-      width: 200;
-      font-size: 19px;
-      font-weight: bold;
-      float: left;
-      padding: none;
-      margin: none; }
+table col.small {
+  width: 352px;
+}
 
+table col.gap {
+  width: 40px;
+}
 
-#news .news .body {
-  height: 100%;
-  padding-bottom: 40px;
-  background: #ccc;
+table h3 {
+  margin-bottom: -6px;
+}
+
+table p {
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 21px;
+}
+
+table thead th {
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  font-weight: normal;
+  font-size: 26px;
+  margin: 20px 0 0 0;
+  padding: 12px 20px;
+  opacity: 0.98;
+  background: #14505a;   
+  text-align: left;
+  vertical-align: top;
+}
+
+table tbody td {
+    font-family: "Open Sans", sans-serif;
+    color: black;
+    font-weight: normal;
+    font-size: 15px;
+    padding: 8px 32px 18px 32px;
+    margin: 0;
+    background: #dddddd;
+    opacity: 0.9;
+    vertical-align: top;
+}
+
+table tbody td.small {
+  padding-top: 24px;
+}
+
+table tbody td img {
+  padding: 16px 20px 8px 0;
+  float: left;
+}
+
+.blank {
+  background: none;   
 }
