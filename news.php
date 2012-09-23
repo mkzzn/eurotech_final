@@ -49,13 +49,15 @@
    <col class="gap"></col>
    <col class="small"></col>
    <thead>
-     <th>
-       Product Development
-     </th>
-     <th class="blank"></th>
-     <th>
-       Trade Shows
-     </th>
+     <tr>
+       <th>
+         Product Development
+       </th>
+       <th class="blank"></th>
+       <th>
+         Trade Shows
+       </th>
+     </tr>
    </thead>
    <tbody>
    <tr>

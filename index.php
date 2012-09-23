@@ -56,13 +56,15 @@
    <col class="gap"></col>
    <col class="small"></col>
    <thead>
-     <th>
-       <?php echo $about['title']; ?>
-     </th>
-     <th class="blank"></th>
-     <th>
-       <?php echo $sub_about['title']; ?>
-     </th>
+     <tr>
+       <th>
+         <?php echo $about['title']; ?>
+       </th>
+       <th class="blank"></th>
+       <th>
+         <?php echo $sub_about['title']; ?>
+       </th>
+     </tr>
    </thead>
    <tbody>
    <tr>
