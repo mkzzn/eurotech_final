@@ -27,7 +27,7 @@
 
   <div class="footer-links links">
     <a href="terms.php">Terms and Conditions</a>
-    <a href="reticle_rental_agreement.pdf">Reticle Rental Agreement</a>
+    <a href="reticle_rental_agreement.pdf" target="_blank">Reticle Rental Agreement</a>
   </div>
 
     <div class="clear"></div>
