@@ -44,7 +44,7 @@
       <div id="content">
         <h1>What's New?</h1>
 
-<table>
+<table id="content-table">
    <col class="large"></col>
    <col class="gap"></col>
    <col class="small"></col>

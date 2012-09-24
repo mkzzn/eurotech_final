@@ -1,4 +1,4 @@
-#primary-content h1 {
+h1#primary-bar {
   font-family: "Open Sans", sans-serif;
   margin-bottom: 14px;
   color: white;
@@ -10,7 +10,7 @@
   opacity: 0.95;
 }
 
-table {
+table#content-table {
   margin-top: 40px;
   border-collapse: collapse;
 }

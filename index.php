@@ -49,9 +49,9 @@
 
 ?>
       <div id="primary-content">
-        <h1>The Best in the Business</h1>
+        <h1 id="primary-bar">The Best in the Business</h1>
 
-<table>
+<table id="content-table">
    <col class="large"></col>
    <col class="gap"></col>
    <col class="small"></col>
@@ -87,7 +87,7 @@
 
       </div>
 
-      <?php include 'app/views/_footer.php'; ?>
+   <?php include('app/views/_footer.php'); ?>
 
       <div class="clear"></div>
 	  </div>

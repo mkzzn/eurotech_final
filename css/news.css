@@ -10,7 +10,8 @@
   opacity: 0.95;
 }
 
-table {
+
+table#content-table {
   margin-top: 40px;
   border-collapse: collapse;
 }
