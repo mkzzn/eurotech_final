@@ -4,7 +4,7 @@
 	
 <div id="logout">
   <br />
-	<a href="logout.php">logout</a>
+	<a href="../logout.php">logout</a>
 </div>
 
 <div id="primary-nav">

@@ -71,9 +71,6 @@ if (!isset($_SESSION['db_is_logged_in']) || $_SESSION['db_is_logged_in'] !== tru
 </div>
 <?php include 'header.php'; ?>
 
-	<div ID=toolbaradd>
-		</div>
-</div>
 
 <div ID=sectionblock>
 
