@@ -62,12 +62,12 @@ $(document).ready(function() {
 	?>
 	</div>
 <?php include 'header.php'; ?>
-
-	</div>
-		<div ID=toolbaradd>
+		<div ID="subnav">
 		<a href="cms-admin.php">back to admin</a>
+    <div class="clear"></div>
 		</div>
-	</div>
+
+
 	<div ID=addpost>
 	<br>
 	<form method="post">
