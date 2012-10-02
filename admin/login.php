@@ -52,7 +52,7 @@ if (isset($_POST['txtUserId']) && isset($_POST['txtPassword'])) {
 	</div>
 	<div ID=logout>
 	<br>
-	<a href="logout.php">logout</a>
+  <br>
 	</div>
 	<div ID=toolbar>
 		<div ID=toolbarsections>
@@ -91,7 +91,7 @@ if (isset($_POST['txtUserId']) && isset($_POST['txtPassword'])) {
 
 
 	<div ID=footer>
-	(c) pg1000.com
+&copy; pg1000.com
 	</div>
 </div>
 
