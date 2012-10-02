@@ -52,7 +52,7 @@ The word "Seller" shall mean Euro-Tech Corporation. The word "Purchaser" shall m
 </p>
 <h3>
 
-1) 
+1) ACCEPTANCE 
 </h3>
 <p>
 Unless otherwise specified, Seller's quote will become void unless accepted by Purchaser within fifteen (15) days of receipt. Purchaser's order must be signed and indicate acceptance of Seller's proposal, and can be accepted in writing only at Seller's place of business. The resulting contract shall in all respects be governed and interpreted according to the laws of the State of Wisconsin, U.S.A. After acceptance, Purchaser's right thereunder may not be sold or assigned to any other party without written consent by Seller. Any Terms or Conditions of Purchaser's order that are in any way in conflict, inconsistent or in addition to the Terms and Conditions set forth herein shall not be binding on Seller and shall in no way be considered applicable to the sale, unless expressly agreed to in writing by Seller. No changes to the proposal, quote, purchase order or these Terms and Conditions will be valid unless such changes are in writing and signed by both Seller and Purchaser. 

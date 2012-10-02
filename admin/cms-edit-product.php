@@ -20,6 +20,16 @@ if (!isset($_SESSION['db_is_logged_in']) || $_SESSION['db_is_logged_in'] !== tru
 <LINK REL=StyleSheet HREF="admincss.css" TYPE="text/css" MEDIA=screen>
 
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<script type="text/javascript" src="../js/jquery.js"></script>
+<link rel="stylesheet" href="../js/redactor/redactor.css" type="text/css" >/
+<script type="text/javascript" src="../js/redactor/redactor.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#product_text').redactor();
+  });
+</script>
+
 </head>
 
 <body>
@@ -402,7 +412,7 @@ if (!isset($_SESSION['db_is_logged_in']) || $_SESSION['db_is_logged_in'] !== tru
 	<br>
 	<form action="cms-edit-product.php" method="post" enctype="multipart/form-data" name="uploadform">
 	<input type="hidden" name="product_id" value="<?=$product_id;?>">
-		  <table width="700" border="0" cellpadding="2" cellspacing="1" class="box" align="center">
+		  <table width="680" border="0" cellpadding="2" cellspacing="1" class="box" align="center">
 		<tr> 
 		  <td width="180">Product Name</td>
 		  <td><input name="product_name" type="text" class="box" id="product_name" size=52 value="<?=$product_name;?>"></td>
