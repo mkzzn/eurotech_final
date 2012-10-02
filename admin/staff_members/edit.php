@@ -17,7 +17,7 @@
     <div class=content>
 
       <?php
-        include '../header.php';
+        include 'header.php';
       ?>
 
       <form action="update.php" method="POST">

@@ -31,7 +31,7 @@
     <div class=content>
 
       <?php
-        include '../header.php';
+        include 'header.php';
       ?>
 
       <form action="../user_response.php" method="POST">
