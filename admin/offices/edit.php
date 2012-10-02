@@ -56,7 +56,8 @@
             $all_fields = array_merge($text_fields, $checkbox_fields);
 
             foreach($all_fields as $label => $field): 
-$$field = isset($_POST[$field]) ? $_POST[$field] : htmlentities($office[$field], ENT_IGNORE);
+// echo $office[$field];
+            $$field = isset($_POST[$field]) ? $_POST[$field] : htmlentities($office[$field], ENT_COMPAT);
             endforeach;
           ?>
 

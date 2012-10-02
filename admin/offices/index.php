@@ -1,6 +1,10 @@
 <?php
-  // like i said, we must never forget to start the session
-  session_start();
+
+// like i said, we must never forget to start the session
+  if (!isset($_SESSION)) {
+    // like i said, we must never forget to start the session
+    session_start();
+  }
 
   // is the one accessing this page logged in or not?
   if (!isset($_SESSION['db_is_logged_in']) || $_SESSION['db_is_logged_in'] !== true) {
@@ -12,6 +16,7 @@
   include '../library/opendb.php';
 
 ?>
+
 <html>
   <head>
     <title>Admin Page For Content Management System (CMS)</title>
@@ -38,7 +43,7 @@
 
         <h1>Manage Offices</h1>
         <div class="controls">
-          <a href="/admin/offices/new.php" class="new_resource">New Office</a>
+          <a href="new.php" class="new_resource">New Office</a>
         </div>
         <table id="users">
           <col></col>

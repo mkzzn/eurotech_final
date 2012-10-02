@@ -37,7 +37,7 @@
       <form action="../user_response.php" method="POST">
         <h1>Manage Staff Members</h1>
         <div class="controls">
-          <a href="/admin/staff_members/new.php" class="new_resource">New Staff Member</a>
+          <a href="new.php" class="new_resource">New Staff Member</a>
         </div>
 
 
