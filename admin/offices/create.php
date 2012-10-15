@@ -16,7 +16,8 @@
                   "Zip"   => "zip",
                   "Country"   => "country",
                   "Fax"        => "fax",
-                  "Phone"       => "phone"
+                  "Phone"       => "phone",
+                  "Email"       => "email"
                    );
   
   $fields_array = array();

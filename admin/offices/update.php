@@ -17,7 +17,8 @@
                   "Country"   => "country",
                   "Fax"        => "fax",
                   "Location Name"       => "location_name",
-                  "Phone"       => "phone"
+                  "Phone"       => "phone",
+                  "Email"       => "email"
                    );
   
   $fields_array = array();

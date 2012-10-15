@@ -50,7 +50,8 @@
               "Zip"   => "zip",
               "Country"   => "country",
               "Fax"        => "fax",
-              "Phone"       => "phone"
+              "Phone"       => "phone",
+              "Email"       => "email"
             );
 
             $all_fields = array_merge($text_fields, $checkbox_fields);
