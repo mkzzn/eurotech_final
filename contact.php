@@ -91,6 +91,7 @@
     /*   $google_map_address = str_replace(" ", "+", $google_map_address); */
     ?>
 
+      <div class='label heading'><?php echo $office['location_name']; ?></div>
 
       <?php if ($office['contact'] && strlen($office['contact']) > 0) { ?>
         <div class='label'>Contact</div>
@@ -159,8 +160,6 @@
      <td class="blank"></td>
      <td class="copy column">
 
-      <div class='label heading'>Michigan Office</div>
-
    <?php 
     $query = mysql_query("select * from offices where domestic = 'on'") or die('Query failed. ' . mysql_error());
 
@@ -180,6 +179,7 @@
       $google_map_address = str_replace(" ", "+", $google_map_address);
       $google_map_address = str_replace("++", "+", $google_map_address);
     ?>
+      <div class='label heading'><?php echo $office['location_name']; ?></div>
 
       <?php if ($office['contact'] && strlen($office['contact']) > 0) { ?>
         <div class='label'>Contact</div>
@@ -250,8 +250,8 @@
       $google_map_address = str_replace(" ", "+", $google_map_address);
     ?>
 
-      <?php if ($office['country'] && strlen($office['country']) > 0) { ?>
-      <div class='label heading'><?php echo $office['country']; ?></div>
+      <?php if ($office['location_name'] && strlen($office['location_name']) > 0) { ?>
+      <div class='label heading'><?php echo $office['location_name']; ?></div>
       <?php } ?>
 
 
@@ -276,9 +276,19 @@
          <?php echo $office['address2']; ?><br />
        <?php } ?>
 
-       <?php if ($office['city'] && strlen($office['city']) > 0) { echo $office['city'] . ", "; } ?>
-       <?php if ($office['state'] && strlen($office['state']) > 0) { echo $office['state']; } ?>
+       <?php if ($office['city'] && strlen($office['city']) > 0) { echo $office['city']; } ?>
+       <?php if ($office['state'] && strlen($office['state']) > 0) { echo ", " . $office['state']; } ?>
        <?php if ($office['zip'] && strlen($office['zip']) > 0) { echo $office['zip']; } ?>
+
+        <?php if (($office['city'] && strlen($office['city']) > 0) || ($office['state'] && strlen($office['state']) > 0) || ($office['zip'] && strlen($office['zip']) > 0)) { ?>
+         <br />
+        <?php } ?>
+       
+       <?php if ($office['country'] && strlen($office['country']) > 0) { ?>
+         <?php echo $office['country']; ?>
+       <?php } ?>
+
+
         </a>
       </div>
           <?php if ($office['phone'] && strlen($office['phone']) > 0) { ?>
