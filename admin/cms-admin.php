@@ -80,6 +80,7 @@ function delArticle(id, title)
 // as long as php can write to it
 $uploadDir = $_SERVER['DOCUMENT_ROOT']."/PG1000/upload/";
 
+	echo "upload dir" . $uploadDir . "<br />";
 
 if(isset($_POST['upload']))
 {
@@ -89,23 +90,55 @@ if(isset($_POST['upload']))
 	$fileType = $_FILES['userfile']['type'];
 	$section = $_POST['section'];
 
+	echo "file name" . $fileName . "<br />";
+	echo "tmp name" . $tmpName . "<br />";
+	echo "file size" . $fileSize . "<br />";
+	echo "file type" . $fileType . "<br />";
+	echo "section" . $section . "<br />";
+
     // get the file extension first
 	$ext      = substr(strrchr($fileName, "."), 1); 
 	
+	echo "ext" . $ext . "<br />";
+
 	// generate the random file name
 	$randName = md5(rand() * time());
+
+	echo "randName: " . $randName . "<br />";
 	
 	// and now we have the unique file name for the upload file
     $filePath = $uploadDir . $randName . '.' . $ext;
     $shortFilePath = 'http://eurotechcorp.com.hosting.tds.net/PG1000/upload/'.$randName.'.'.$ext;
     
-    
+	echo "filePath: " . $filePath . "<br />";
+	echo "shortFilePath: " . $shortFilePath . "<br />";
 
     // move the files to the specified directory
 	// if the upload directory is not writable or
 	// something else went wrong $result will be false
-    //$result    = move_uploaded_file($tmpName, $filePath);
-     $result    = copy($tmpName, $filePath);
+
+/* // check the upload form was actually submitted else print the form  */
+/* isset($_POST['submit'])  */
+/*     or error('the upload form is neaded', $uploadForm);  */
+
+/* // check for PHP's built-in uploading errors  */
+/* ($_FILES['userfile']['error'] == 0)  */
+/*     or error($errors[$_FILES['userfile']['error']]);  */
+     
+/* // check that the file we are working on really was the subject of an HTTP upload  */
+/* @is_uploaded_file($_FILES['userfile']['tmp_name'])  */
+/*     or error('not an HTTP upload', $uploadForm);  */
+
+/*   // now let's move the file to its final location and allocate the new filename to it  */
+/*   $result = @move_uploaded_file($tmpName, $filePath)  */
+/*     or error('receiving directory insuffiecient permission');  */
+
+
+
+  $result    = copy($tmpName, $filePath);
+  // $result    = move_uploaded_file($tmpName, $filePath);
+
+	echo "result: " . $result . "<br />";
 
 	if (!$result) {
 		echo "Error uploading file";
