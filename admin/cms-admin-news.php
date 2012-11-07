@@ -241,7 +241,7 @@ Upload a new image:
 		</form>
 
 
-	Images should be cropped to 200 x 200 prior to uploading.
+	Images cannot be larger than 2MB.
 <br>
 	
 	
@@ -283,6 +283,7 @@ Upload a new image:
 </div>
 </td><td align="center">
 <div ID=image>
+    <div style="color: white; margin-bottom: 12px; font-size: 11px;">Image Preview</div>
 		<img src="<?php echo $filePath;?>" height=200 width=200>
 </div>
 </td></tr></table>

@@ -44,6 +44,13 @@
       <div id="content">
         <h1>What's New?</h1>
 
+	<?php
+		$query   = "SELECT id, caption, path FROM upload WHERE section = 'News' ORDER BY id DESC LIMIT 1";
+		$result  = mysql_query($query) or die('Error, query failed');
+		list($id, $caption, $filePath) = mysql_fetch_array($result);
+	?>
+
+
 <table id="content-table">
    <col class="large"></col>
    <col class="gap"></col>
@@ -69,7 +76,10 @@
            if ($row['section'] == 'News') {
       ?>
         <h3><?php echo $row['title']; ?></h3>
-        <p><?php echo $row['content']; ?></p>
+        <p>
+ 		      <img src="<?php echo $filePath;?>" style="max-width: 320px; padding-left: 0; padding-top: 8px;"/>
+          <?php echo $row['content']; ?>
+        </p>
       <?php
            }
          }

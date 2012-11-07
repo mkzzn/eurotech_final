@@ -67,9 +67,17 @@
      </tr>
    </thead>
    <tbody>
+
+	<?php
+		$query   = "SELECT id, caption, path FROM upload WHERE section = 'About' ORDER BY id DESC LIMIT 1";
+		$result  = mysql_query($query) or die('Error, query failed');
+		list($id, $caption, $filePath) = mysql_fetch_array($result);
+	?>
+
+
    <tr>
      <td class="copy">
-        <img src='images/homepage/machine1.jpg' width='320px' />
+		    <img src="<?php echo $filePath;?>" style="max-width: 320px;"/>
         <p>
           <?php echo $about['content']; ?>
         </p>
