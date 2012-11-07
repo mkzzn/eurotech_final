@@ -57,6 +57,9 @@ if(isset($_GET['del']))
 <head>
 <title>Admin Page For Content Management System (CMS)</title>
 
+<script language="javascript" type="text/javascript" src="../js/jquery.js"></script>
+<script language="javascript" type="text/javascript" src="../js/admin/cms-admin.js"></script>
+<LINK REL=StyleSheet HREF="../css/admin/shared.css" TYPE="text/css" MEDIA=screen>
 <LINK REL=StyleSheet HREF="admincss.css" TYPE="text/css" MEDIA=screen>
 
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
@@ -80,8 +83,6 @@ function delArticle(id, title)
 // as long as php can write to it
 $uploadDir = $_SERVER['DOCUMENT_ROOT']."/PG1000/upload/";
 
-	echo "upload dir" . $uploadDir . "<br />";
-
 if(isset($_POST['upload']))
 {
 	$fileName = $_FILES['userfile']['name'];
@@ -90,6 +91,7 @@ if(isset($_POST['upload']))
 	$fileType = $_FILES['userfile']['type'];
 	$section = $_POST['section'];
 
+	echo "upload dir" . $uploadDir . "<br />";
 	echo "file name" . $fileName . "<br />";
 	echo "tmp name" . $tmpName . "<br />";
 	echo "file size" . $fileSize . "<br />";
@@ -142,8 +144,7 @@ if(isset($_POST['upload']))
 
 	if (!$result) {
 		echo "Error uploading file";
-		exit;
-	}
+	} else {
 	
 	
 	
@@ -164,6 +165,7 @@ if(isset($_POST['upload']))
     //include 'library/closedb.php';
     
     echo "<br>File uploaded<br>";
+  }
 }		
 ?>
 </div>
