@@ -68,7 +68,7 @@ function delArticle(id, title)
 {
 	if (confirm("Are you sure you want to delete '" + title + "'"))
 	{
-		window.location.href = 'cms-admin.php?del=' + id;
+		window.location.href = 'cms-admin-news.php?del=' + id;
 	}
 }
 </script>
@@ -173,7 +173,6 @@ if(isset($_POST['upload']))
 <?php include 'header.php'; ?>
 
 	<div id="subnav">
-	<a href="cms-add.php">Add an article</a>
   <div class="clear"></div>
 	</div>
 
@@ -188,7 +187,7 @@ if(isset($_POST['upload']))
 
 <table width="400" border="0" cellpadding="5" cellspacing="1">
  <tr align="center" bgcolor="#CCCCCC"> 
-  <td width="220" align="left"><strong>News Section</strong></td>
+  <td width="220" align="left"><strong>News Section</strong> 	<a href="cms-add.php?section=News">(new)</a></td>
   <td width="180"></td>
  </tr>
  <?php
@@ -213,7 +212,7 @@ if(isset($_POST['upload']))
 
 <table width="400" border="0" cellpadding="5" cellspacing="1">
  <tr align="center" bgcolor="#CCCCCC"> 
-  <td width="220" align="left"><strong>Tradeshows Section</strong></td>
+  <td width="220" align="left"><strong>Tradeshows Section</strong> <a href="cms-add.php?section=Tradeshows">(new)</a></td>
   <td width="180"></td>
  </tr>
  <?php
@@ -252,13 +251,13 @@ Upload a new image:
 		list($id, $caption, $filePath) = mysql_fetch_array($result);
 		?>
 
-	<br>Image Caption: <a href="cms-admin.php?imagecaption=news">edit</a><br>
+	<br>Image Caption: <a href="cms-admin-news.php?imagecaption=news">edit</a><br>
 	
 	<?php
 	if($_GET['imagecaption'] == "news")
 	{
 	?>
-	<form method="post" action="cms-admin.php">
+	<form method="post" action="cms-admin-news.php">
 	<input type="hidden" name="id" value="<?=$id;?>">
 <textarea name="caption" cols="45" rows="3" class="box" id="caption"><?=$caption;?></textarea><br>
 	<input name="update" type="submit" class="box" id="update" value="update caption">
@@ -288,124 +287,6 @@ Upload a new image:
 </div>
 </td></tr></table>
 </div>
-<br><br>
-
-
-<div ID=sectionblock>
-<table><tr><td>
-<div ID=articlelist>
-
-<?php
-	$query = "SELECT id, title, section FROM news WHERE section = 'About' ORDER BY id";
-	$result = mysql_query($query) or die('Error : ' . mysql_error());
-?>
-
-<table width="400" border="0" cellpadding="5" cellspacing="1">
- <tr align="center" bgcolor="#CCCCCC"> 
-  <td width="220" align="left"><strong>About Section</strong></td>
-  <td width="180"></td>
- </tr>
- <?php
-	while(list($id, $title, $section) = mysql_fetch_array($result, MYSQL_NUM))
-	{	
-?>
- <tr bgcolor="#FFFFFF"> 
-  <td width="220"> 
-   <?php echo $title;?>
-  </td>
-  <td width="180" align="center"><a href="cms-edit.php?id=<?php echo $id;?>">edit</a> | <a href="javascript:delArticle('<?php echo $id;?>', '<?php echo $title;?>');">delete</a></td>
- </tr>
- <?php
-	}
-?>
-</table>
-<br>
-<?php
-	$query = "SELECT id, title, section FROM news WHERE section = 'SubAbout' ORDER BY id";
-	$result = mysql_query($query) or die('Error : ' . mysql_error());
-?>
-
-<table width="400" border="0" cellpadding="5" cellspacing="1">
- <tr align="center" bgcolor="#CCCCCC"> 
-  <td width="220" align="left"><strong>Sub-About Section</strong></td>
-  <td width="180"></td>
- </tr>
- <?php
-	while(list($id, $title, $section) = mysql_fetch_array($result, MYSQL_NUM))
-	{	
-?>
- <tr bgcolor="#FFFFFF"> 
-  <td width="220"> 
-   <?php echo $title;?>
-  </td>
-  <td width="180" align="center"><a href="cms-edit.php?id=<?php echo $id;?>">edit</a> | <a href="javascript:delArticle('<?php echo $id;?>', '<?php echo $title;?>');">delete</a></td>
- </tr>
- <?php
-	}
-?>
-</table>
-<div class="subtext">
-<br>
-Upload a new image:
-<br>
-	<form action="" method="post" enctype="multipart/form-data" name="uploadform">
-		<input type="hidden" name="MAX_FILE_SIZE" value="2000000">
-		<input type="hidden" name="section" value="About">
-		<input name="userfile" type="file" class="box" id="userfile">
-		<input name="upload" type="submit" class="box" id="upload" value="  Upload  ">
-		</form>
-
-
-	Images should be cropped to 200 x 200 prior to uploading.
-	
-	<br>
-	
-	
-	<?php
-		$query   = "SELECT id, caption, path FROM upload WHERE section = 'About' ORDER BY id DESC LIMIT 1";
-		$result  = mysql_query($query) or die('Error, query failed');
-		list($id, $caption, $filePath) = mysql_fetch_array($result);
-		?>
-
-	<br>Image Caption: <a href="cms-admin.php?imagecaption=about">edit</a><br>
-	
-	<?php
-	if($_GET['imagecaption'] == "about")
-	{
-	?>
-	<form method="post" action="cms-admin.php">
-	<input type="hidden" name="id" value="<?=$id;?>">
-<textarea name="caption" cols="45" rows="3" class="box" id="caption"><?=$caption;?></textarea><br>
-	<input name="update" type="submit" class="box" id="update" value="update caption">
-	
-	<?php
-	}
-	else{
-		if($caption == "")
-		{
-			echo "(no caption set)";
-		} 
-		else
-		{
-	?>
-	<div ID=caption><?php echo $caption;?></div>
-	
-	<?php
-		}
-	}
-	?>
-	
-</div>
-</div>
-</td><td align="center">
-<div ID=image>
-		<img src="<?php echo $filePath;?>" height=200 width=200>
-</div>
-</td></tr></table>
-</div>
-<br><br>
-
-
 
  <?php
 	

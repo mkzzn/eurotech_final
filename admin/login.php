@@ -26,7 +26,7 @@ if (isset($_POST['txtUserId']) && isset($_POST['txtPassword'])) {
 		$_SESSION['db_is_logged_in'] = true;
 		
 		// after login we move to the main page
-		header('Location: cms-admin.php');
+		header('Location: cms-admin-homepage.php');
 		exit;
 	} else {
 		$errorMessage = 'Sorry, wrong user id / password';

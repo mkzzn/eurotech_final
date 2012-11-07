@@ -63,8 +63,6 @@ $(document).ready(function() {
 	</div>
 <?php include 'header.php'; ?>
 		<div ID="subnav">
-		<a href="cms-admin.php">back to admin</a>
-    <div class="clear"></div>
 		</div>
 
 
@@ -79,12 +77,18 @@ $(document).ready(function() {
 		<tr> 
 		  <td width="100">Section</td>
 		  <td>
+        <?php if (isset($_GET['section'])) { ?>
+          <input type="hidden" name="section" value="<?php echo $_GET['section']; ?>" />
+          <strong><?php echo $_GET['section']; ?></strong>
+           <?php } else { ?>
+
 			<select name="section">
 				<option selected>News</option>
 				<option>Tradeshows</option>
 				<option>About</option>
 				<option>SubAbout</option>
 			</select>
+           <?php } ?>
 		  </td>
 		</tr>
 		<tr> 

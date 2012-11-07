@@ -86,8 +86,6 @@ $(document).ready(function() {
 	</div>
 <?php include 'header.php'; ?>
 		<div ID="subnav">
-		<a href="cms-admin.php">back to admin</a>
-    <div class="clear"></div>
 		</div>
 
 
@@ -103,15 +101,8 @@ $(document).ready(function() {
 		<tr> 
 		  <td width="100">Section</td>
 		  <td>
-			<select name="section">
-				<option selected><?=$section;?></option>
-				<option>News</option>
-				<option>Tradeshows</option>
-				<option>About</option>
-				<option>SubAbout</option>
-			</select>
-		  
-		  
+          <input type="hidden" name="section" value="<?php echo $section; ?>" />
+          <strong><?php echo $section; ?></strong>
 		  
 		  </td>
 		</tr>

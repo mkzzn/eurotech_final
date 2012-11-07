@@ -71,9 +71,6 @@ include 'library/closedb.php';
 		<div ID=toolbarsections>
 		announcements  |  products
 		</div>
-		<div ID=toolbaradd>
-		<a href="cms-admin.php">back to admin</a>
-		</div>
 	</div>
 	<div ID=addpost>
 		<div ID=title><?php echo $title;?></div>
